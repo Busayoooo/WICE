@@ -21,7 +21,7 @@
 <body>
     <br> <br> <br> <br> <br> <br> <br>
     <div class="container outline">
-        <h1 class="center"></h1>
+        <h1 class="center">Hi there</h1>
     </div>
 </body>
 </html>
