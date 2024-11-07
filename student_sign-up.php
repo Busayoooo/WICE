@@ -64,6 +64,11 @@ if (isset($_POST['submit'])) {
         box-shadow: 0 1px 0 0 #42A5F5 !important;
     }
 
+    .outline{
+  border: solid #2196F3;
+  border-radius: 150px;
+}
+
     /* changes the label and icon color */
     .input-field .prefix.active, label.active{
         color: #42A5F5 !important;;

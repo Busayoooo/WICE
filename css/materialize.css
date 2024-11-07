@@ -2027,11 +2027,6 @@
   color: #37474f !important;
 }
 
-.outline{
-  border: solid #2196F3;
-  border-radius: 150px;
-}
-
 .blue-grey.darken-4 {
   background-color: #263238 !important;
 }
@@ -5112,7 +5107,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #f6b2b5;
+  background-color: #42A5F5;
   will-change: left, right;
 }
 
@@ -8360,7 +8355,7 @@ input[type=range]::-ms-thumb {
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #4CAF50;
+  background-color: #42A5F5;
 }
 
 .carousel {

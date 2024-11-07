@@ -28,12 +28,12 @@
         <div class="left">
             <h4 class=" white-text center hide-on-med-and-down">Yes?</h4>
             <h5 class=" white-text center hide-on-large-only">Yes?</h5>
-            <a href="" class="btn btn-flat btn-large white background-txt bold-txt">Continue</a>
+            <a href="student_sign-up_two.php" class="btn btn-flat btn-large white background-txt bold-txt">Continue</a>
         </div>
         <div class="right">
         <h4 class=" white-text center hide-on-med-and-down">No?</h4>
         <h5 class=" white-text center hide-on-large-only">No?</h5>
-        <a href="" class="btn btn-flat btn-large white background-txt bold-txt">Home</a>
+        <a href="home.php" class="btn btn-flat btn-large white background-txt bold-txt">Home</a>
         </div>
     </div>
 </body>

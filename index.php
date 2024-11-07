@@ -29,9 +29,7 @@
         <div class="row center container">
             <a href="./student_sign-up_one.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Student</a> 
             <a href="./staff_sign-up.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Staff</a>
-            <a href="./applicant_sign-up.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Applicant</a>
-            <a href="./parent_sign-up.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Parents</a>
-            <a href="./admin_sign-up.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Admin</a>
+            <a href="./homepage.php" class="category blue pink-text text-lighten-4 btn btn-large btn-flat col s12">Visitor</a>
             <p>Don't have an account?<a href="./login.php" class=" blue-text">Login</a></p>
         </div>
     </div>
