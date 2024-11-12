@@ -21,17 +21,26 @@ include("./templates/header.php");
 <body>
     <div class="container">
     <h3 class=" blue-text text-lighten-1 bold-txt ">History of WISE</h3>
-    <div class="divider"></div>
         <p class=" grey-text text-darken-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
-        </p>
-        <div>
-            <div class="left"><img width="160px" src="./img/3.png" alt="" class="responsive-img"></div>
-            <div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis deserunt eaque reiciendis blanditiis, tenetur, iusto nam dignissimos eos, commodi ut voluptates unde? Iure ipsa laboriosam necessitatibus perferendis at officiis vitae.</p></div>
-            <br> <br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor necessitatibus neque eveniet deleniti quas, animi iusto dolores velit minima. Exercitationem perspiciatis ipsum deleniti obcaecati eveniet porro neque, id voluptatem numquam molestias cumque autem aliquam esse nihil nam beatae quibusdam illum adipisci. Sequi suscipit delectus libero facilis sed ipsa quisquam?</p>
+
+        <h4 class="pink-text bold-txt">Our vision and values</h4>
+        <div class="divider pink"></div>
+        <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ut omnis tempora assumenda minus molestiae odit recusandae obcaecati ipsa eveniet!</p>
+        <div class="divider pink"></div>
+
+        <h4 class="blue-text bold-txt"> Location</h4>
+        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
+        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
+        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
+
+        <h4 class="pink-text bold-txt">Contact Information</h4>
+        <div class="center">
+            <h6 class="left">Want to ask a question, make enquiries or just talk to us?<a href="./contactUs.php" class="pink-text"> Click here!!!</a></h6>
+            
         </div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi illo nemo impedit fuga sapiente, aliquid dolore saepe debitis molestiae alias voluptatem, unde, quas id! Iusto maxime sed laboriosam tempora. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad delectus assumenda debitis deserunt fugit! Omnis necessitatibus ullam iste nostrum tempore. Possimus?</p>
-        <div class="divider"></div>
     </div>
+    
 
 
     <script src="js/jquery.js"></script>

@@ -49,20 +49,20 @@
             <nav class=" z-depth-0 nav-wrapper blue">
                 <div class="container">
                     <div class="row">
-                        <a href="homepage.php" class="left brand-logo hide-on-med-and-down" >WICE</a>
+                        <a href="homepage.php" class="left brand-logo hide-on-med-and-down " >WICE</a>
 
                         <ul class="right hide-on-med-and-down">
                             <li>
                                 <a href="homepage.php" class="background-text"><i class="material-icons left">home</i>Home</a>
                             </li>
                             <li>
-                                <a href="aboutUs.php" class="background-tex"><i class="material-icons left">home</i>About Us</a>
+                                <a href="aboutUs.php" class="background-tex"><i class="material-icons left">people</i>About Us</a>
                             </li>
                             <li>
-                                <a href="" class="background-tex"><i class="material-icons left">home</i>Academics</a>
+                                <a href="" class="background-tex"><i class="material-icons left">school</i>Academics</a>
                             </li>
                             <li>
-                                <a href="" class="background-tex"><i class="material-icons left">home</i>Contact Us</a>
+                                <a href="" class="background-tex"><i class="material-icons left">contact_mail</i>Contact Us</a>
                             </li>
                         </ul>
                     </div>
