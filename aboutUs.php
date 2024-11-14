@@ -17,29 +17,127 @@ include("./templates/header.php");
     .bold-txt{
         font-weight: bold;
     }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+        color: #E91E63;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: #E91E63;
+}
 </style>
-<body>
-    <div class="container">
+<body class="background">
+    <div class="parallax-container">
+            <div class="parallax">
+                <img src="./img/3.png" alt="" class="">
+            </div>
+    </div>
+    <div class="container ">
     <h3 class=" blue-text text-lighten-1 bold-txt ">History of WISE</h3>
         <p class=" grey-text text-darken-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor necessitatibus neque eveniet deleniti quas, animi iusto dolores velit minima. Exercitationem perspiciatis ipsum deleniti obcaecati eveniet porro neque, id voluptatem numquam molestias cumque autem aliquam esse nihil nam beatae quibusdam illum adipisci. Sequi suscipit delectus libero facilis sed ipsa quisquam?</p>
 
-        <h4 class="pink-text bold-txt">Our vision and values</h4>
-        <div class="divider pink"></div>
-        <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ut omnis tempora assumenda minus molestiae odit recusandae obcaecati ipsa eveniet!</p>
-        <div class="divider pink"></div>
-
-        <h4 class="blue-text bold-txt"> Location</h4>
-        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
-        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
-        <p><strong>Lorem:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, necessitatibus. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!</p>
-
-        <h4 class="pink-text bold-txt">Contact Information</h4>
-        <div class="center">
-            <h6 class="left">Want to ask a question, make enquiries or just talk to us?<a href="./contactUs.php" class="pink-text"> Click here!!!</a></h6>
-            
+        <div class="row">
+            <div class="col s12">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="./img/3.png" alt="" class="responsive-img">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
+                        <p class="grey-text text-darken-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    
+        <div class="divider blue"></div>
+        <div class="row">
+            <div class="col s12">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header blue white-text"><i class="material-icons right white-text ">label</i>FAQ</div>
+                        <div class="collapsible-body">
+                            <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsa hic incidunt consequuntur dignissimos culpa!</p>
+                            <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsa, mollitia accusantium error enim animi.</p>
+                            <br>
+                            <br>
+                            <a class="blue white-text bold-text btn" href="">See More</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider blue"></div>
+
+        <h3 class="pink-text bold-txt">Team</h3>
+        <div class="row">
+            <div class="col l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="./img/3.png" alt="" class="responsive-img">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
+                        <p class="grey-text text-darken-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="./img/3.png" alt="" class="responsive-img">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
+                        <p class="grey-text text-darken-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="./img/3.png" alt="" class="responsive-img">
+                    </div>
+                    <div class="card-content">
+                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
+                        <p class="grey-text text-darken-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="blue-text bold-txt">Values</h4>
+        <div class="divider blue"></div>
+        <div class="row">
+            <div class="col l2 center">Lorem</div>
+            <div class="col l2 center">Lorem</div>
+            <div class="col l2 center">Lorem</div>
+            <div class="col l2 center">Lorem</div>
+            <div class="col l2 center">Lorem</div>
+            <div class="col l2 center">Lorem</div>
+        </div>
+        <div class="divider blue"></div>
     </div>
+    <br> <br>
     
 
 
@@ -50,6 +148,8 @@ include("./templates/header.php");
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
             $('.slider').slider();
+            $('.parallax').parallax();
+            $('.collapsible').collapsible();
         });
     </script>
 </body>
