@@ -36,15 +36,22 @@ include("./templates/header.php");
     .secondary-color{
         background-color: #E91E63;
     }
+    .banner-div{
+        position: relative;
+    }
 </style>
 <body class="background">
-    <br>
     <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="" alt="" class="responsive-img">
-                </li>
-            </ul>
+        <ul class="slides">
+            <li>
+                <img src="" alt="" class="responsive-img">
+                <div class="caption center-align">
+                        <h3>Welcome to Wisdom International school of excellence</h3>
+                        <p class="white-text">Brighter Future</p>
+                        <a href="" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                    </div>
+            </li>
+        </ul>
     </div>
     <div class="container">
         <h3 class=" blue-text bold-txt center">Overview of WISE</h3>
@@ -113,7 +120,9 @@ include("./templates/header.php");
         $(document).ready(function(){
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
-            $('.slider').slider();
+            $('.slider').slider({
+                height:500
+            });
         });
     </script>
 </body>

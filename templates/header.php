@@ -42,27 +42,48 @@
     .light-text{
         color: #FFFFFF;
     }
+
+    .navbar{
+        background: transparent !important;
+        transition: background 0.5s ease, color 0.5s ease;
+    }
+    .navbar a{
+        color: #2196f3;
+        transition: color 0.5s ease;
+    }
+    .navbar.scrolled{
+        background: #2196f3 !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+    }
+    .navbar.scrolled a{
+        color: white !important;
+    }
+    .navbar{
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+    }
 </style>
 <body>
     <header>
-        <div class="navbar-fixed">
-            <nav class=" z-depth-0 nav-wrapper blue">
+        <div class="navbar fixed-top z-depth-0">
+            <nav class=" nav-wrapper">
                 <div class="container">
                     <div class="row">
-                        <a href="homepage.php" class="left brand-logo hide-on-med-and-down " >WICE</a>
+                        <a href="homepage.php" class="left brand-logo hide-on-med-and-down blue-text" >WICE</a>
 
                         <ul class="right hide-on-med-and-down">
                             <li>
-                                <a href="homepage.php" class="background-text"><i class="material-icons left">home</i>Home</a>
+                                <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
                             </li>
                             <li>
-                                <a href="aboutUs.php" class="background-tex"><i class="material-icons left">people</i>About Us</a>
+                                <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
                             </li>
                             <li>
-                                <a href="" class="background-tex"><i class="material-icons left">school</i>Academics</a>
+                                <a href="" class="blue-text"><i class="material-icons left">school</i>Academics</a>
                             </li>
                             <li>
-                                <a href="" class="background-tex"><i class="material-icons left">contact_mail</i>Contact Us</a>
+                                <a href="" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -70,5 +91,24 @@
             </nav>
         </div>
     </header>
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.datepicker').datepicker();
+            $('.tooltipped').tooltip();
+            $('.slider').slider();
+
+            $(window).scroll(function () {
+                const sliderHeight = $('.slider').height(); 
+                if($(window).scrollTop() > sliderHeight){
+                    $(".navbar").addClass("scrolled");
+                } else {
+                    $(".navbar").removeClass("scrolled");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
