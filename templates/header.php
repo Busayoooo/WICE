@@ -45,11 +45,11 @@
 
     .navbar{
         background: transparent !important;
-        transition: background 0.5s ease, color 0.5s ease;
+        transition: background 0.2s ease, color 0.2s ease;
     }
     .navbar a{
         color: #2196f3;
-        transition: color 0.5s ease;
+        transition: color 0.2s ease;
     }
     .navbar.scrolled{
         background: #2196f3 !important;
@@ -66,8 +66,8 @@
 </style>
 <body>
     <header>
-        <div class="navbar fixed-top z-depth-0">
-            <nav class=" nav-wrapper">
+        <div class="fixed-top z-depth-0">
+            <nav class=" nav-wrapper navbar">
                 <div class="container">
                     <div class="row">
                         <a href="homepage.php" class="left brand-logo hide-on-med-and-down blue-text" >WICE</a>

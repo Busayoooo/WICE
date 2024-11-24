@@ -17,12 +17,8 @@ include("./templates/header.php");
     .slider .indicators .indicator-item.active {
         background-color: #E91E63;
     }
-
-    .outline{
-        border: solid #2196f3;
-        /* border: solid #E91E63; */
-        border-width:1px;
-        border-radius: 1px;
+    section{
+        padding: 50px 0px;
     }
     .bold-txt{
         font-weight: bold;
@@ -54,11 +50,9 @@ include("./templates/header.php");
         </ul>
     </div>
     <div class="container">
-        <h3 class=" blue-text bold-txt center">Overview of WISE</h3>
-        <div class="divider blue"></div>
-        <p class=" grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
+        <h3 class="bold-txt center">Overview of WISE</h3>
+        <p class=" grey-text text-darken-2 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         </p>
-        <div class="divider blue"></div>
 
         <br>
 
@@ -68,50 +62,59 @@ include("./templates/header.php");
         </p>
         <div class="divider secondary-color"></div>
 
-        <h2 class="blue-text">News</h2>
-        <div class="outline">
+        <section class="">
+        <h2 class="center">News</h2>
             <div class="row">
-                <div class="col l4">
+                <div class="col s12 m4">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="" alt="" class="responsive-img">
+                            <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <p class="blue-text text-lighten-1">
+                            <span class="card-title">Sports Day 2024</span>
+                            <p class="">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
-                        
+                        <div class="card-action">
+                            <a href="">Read More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col l4">
+                <div class="col s12 m4">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="" alt="" class="responsive-img">
+                            <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <p class="blue-text text-lighten-1">
+                            <span class="card-title">Sports Day 2024</span>
+                            <p class="">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
-                        
+                        <div class="card-action">
+                            <a href="">Read More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col l4">
+                <div class="col s12 m4">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="" alt="" class="responsive-img">
+                            <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <p class="blue-text">
+                            <span class="card-title">Sports Day 2024</span>
+                            <p class="">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
-                        
+                        <div class="card-action">
+                            <a href="">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <script src="js/jquery.js"></script>
