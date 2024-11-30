@@ -34,7 +34,7 @@ include("./templates/header.php");
     }
     .banner-div{
         position: relative;
-    }
+    }   
 </style>
 <body class="background">
     <div class="slider">
@@ -44,7 +44,7 @@ include("./templates/header.php");
                 <div class="caption center-align">
                         <h3>Welcome to Wisdom International school of excellence</h3>
                         <p class="white-text">Brighter Future</p>
-                        <a href="" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
             </li>
         </ul>
@@ -56,7 +56,7 @@ include("./templates/header.php");
 
         <br>
 
-        <h4 class="pink-text bold-txt">Our Mission</h4>
+        <h4 class="pink-text  bold-txt">Our Mission</h4>
         <div class="divider secondary-color"></div>
         <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum 
         </p>
@@ -77,7 +77,13 @@ include("./templates/header.php");
                             </p>
                         </div>
                         <div class="card-action">
-                            <a href="">Read More</a>
+                            <a href="#Sports" class=" modal-trigger">Read More</a>
+                            <div class="modal" id="Sports">
+                                <div class="container">
+                                    <h4>Hi there,</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +99,13 @@ include("./templates/header.php");
                             </p>
                         </div>
                         <div class="card-action">
-                            <a href="">Read More</a>
+                            <a href="#Sports" class=" modal-trigger">Read More</a>
+                            <div class="modal" id="Sports">
+                                <div class="container">
+                                    <h4>Hi there,</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +121,13 @@ include("./templates/header.php");
                             </p>
                         </div>
                         <div class="card-action">
-                            <a href="">Read More</a>
+                            <a href="#Sports" class=" modal-trigger">Read More</a>
+                            <div class="modal" id="Sports">
+                                <div class="container">
+                                    <h4>Hi there,</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,8 +141,17 @@ include("./templates/header.php");
         $(document).ready(function(){
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
+            $('.modal').modal();
             $('.slider').slider({
                 height:500
+            });
+            $(window).scroll(function () {
+                const sliderHeight = $('.slider').height(); 
+                if($(window).scrollTop() > sliderHeight){
+                    $(".navbar").addClass("scrolled");
+                } else {
+                    $(".navbar").removeClass("scrolled");
+                }
             });
         });
     </script>

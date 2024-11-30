@@ -43,10 +43,9 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
                     <input type="password" name="password" id="password">
-                    <label for="username">Password</label>
+                    <label for="password">Password</label>
                 </div>
                 <div class="container">
-                    <p class="left">Don't have an account?<a href="./index.php" class=" blue-text">Register</a></p>
                     
                     <input class="right btn white-text btn-flat blue" type="submit" name="login" id="login" value="Login">
                 </div>

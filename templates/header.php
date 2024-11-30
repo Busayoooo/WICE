@@ -1,6 +1,3 @@
-<?php 
-
-?>
 
 <html lang="en">
 <head>
@@ -80,10 +77,10 @@
                                 <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
                             </li>
                             <li>
-                                <a href="" class="blue-text"><i class="material-icons left">school</i>Academics</a>
+                                <a href="academics.php" class="blue-text"><i class="material-icons left">school</i>Academics</a>
                             </li>
                             <li>
-                                <a href="" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
+                                <a href="contactUs.php" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -98,17 +95,7 @@
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
             $('.slider').slider();
-
-            $(window).scroll(function () {
-                const sliderHeight = $('.slider').height(); 
-                if($(window).scrollTop() > sliderHeight){
-                    $(".navbar").addClass("scrolled");
-                } else {
-                    $(".navbar").removeClass("scrolled");
-                }
-            });
         });
     </script>
-
 </body>
 </html>

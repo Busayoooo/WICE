@@ -21,8 +21,21 @@ include("./templates/header.php");
         color: #E91E63;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
-  color: #E91E63;
-}
+        color: #E91E63;
+    }
+
+    .banner-div{
+        position: relative;
+    }
+
+    .banner-div h5{
+        padding: 20px;
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 10%;
+    }
+
 </style>
 <body class="background">
     <div class="parallax-container">
@@ -34,46 +47,21 @@ include("./templates/header.php");
     <h3 class=" blue-text text-lighten-1 bold-txt ">History of WISE</h3>
         <p class=" grey-text text-darken-3 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor necessitatibus neque eveniet deleniti quas, animi iusto dolores velit minima. Exercitationem perspiciatis ipsum deleniti obcaecati eveniet porro neque, id voluptatem numquam molestias cumque autem aliquam esse nihil nam beatae quibusdam illum adipisci. Sequi suscipit delectus libero facilis sed ipsa quisquam?</p>
-
-        <div class="row">
-            <div class="col s12">
-                <div class="card hoverable">
-                    <div class="card-image">
-                        <img src="./img/3.png" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
-                        <p class="grey-text text-darken-3">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
-                        </p>
-                    </div>
-                    <div class="card-action">
-                        <a href="">Learn More</a>
-                    </div>
-                </div>
-            </div>
+        <br>
+        <h2>Our Vision</h2>
+    </div>
+        
+    <div class="parallax-container">
+        <div class="banner-div parallax">
+            <img src="./img/3.png" alt="" class="center-align" width="1345px">
+            <h5 class="black-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos est minus, libero unde voluptate praesentium ut quos beatae iusto fugiat!</h5>
         </div>
-    
-        <div class="divider blue"></div>
-        <div class="row">
-            <div class="col s12">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header blue white-text"><i class="material-icons right white-text ">label</i>FAQ</div>
-                        <div class="collapsible-body">
-                            <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsa hic incidunt consequuntur dignissimos culpa!</p>
-                            <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsa, mollitia accusantium error enim animi.</p>
-                            <br>
-                            <br>
-                            <a class="blue white-text bold-text btn" href="">See More</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="divider blue"></div>
+    </div>
 
-        <h3 class="pink-text bold-txt">Team</h3>
+    <div class="container">
+        
+
+        <h3 class="pink-text bold-txt">Our Team</h3>
         <div class="row">
             <div class="col l4">
                 <div class="card hoverable">
@@ -125,7 +113,7 @@ include("./templates/header.php");
             </div>
         </div>
 
-        <h4 class="blue-text bold-txt">Values</h4>
+        <h4 class="blue-text bold-txt">Our Values</h4>
         <div class="divider blue"></div>
         <div class="row">
             <div class="col l2 center">Lorem</div>
@@ -151,6 +139,14 @@ include("./templates/header.php");
             $('.parallax').parallax();
             $('.collapsible').collapsible();
         });
+        $(window).scroll(function () {
+                const parallaxHeight = $('.parallax').height(); 
+                if($(window).scrollTop() > parallaxHeight){
+                    $(".navbar").addClass("scrolled");
+                } else {
+                    $(".navbar").removeClass("scrolled");
+                }
+            });
     </script>
 </body>
 </html>
