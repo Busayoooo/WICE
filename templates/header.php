@@ -67,9 +67,11 @@
             <nav class=" nav-wrapper navbar">
                 <div class="container">
                     <div class="row">
-                        <a href="homepage.php" class="left brand-logo hide-on-med-and-down blue-text" >WICE</a>
-
-                        <ul class="right hide-on-med-and-down">
+                        <div class="col l2 s12 center-on-small-only">
+                            <a href="homepage.php" class="brand-logo blue-text" >WICE</a>
+                            <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
+                        </div>
+                        <ul class="col l10 hide-on-med-and-down">
                             <li>
                                 <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
                             </li>
@@ -87,12 +89,28 @@
                 </div>
             </nav>
         </div>
+        
+        <ul class="sidenav navbar-fixed" id="sidenav">
+        <li>
+            <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
+        </li>
+        <li>
+            <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
+        </li>
+        <li>
+            <a href="academics.php" class="blue-text"><i class="material-icons left">school</i>Academics</a>
+        </li>
+        <li>
+            <a href="contactUs.php" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
+        </li>
+        </ul>
     </header>
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
         $(document).ready(function(){
             $('.datepicker').datepicker();
+            $('.sidenav').sidenav();
             $('.tooltipped').tooltip();
             $('.slider').slider();
         });

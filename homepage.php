@@ -34,34 +34,52 @@ include("./templates/header.php");
     }
     .banner-div{
         position: relative;
-    }   
+    } 
+
+    .video-txt{
+        position:absolute;
+        top: 35%;
+        left: 5%;
+    }
 </style>
 <body class="background">
+    <!-- Hero section -->
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="" alt="" class="responsive-img">
-                <div class="caption center-align">
-                        <h3>Welcome to Wisdom International school of excellence</h3>
-                        <p class="white-text">Brighter Future</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                <div class="banner-div">
+                    <img src="" alt="" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                            <h3>Welcome to Wisdom International school of excellence</h3>
+                            <p class="white-text">Brighter Future</p>
+                            <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class=" hide-on-large-only">Welcome to Wisdom International school of excellence</h5>
+                    <p class="white-text">Brighter Future</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
+    <!-- Overview section -->
     <div class="container">
-        <h3 class="bold-txt center">Overview of WISE</h3>
+        <h2 class="bold-txt center hide-on-med-and-down">Overview of WISE</h2>
+        <h4 class="bold-txt center hide-on-large-only">Overview of WISE</h4>
         <p class=" grey-text text-darken-2 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         </p>
 
         <br>
-
-        <h4 class="pink-text  bold-txt">Our Mission</h4>
+<!-- Mission Section -->
+        <h3 class="pink-text bold-txt hide-on-med-and-down">Our Mission</h3>
+        <h4 class="pink-text bold-txt hide-on-large-only">Our Mission</h4>
         <div class="divider secondary-color"></div>
         <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum 
         </p>
         <div class="divider secondary-color"></div>
 
+        <!-- News  Section -->
         <section class="">
         <h2 class="center">News</h2>
             <div class="row">
