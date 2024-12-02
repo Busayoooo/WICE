@@ -36,6 +36,14 @@ include("./templates/header.php");
         left: 10%;
     }
 
+    .banner-div p{
+        padding: 20px;
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 10%;
+    }
+
 </style>
 <body class="background">
     <div class="parallax-container">
@@ -43,18 +51,23 @@ include("./templates/header.php");
                 <img src="./img/3.png" alt="" class="">
             </div>
     </div>
+    <br>
     <div class="container ">
-        <h3 class=" blue-text text-lighten-1 bold-txt ">History of WISE</h3>
+        <h2 class="blue-text text-lighten-1 bold-txt hide-on-med-and-down">History of WISE</h2>
+        <h3 class="blue-text text-lighten-1 bold-txt hide-on-large-only center">History of WISE</h3>
         <p class=" grey-text text-darken-3 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor necessitatibus neque eveniet deleniti quas, animi iusto dolores velit minima. Exercitationem perspiciatis ipsum deleniti obcaecati eveniet porro neque, id voluptatem numquam molestias cumque autem aliquam esse nihil nam beatae quibusdam illum adipisci. Sequi suscipit delectus libero facilis sed ipsa quisquam?</p>
         <br>
-        <h2>Our Vision</h2>
+        <h2 class="blue-text bold-txt hide-on-med-and-down">Our Vision</h2>
+        <h3 class="blue-text bold-txt hide-on-large-only center">Our Vision</h3>
     </div>
         
     <div class="parallax-container">
         <div class="banner-div parallax">
             <img src="./img/3.png" alt="" class="center-align" width="1345px">
-            <h5 class="black-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos est minus, libero unde voluptate praesentium ut quos beatae iusto fugiat!</h5>
+            <h5 class="white-text hide-on-med-and-down">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos est minus, libero unde</h5>
+            <p class="white-text hide-on-large-only">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos est minus, libero unde</p>
+            
         </div>
     </div>
 

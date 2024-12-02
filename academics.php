@@ -30,6 +30,7 @@ include("./templates/header.php");
 }
 </style>
 <body class="background">
+    <!-- hero section -->
     <div class="relative hide-on-med-and-down">
         <video width="100%" class="responsive-video hi" autoplay loop>
             <source src="./img/header-bg-vid.mp4" type="video/mp4">
@@ -41,8 +42,10 @@ include("./templates/header.php");
         </div> -->
     </div>
     <br>
+    <!-- Curriculum section -->
     <div class="container">
-        <h2 class="blue-text bold-txt">Curriculum</h2>
+        <h2 class="blue-text bold-txt hide-on-med-and-down">Curriculum</h2>
+        <h4 class="blue-text bold-txt center hide-on-large-only">Curriculum</h4>
         <div class="row form-bg">
             <div class="col l6 s12">
                 <img src="./img/7.png" alt="" class="responsive-img">
@@ -53,6 +56,7 @@ include("./templates/header.php");
         </div>
     </div>
 
+    <!-- Available classes section -->
     <div class="row blue">
         <br>
         <h2 class="background-text center">Classes Available</h2>
@@ -84,6 +88,7 @@ include("./templates/header.php");
             <p class="grey-text text-lighten-2" href="">SSS 3 </p>
         </div>
     </div>
+    <!-- Register form -->
     <div class="container">
         <h2 class="Blue-text">Register</h2>
         <div class="row form-bg">

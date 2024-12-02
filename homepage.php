@@ -65,8 +65,8 @@ include("./templates/header.php");
     </div>
     <!-- Overview section -->
     <div class="container">
-        <h2 class="bold-txt center hide-on-med-and-down">Overview of WISE</h2>
-        <h4 class="bold-txt center hide-on-large-only">Overview of WISE</h4>
+        <h2 class="blue-text bold-txt center hide-on-med-and-down">Overview of WISE</h2>
+        <h4 class="blue-text bold-txt center hide-on-large-only">Overview of WISE</h4>
         <p class=" grey-text text-darken-2 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
         </p>
 
@@ -81,7 +81,7 @@ include("./templates/header.php");
 
         <!-- News  Section -->
         <section class="">
-        <h2 class="center">News</h2>
+        <h2 class=" blue-text center">News</h2>
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card hoverable">
@@ -89,8 +89,8 @@ include("./templates/header.php");
                             <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Sports Day 2024</span>
-                            <p class="">
+                            <span class="pink-text card-title">Sports Day 2024</span>
+                            <p class="grey-text text-darken-2">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
@@ -98,8 +98,8 @@ include("./templates/header.php");
                             <a href="#Sports" class=" modal-trigger">Read More</a>
                             <div class="modal" id="Sports">
                                 <div class="container">
-                                    <h4>Hi there,</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                    <h4 class="grey-text text-darken-3">Hi there,</h4>
+                                    <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
                                 </div>
                             </div>
                         </div>
@@ -111,8 +111,8 @@ include("./templates/header.php");
                             <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Sports Day 2024</span>
-                            <p class="">
+                            <span class="pink-text card-title">Sports Day 2024</span>
+                            <p class="grey-text text-darken-2">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
@@ -120,8 +120,8 @@ include("./templates/header.php");
                             <a href="#Sports" class=" modal-trigger">Read More</a>
                             <div class="modal" id="Sports">
                                 <div class="container">
-                                    <h4>Hi there,</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                    <h4 class="grey-text text-darken-3">Hi there,</h4>
+                                    <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
                                 </div>
                             </div>
                         </div>
@@ -133,8 +133,8 @@ include("./templates/header.php");
                             <img src="./img/7.png" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Sports Day 2024</span>
-                            <p class="">
+                            <span class="pink-text card-title">Sports Day 2024</span>
+                            <p class="grey-text text-darken-2">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
                             </p>
                         </div>
@@ -142,8 +142,8 @@ include("./templates/header.php");
                             <a href="#Sports" class=" modal-trigger">Read More</a>
                             <div class="modal" id="Sports">
                                 <div class="container">
-                                    <h4>Hi there,</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                    <h4 class="grey-text text-darken-3">Hi there,</h4>
+                                    <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
                                 </div>
                             </div>
                         </div>
