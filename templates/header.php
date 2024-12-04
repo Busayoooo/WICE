@@ -73,16 +73,16 @@
                         </div>
                         <ul class="col l10 hide-on-med-and-down">
                             <li>
-                                <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
+                                <a href="homepage.html" class="blue-text"><i class="material-icons left">home</i>Home</a>
                             </li>
                             <li>
-                                <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
+                                <a href="aboutUs.html" class="blue-text"><i class="material-icons left">people</i>About Us</a>
                             </li>
                             <li>
-                                <a href="academics.php" class="blue-text"><i class="material-icons left">school</i>Academics</a>
+                                <a href="academics.html" class="blue-text"><i class="material-icons left">school</i>Academics</a>
                             </li>
                             <li>
-                                <a href="contactUs.php" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
+                                <a href="contactUs.html" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -92,16 +92,16 @@
         
         <ul class="sidenav navbar-fixed" id="sidenav">
         <li>
-            <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
+            <a href="homepage.html" class="blue-text"><i class="material-icons left">home</i>Home</a>
         </li>
         <li>
-            <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
+            <a href="aboutUs.html" class="blue-text"><i class="material-icons left">people</i>About Us</a>
         </li>
         <li>
-            <a href="academics.php" class="blue-text"><i class="material-icons left">school</i>Academics</a>
+            <a href="academics.html" class="blue-text"><i class="material-icons left">school</i>Academics</a>
         </li>
         <li>
-            <a href="contactUs.php" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
+            <a href="contactUs.html" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
         </li>
         </ul>
     </header>
