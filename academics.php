@@ -62,6 +62,7 @@ include("./templates/header.php");
         <h2 class="background-text center">Classes Available</h2>
         <div class="col l3 grey-text text-darken-3 s6 center">
             <h5 class="center">Pre-School</h2>
+            <p class="grey-text text-lighten-2" href="">Creche</p>
             <p class="grey-text text-lighten-2" href="">play-pen</p>
             <p class="grey-text text-lighten-2" href="">Pre-nursery</p>
             <p class="grey-text text-lighten-2" href="">Nursery 1</p>
@@ -90,7 +91,8 @@ include("./templates/header.php");
     </div>
     <!-- Register form -->
     <div class="container">
-        <h2 class="Blue-text">Register</h2>
+        <h2 class="Blue-text hide-on-med-and-down">Register</h2>
+        <h3 class="Blue-text hide-on-large-only center">Register</h3>
         <div class="row form-bg">
             <div class="col s12 l6">
                 <h3 class=" grey-text text-darken-1">Want to join the <span class="Blue-text">WISE</span> family?</h3>
