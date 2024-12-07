@@ -6,11 +6,16 @@
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3f4f6;
+    }
     .slider .indicators .indicator-item.active {
         background-color: #2196f3;
     }
@@ -67,11 +72,11 @@
             <nav class=" nav-wrapper navbar">
                 <div class="container">
                     <div class="row">
-                        <div class="col l2 s12 center-on-small-only">
-                            <a href="homepage.php" class="brand-logo blue-text" >WICE</a>
+                        <div class="col l2 s12 center-on-small-only ">
+                            <a href="homepage.php" class="brand-logo blue-text" >WISE</a>
                             <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
                         </div>
-                        <ul class="col l10 hide-on-med-and-down">
+                        <ul class="col l10 hide-on-med-and-down right push-l4">
                             <li>
                                 <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
                             </li>

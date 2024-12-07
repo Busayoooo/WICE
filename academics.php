@@ -59,9 +59,10 @@ include("./templates/header.php");
     <!-- Available classes section -->
     <div class="row blue">
         <br>
-        <h2 class="background-text center">Classes Available</h2>
+        <h2 class="background-text center white-text">Classes Available</h2>
         <div class="col l3 grey-text text-darken-3 s6 center">
             <h5 class="center">Pre-School</h2>
+            <p class="grey-text text-lighten-2" href="">Creche</p>
             <p class="grey-text text-lighten-2" href="">play-pen</p>
             <p class="grey-text text-lighten-2" href="">Pre-nursery</p>
             <p class="grey-text text-lighten-2" href="">Nursery 1</p>
@@ -90,13 +91,14 @@ include("./templates/header.php");
     </div>
     <!-- Register form -->
     <div class="container">
-        <h2 class="Blue-text">Register</h2>
+        <h2 class="blue-text hide-on-med-and-down">Register</h2>
+        <h3 class="hide-on-large-only blue-text center">Register</h3>
         <div class="row form-bg">
             <div class="col s12 l6">
                 <h3 class=" grey-text text-darken-1">Want to join the <span class="Blue-text">WISE</span> family?</h3>
                 <p class=" grey-text flow-text">Click the button below to register now 👇</p>
-                <a href="mailto:abassalex49@gmail.com" class= "hide-on-med-and-down blush-pink creamy-white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
-                <a class= "hide-on-large-only right blush-pink creamy-white-text btn btn-large left hoverable">Call us Now<i class="right material-icons">phone</i></a>
+                <a href="mailto:abassalex49@gmail.com" class= "hide-on-med-and-down blue white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
+                <a class= "hide-on-large-only btn btn-large hoverable blue white-text right">Call us Now<i class=" material-icons right">phone</i></a>
             </div>
                 <div class="col s12 l6">
                     <form action="./academics.php" method="post">
@@ -124,31 +126,40 @@ include("./templates/header.php");
                 </div>
         </div>
     </div>
-    <div class="parallax-container">
-            <div class="parallax">
-                <img src="./img/3.png" alt="" class="">
-            </div>
+    <div class="parallax-container hide-on-med-and-down">
+        <div class="parallax">
+            <img src="./img/3.png" alt="" class="">
+        </div>
     </div>
+    <div class="hide-on-large-only">
+        <img src="./img/3.png" alt="" class="responsive-img">
+    </div>  
     <div class="container">
         <h2 class="blue-text ">Nursery</h2>
         <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
     </div>
 
-    <div class="parallax-container">
-            <div class="parallax">
-                <img src="./img/3.png" alt="" class="">
-            </div>
+    <div class="parallax-container hide-on-med-and-down">
+        <div class="parallax">
+            <img src="./img/3.png" alt="" class="">
+        </div>
     </div>
+    <div class="hide-on-large-only">
+        <img src="./img/3.png" alt="" class="responsive-img">
+    </div>  
     <div class="container">
         <h2 class="blue-text ">Primary</h2>
         <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
     </div>
 
-    <div class="parallax-container">
-            <div class="parallax">
-                <img src="./img/3.png" alt="" class="">
-            </div>
+    <div class="parallax-container hide-on-med-and-down">
+        <div class="parallax">
+            <img src="./img/3.png" alt="" class="">
+        </div>
     </div>
+    <div class="hide-on-large-only">
+        <img src="./img/3.png" alt="" class="responsive-img">
+    </div>  
     <div class="container">
         <h2 class="blue-text ">Secondary</h2>
         <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
