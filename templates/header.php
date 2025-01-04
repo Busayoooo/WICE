@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -47,7 +46,7 @@
 
     .navbar{
         background: transparent !important;
-        transition: background 0.2s ease, color 0.2s ease;
+        transition: 500ms background 0.2s ease, color 0.2s ease;
     }
     .navbar a{
         color: #2196f3;
@@ -65,6 +64,21 @@
         position: fixed;
         width: 100%;
     }
+    .section-heading {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+    .section-heading::after {
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: #E91E63;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        }
 </style>
 <body>
     <header>
@@ -73,7 +87,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only ">
-                            <a href="homepage.php" class="brand-logo blue-text" >WISE</a>
+                            <a href="homepage.php" class="brand-logo blue-text" >WICE</a>
                             <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">

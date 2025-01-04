@@ -78,6 +78,9 @@
         .faq h5 {
             font-weight: 600;
         }
+        div.page-header p{
+            padding: 0px 20px;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +88,8 @@
 <br>
     <!-- Page Header -->
 <div class="page-header">
-    <h1 class="blue-text">Get in <span class="pink-text text-accent-2">Touch</span></h1>
+    <h1 class="blue-text hide-on-med-and-down">Get in <span class="pink-text text-accent-2">Touch</span></h1>
+    <h2 class="blue-text hide-on-large-only">Get in <span class="pink-text text-accent-2">Touch</span></h2>
     <p class="flow-text grey-text text-darken-1">We'd love to hear from you! Let us know how we can help.</p>
 </div>
 
@@ -94,7 +98,8 @@
         <div class="row form-bg">
             <!-- Contact Form -->
             <div class="col s12 l6">
-                <h4 class="blue-text">Need Assistance? Drop Us a Message!</h4>
+                <h4 class="blue-text hide-on-med-and-down">Need Assistance? Drop Us a Message!</h4>
+                <h4 class="blue-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
                 <form action="./contact-handler.php" method="post" id="contact-form">
                     <div class="input-field">
                         <input type="text" name="name" id="name" required>
