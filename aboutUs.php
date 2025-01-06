@@ -14,21 +14,136 @@ include("./templates/header.php");
     <title>Document</title>
 </head>
 <style>
+    .video-txt{
+        position:absolute;
+        top: 35%;
+        left: 5%;
+    }
+    /* Default hidden state */
+    .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: 1s all 0.2s ease-out; /* Smooth transition */
+}
+
+/* Visible state (triggered by JS) */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+.fade-in-left.hidden {
+    opacity: 0; /* Completely transparent */
+    transform: translateX(-50px); /* Start 50px to the left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Visible state (triggered by adding the 'visible' class) */
+.fade-in-left.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Fade-in from the right */
+.fade-in-right.hidden {
+    transform: translateX(50px); /* Start 50px to the right */
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to its original position */
+}
+
+/* Fade-in from the bottom */
+.fade-in-bottom.hidden {
+    transform: translateY(50px); /* Start 50px below */
+}
+
+.fade-in-bottom.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+}
     .bold-txt{
         font-weight: bold;
     }
+    
+    /* Card Action Default State */
+.card-action {
+    position: relative;
+    padding: 10px;
+    background-color: white; /* Default background color */
+    border-radius: 0 0 20px 20px; /* Match card's border-radius */
+    transition: background-color 0.3s ease;
+}
+
+/* Primary Link Default Style */
+.card-action .primary-action {
+    font-weight: bold;
+    color: #E91E63; /* Pink text for the link */
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Card Action */
+.hover-trigger:hover {
+    background-color: #E91E63; /* Pink background on hover */
+}
+
+/* Change Primary Link Color on Hover */
+.hover-trigger:hover .primary-action {
+    color: white; /* Change link text color to white */
+}
+
+/* Contact Icons Hidden Initially */
+.contact-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Hidden state */
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Style for Circular Contact Icons */
+.contact-icons .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: white; /* White background for icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons i {
+    color: #E91E63; /* Pink icon color */
+    font-size: 1.2rem;
+}
+
+/* Show Icons on Hover */
+.hover-trigger:hover .contact-icons {
+    transform: translate(-50%, -50%) scale(1); /* Icons scale to visible */
+    opacity: 1;
+}
+
+
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
         color: #E91E63;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
         color: #E91E63;
     }
-
+    .slider-div{
+        position: relative;
+    }
     .banner-div{
         position: relative;
     }
 
-    .banner-div h5{
+    .banner-div.parallax h5{
         padding: 20px;
         position: absolute;
         color: white;
@@ -62,154 +177,398 @@ include("./templates/header.php");
     .cta-section a:hover {
         color: #F8BBD0;
     }
-    /* Parallax Styling */
-    .banner-div {
-        position: relative;
-    }
+    .pulsating-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+    opacity: 0; /* Start as hidden */
+    transform: scale(1); /* Normal scale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
 
-    .banner-div h5, 
-    .banner-div p {
-        position: absolute;
-        color: white;
-        padding: 20px;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    }
+.pulsating-section.visible {
+    opacity: 1; /* Become visible */
+    transform: scale(1.05); /* Slightly scale up */
+}
 
-    .banner-div h5 {
-        top: 40%;
-        left: 10%;
-    }
+    .pulsate-line {
+    display: flex; /* Align words in a line */
+    justify-content: center;
+    gap: 10px; /* Space between words */
+    
+}
 
-    .banner-div p {
-        top: 50%;
-        left: 10%;
-    }
+.word {
+    font-size: 15px; /* Smaller initial size */
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly smaller than normal */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+}
+
+
+
+.word.visible {
+    opacity: 1; /* Fully visible */
+    transform: scale(1.1); /* Grow slightly bigger */
+}
+
+
+    .btn {
+            border-radius: 30px;
+            text-transform: none;
+        }
 
 </style>
 <body class="background">
-    <div class="parallax-container">
-            <div class="parallax">
-                <img src="./img/3.png" alt="" class="">
-            </div>
+    <!-- Hero section -->
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <div class="slider-div">
+                    <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text center">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
     <br>
-    <div class="container ">
+
+    <!-- History of WISE -->
+    <div class="container hidden fade-in-left">
         <h2 class="blue-text section-heading text-lighten-1 bold-txt hide-on-med-and-down">History of WISE</h2>
         <h3 class="blue-text section-heading text-lighten-1 bold-txt hide-on-large-only center">History of WISE</h3>
-        <p class=" grey-text text-darken-3 flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus at, nam illo rerum ullam expedita voluptatum porro. Sequi, optio! Hic vitae officia natus, numquam molestias, expedita, alias amet nisi harum repudiandae minus omnis reprehenderit corporis aliquam! Unde numquam corrupti quod, ipsam, pariatur provident magnam nam enim dolorem reiciendis illo! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officia vitae odit, alias officiis quae beatae vero qui delectus sit perspiciatis cum, porro veniam. Blanditiis alias quod quos, facere cum debitis est officiis ducimus molestias quidem possimus, optio exercitationem porro fugiat non laudantium unde error consequuntur quae mollitia, inventore nisi?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor necessitatibus neque eveniet deleniti quas, animi iusto dolores velit minima. Exercitationem perspiciatis ipsum deleniti obcaecati eveniet porro neque, id voluptatem numquam molestias cumque autem aliquam esse nihil nam beatae quibusdam illum adipisci. Sequi suscipit delectus libero facilis sed ipsa quisquam?</p>
+        <p class=" grey-text text-darken-3 flow-text">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
+            <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> <br> <br>
+        In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary      individuals came together to establish a private school that would provide quality education to the children of the community. The year was     2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty,     limited access to education, and a lack of opportunities for social mobility... 
+        <a href="#History" class="pink-text modal-trigger">Read More</a>
+        </p>
         <br>
-        <h2 class="blue-text section-heading bold-txt hide-on-med-and-down">Our Vision</h2>
-        <h3 class="blue-text section-heading bold-txt hide-on-large-only center">Our Vision</h3>
+        <div class="vision-heading hidden fade-in-right">
+            <h2 class="blue-text section-heading bold-txt hide-on-med-and-down">Our Vision</h2>
+            <h3 class="blue-text section-heading bold-txt hide-on-large-only center">Our Vision</h3>
+        </div>
     </div>
         
+    <div id="History" class="modal">
+            <div class="modal-content">
+            <p class=" grey-text text-darken-3 flow-text">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
+                <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> <br> <br>
+                In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary individuals came together to establish a private school that would provide quality education to the children of the community. The year was 2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty, limited access to education, and a lack of opportunities for social mobility. <br> <br>
+                Despite these challenges, the founders of Wisdom College of Excellence (WICE) were determined to create a institution that would empower the children of Iwopin with the knowledge, skills, and values necessary to succeed in life. The school's mission was to provide a holistic education that would prepare students for academic excellence, personal growth, and community leadership. <br> <br>
+                <strong class="bold-txt">Early Years (2019-2020):</strong> <br> <br>
+                WICE began with a humble start, with a small group of students and a handful of teachers. The school was housed in a temporary facility, and the curriculum was focused on providing a solid foundation in core subjects such as English, mathematics, science, computer studies and social studies. Despite the challenges of limited resources and infrastructure, the school's founders and staff were committed to providing a high-quality education that would meet the needs of the community. <br> <br>
+                <strong class="bold-txt">Growth and Development (2020-Present):</strong> <br> <br>
+                In the years since its founding, WICE has experienced significant growth and development. The school has expanded its curriculum to include a range of subjects, including computer science, arts, and music. The school has also introduced extracurricular activities, such as sports, debate, and cultural clubs, to provide students with opportunities for personal growth and development. <br> <br>
+                In 2020, WICE relocated to a new, purpose-built facility that provides a safe and conducive learning environment for students. The school has also invested in modern technology, including computers, tablets, and educational software, to enhance the learning experience. <br> <br>
+                <strong class="bold-txt">Community Engagement and Partnerships:</strong> <br> <br>
+                WICE is committed to engaging with the local fishing community, established fish farm, advancing community health, Poverty reduction and forming partnerships with organizations and individuals who share its mission and values. The school has established relationships with local businesses, community groups, and government agencies to provide students with opportunities for internships, mentorship, and community service. This partnership is supporting to overcoming adversity in the community. <br> <br>
+                In 2022, WICE launched a community digital literacy outreach program, which provides support to young people, local families and individuals in need to learning computers and digital tools for growth and transformation. Other community outreach program includes initiatives such as literacy classes, Gender Based violence, health clinics, and economic empowerment schemes. <br> <br>
+                <strong class="bold-txt">Vision for the Future:</strong> <br> <br>
+                As WICE looks to the future, the school is committed to continuing its mission of providing a high-quality education that empowers the children of Iwopin to succeed in life. The school's vision is to become a leading institution in the region, known for its academic excellence, innovative approaches to education, and commitment to community development. <br> <br>
+                With the support of its founders, staff, students, and the local community, WICE is poised to make a positive impact on the lives of generations to come. The school's motto, "Skills for Today Future Leader," reflects its commitment to providing a holistic education that prepares students for success in all aspects of life.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
     <!-- Vision Section with Parallax -->
-    <div class="parallax-container">
+    <div class="parallax-container hide-on-med-and-down">
         <div class="banner-div parallax">
-            <img src="./img/3.png" alt="Our Vision Background" class="responsive-img">
-            <h5 class="white-text hide-on-med-and-down">"Empowering young minds for a brighter tomorrow."</h5>
-            <p class="white-text hide-on-large-only">"Empowering young minds for a brighter tomorrow."</p>
+            <img src="./img/20240810_113517.jpg" alt="Our Vision Background" class="responsive-img">
+            <h5 class="white-text hide-on-med-and-down">"A society where learning  is transformed for Brighter Future"</h5>
+        </div>
+    </div>
+
+    <div class="hide-on-large-only ">
+        <div class="banner-div">
+            <img src="./img/20240810_113517.jpg" alt="Our Vision Background" class="responsive-img">
+            <p class="white-text ">"A society where learning  is transformed for Brighter Future"</p>
         </div>
     </div>
     
-
+    <!-- Our Team section -->
     <div class="container">
-        
-
-        <h3 class="Blue-text bold-txt section-heading">Our Team</h3>
+        <div class="hidden fade-in-left"><h3 class="Blue-text bold-txt section-heading">Our Team</h3></div>
         <div class="row">
-            <div class="col l4">
-                <div class="card hoverable">
+            <div class="col l4 hidden fade-in-bottom">
+                <div class="card hoverable ">
                     <div class="card-image">
-                        <img src="./img/3.png" alt="" class="responsive-img">
+                        <img src="./img/School_admin.jpg" alt="School administrator" class="responsive-img">
                     </div>
                     <div class="card-content">
-                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
-                        <p class="grey-text text-darken-3">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
-                        </p>
+                        <h6 class="bold-txt pink-text card-title">Oke Abass Sheriff</h6>
+                        <p class="grey-text text-darken-3">Scool Administrator</p>
                     </div>
-                    <div class="card-action">
-                        <a href="">Contact</a>
+                    <div class="card-action hover-trigger">
+                        <a href="#" class="primary-action">Contact</a>
+                        <div class="contact-icons hidden">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                                <i class="material-icons">phone</i>
+                            </a>
+                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                                <i class="material-icons">email</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col l4">
+            <div class="col l4 hidden fade-in-bottom">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./img/3.png" alt="" class="responsive-img">
+                        <img src="./img/ASS._HOA1.jpg" alt="Ass. HOA" class="responsive-img">
                     </div>
                     <div class="card-content">
-                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
-                        <p class="grey-text text-darken-3">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
-                        </p>
+                        <h6 class="bold-txt pink-text card-title">O. A Taiwo</h6>
+                        <p class="grey-text text-darken-3">Ass. Head of Academics</p>
                     </div>
-                    <div class="card-action">
-                        <a href="">Contact</a>
+                    <div class="card-action hover-trigger">
+                        <a href="#" class="primary-action">Contact</a>
+                        <div class="contact-icons hidden">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                                <i class="material-icons">phone</i>
+                            </a>
+                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                                <i class="material-icons">email</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col l4">
+            <div class="col l4 hidden fade-in-bottom">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./img/3.png" alt="" class="responsive-img">
+                        <img src="./img/HOA.jpg" alt="HOA" class="responsive-img">
                     </div>
                     <div class="card-content">
-                        <h6 class="bold-txt pink-text card-title">Our vision</h6>
-                        <p class="grey-text text-darken-3">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam vel nostrum ex, alias aperiam illo distinctio eaque cupiditate laboriosam itaque?
-                        </p>
+                        <h6 class="bold-txt pink-text card-title">Adams Agbro</h6>
+                        <p class="grey-text text-darken-3">Head of Academics</p>
                     </div>
-                    <div class="card-action">
-                        <a href="">Contact</a>
+                    <div class="card-action hover-trigger">
+                        <a href="#" class="primary-action">Contact</a>
+                        <div class="contact-icons hidden">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                                <i class="material-icons">phone</i>
+                            </a>
+                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                                <i class="material-icons">email</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+<br>
 
+<!-- Call to Action Section -->
+<div class="cta-section blue pulsating-section">
+        <h4>Ready to join the WISE Community?</h4>
+        <p>
+            Enroll your child today and take the first step towards a brighter future.
+            <br>
+            <a href="./academics.php#target-section">Click here to get started</a>
+        </p>
+    </div>
+
+    <br> <br>
+
+    <div class="container">
         <!-- Values Section -->
-        <h4 class="blue-text bold-txt">Our Values</h4>
+        <h4 class="blue-text bold-txt section-heading">Our Values</h4>
         <div class="divider blue"></div>
         <br>
-        <div class="row">
-            <div class="col s3 center values-item pink-text">Innovation</div>
-            <div class="col s3 center values-item pink-text">Excellence</div>
-            <div class="col s3 center values-item pink-text">Respect</div>
-            <div class="col s3 center values-item pink-text">Teamwork</div>
+        <div class="row pulsate-line">
+            <span class="col word s3 center values-item pink-text">Innovation</span>
+            <span class="col word s3 center values-item pink-text">Excellence</span>
+            <span class="col word s3 center values-item pink-text">Respect</span>
+            <span class="col word s3 center values-item pink-text">Teamwork</span>
         </div>
         <div class="divider blue"></div>
     </div>
 
     <br> <br>
 
-    <!-- Call to Action Section -->
-    <div class="cta-section blue">
-        <h4>Ready to join the WISE Community?</h4>
-        <p>
-            Enroll your child today and take the first step towards a brighter future.
-            <br>
-            <a href="./enroll.php">Click here to get started</a>
-        </p>
-    </div>
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
         $(document).ready(function(){
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
-            $('.slider').slider();
+            $('.modal').modal();
+            $('.scrollspy').scrollSpy();
             $('.parallax').parallax();
-            $('.collapsible').collapsible();
-        });
-        $(window).scroll(function () {
-                const parallaxHeight = $('.parallax').height(); 
-                if($(window).scrollTop() > parallaxHeight){
+            $('.slider').slider({
+                height:600
+            });
+            $(window).scroll(function () {
+                const sliderHeight = $('.slider').height(); 
+                if($(window).scrollTop() > sliderHeight){
                     $(".navbar").addClass("scrolled");
                 } else {
                     $(".navbar").removeClass("scrolled");
                 }
             });
+
+            // Function to check if an element is in the viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Add 'visible' class to elements with a delay
+        function addFadeInClass() {
+            const elements = document.querySelectorAll('.fade-in-bottom');
+            elements.forEach((element, index) => {
+                if (isInViewport(element)) {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 200); // Stagger delay of 200ms per card
+                }
+            });
+        }
+
+        // Trigger animation on scroll and initial load
+        window.addEventListener('scroll', addFadeInClass);
+        window.addEventListener('load', addFadeInClass);
+
+
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0
+        );
+    }
+
+        // Function to add 'visible' class to elements in the viewport
+        function addVisibleClass() {
+            $('.hidden').each(function () {
+                if (isElementInViewport(this)) {
+                    $(this).addClass('visible');
+                }
+            });
+        }
+
+    // Check elements on scroll
+    $(window).on('scroll', function () {
+        addVisibleClass();
+    });
+
+    // Initial check
+    addVisibleClass();
+    
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Trigger the animation when the section becomes visible
+                    $('.pulsate-line .word').each(function (index) {
+                        setTimeout(() => {
+                            $(this)
+                                .addClass('visible') // Trigger CSS transition
+                                .delay(500) // Stay enlarged for 500ms
+                                .queue(function (next) {
+                                    $(this).css('transform', 'scale(1)'); // Return to normal size
+                                    next();
+                                });
+                        }, index * 800); // Delay for each word
+                    });
+
+                    // Disconnect the observer after animation
+                    observer.disconnect();
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    // Observe the pulsate-line container
+    observer.observe(document.querySelector('.pulsate-line'));
+
+    $(document).ready(function () {
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Trigger the pulsating effect when the section becomes visible
+                    $(entry.target).addClass('visible');
+
+                    // Disconnect the observer after triggering the animation
+                    observer.disconnect();
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    // Observe the pulsating-section
+    observer.observe(document.querySelector('.pulsating-section'));
+});
+
+    });
     </script>
 </body>
 </html>

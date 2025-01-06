@@ -79,15 +79,57 @@
         left: 50%;
         transform: translateX(-50%);
         }
+
+    /* Default hidden state */
+    .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: 1s all 0.1s ease-out; /* Smooth transition */
+}
+
+/* Visible state (triggered by JS) */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+/* General hidden state for fade-in from the left */
+.fade-in-left.hidden {
+    transform: translateX(-50px); /* Start from the left */
+}
+
+/* When the section becomes visible */
+.fade-in-left.visible {
+    opacity: 1;
+}
+/* Fade-in from the right */
+.fade-in-right.hidden {
+    transform: translateX(50px); /* Start 50px to the right */
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to its original position */
+}
+
+/* Fade-in from the bottom */
+.fade-in-bottom.hidden {
+    transform: translateY(50px); /* Start 50px below */
+}
+
+.fade-in-bottom.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+}
+
 </style>
 <body>
     <header>
-        <div class="fixed-top z-depth-0">
+        <div class="fixed-top z-depth-2">
             <nav class=" nav-wrapper navbar">
                 <div class="container">
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only ">
-                            <a href="homepage.php" class="brand-logo blue-text" >WICE</a>
+                            <a href="homepage.php" class="brand-logo blue-text bold-txt" >WICE</a>
                             <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">

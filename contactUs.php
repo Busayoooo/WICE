@@ -81,6 +81,10 @@
         div.page-header p{
             padding: 0px 20px;
         }
+        .form-bg{
+            background-color: rgb(221, 224, 235);
+            padding: 20px 20px;
+        }
     </style>
 </head>
 <body>
@@ -138,8 +142,8 @@
                 </div>
                 <p class="center-on-small-only"><strong>Operating Hours:</strong></p>
                 <ul class="center-on-small-only">
-                    <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
-                    <li>Saturday: 9:00 AM - 2:00 PM</li>
+                    <li>Monday - Friday: 8:00 AM - 2:00 PM</li>
+                    <li>Saturday: Closed</li>
                     <li>Sunday: Closed</li>
                 </ul>
             </div>

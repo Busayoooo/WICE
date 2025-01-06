@@ -1,4 +1,5 @@
 <?php 
+
 include("./templates/header.php");
 include("./templates/connect.php");
 
@@ -12,6 +13,7 @@ $send_fetch_query = mysqli_query($db_connect, $fetch_query);
 $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
 // print_r($news);
+
 ?>
 
 <html lang="en">
@@ -38,8 +40,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     .background{
         background-color: #f3f4f6;
     }
+    
 /* Default hidden state */
-    .hidden {
+.hidden {
     opacity: 0;
     transform: translateY(50px); /* Start slightly below */
     transition: 1s all 0.2s ease-out; /* Smooth transition */
@@ -50,15 +53,19 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     opacity: 1;
     transform: translateY(0); /* Move to original position */
 }
-/* General hidden state for fade-in from the left */
+
 .fade-in-left.hidden {
-    transform: translateX(-50px); /* Start from the left */
+    opacity: 0; /* Completely transparent */
+    transform: translateX(-50px); /* Start 50px to the left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
 }
 
-/* When the section becomes visible */
+/* Visible state (triggered by adding the 'visible' class) */
 .fade-in-left.visible {
-    opacity: 1;
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
 }
+
 /* Fade-in from the right */
 .fade-in-right.hidden {
     transform: translateX(50px); /* Start 50px to the right */
@@ -78,8 +85,6 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     opacity: 1;
     transform: translateY(0); /* Move to its original position */
 }
-
-
     .dark-text{
         color: #212121;
     }
@@ -90,6 +95,11 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         background-color: #E91E63;
         color: white;
         padding: 30px 200px;
+    }
+    .mission-mobile{
+        background-color: #E91E63;
+        color: white;
+        padding: 30px 20px;
     }
     
     .banner-div{
@@ -118,7 +128,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         width: 50px;
         height: 4px;
         background-color: #E91E63;
-        position: absolute;
+        position: absolute; 
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -132,14 +142,14 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
-                        <h3>Welcome to Wisdom College of Excellence</h3>
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
                         <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class=" hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                        <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
+                        <p class="white-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
@@ -147,12 +157,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
-                        <h3>Welcome to Wisdom College of Excellence</h3>
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
                         <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class=" hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
                     <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
                     </div>
@@ -162,12 +172,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
-                        <h3>Welcome to Wisdom College of Excellence</h3>
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
                         <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class=" hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
                     <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
                     </div>
@@ -177,12 +187,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
-                        <h3>Welcome to Wisdom College of Excellence</h3>
+                        <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
                         <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class=" hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
                     <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
                     </div>
@@ -193,7 +203,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
         <!-- Overview Section -->
     <section>
-        <div class="container fade-in-left hidden">
+        <div class="container hidden fade-in-left">
             <h2 class="blue-text bold-txt section-heading center hide-on-med-and-down">Overview of WISE</h2>
             <h4 class="blue-text bold-txt section-heading center hide-on-large-only">Overview of WISE</h4>
             <p class="grey-text text-darken-2 flow-text overview-text">
@@ -206,40 +216,50 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </section>
 
     <!-- Mission Section -->
-    <div class="mission-section hidden">
-            <h3 class="bold-txt section-heading hide-on-med-and-down">Our Mission</h3>
-            <h4 class="bold-txt section-heading hide-on-large-only">Our Mission</h4>
-            <p class="flow-text mission-text">
+    <div class="mission-section hidden hide-on-med-and-down">
+        <h3 class="bold-txt section-heading">Our Mission</h3>
+        <p class="flow-text mission-text">
                 To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
-            </p>
+        </p>
+    </div>
+    <div class="mission-mobile hidden hide-on-large-only">
+        <h4 class="bold-txt section-heading white-text">Our Mission</h4>
+        <p class="flow-text mission-text white-text">
+                To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
+        </p>
     </div>
     <br>
 
         <!-- News Section -->
     <section>
         <div class="container">
-            <h2 class="blue-text center section-heading">Latest News</h2>
+            <div class="hidden fade-in-left"><h2 class="blue-text center section-heading">Latest News</h2></div>
             <div class="row">
                 <?php foreach ($news as $new) { ?>
-                    <div class="col s12 m4">
+                    <div class="col m4 s12 hidden fade-in-bottom">
                         <div class="card hoverable">
                             <div class="card-image">
-                                <img src="./img/7.png" alt="' . $news['news_title'] . '" class="responsive-img">
+                                <img src="<?php echo $new['news_pic'];?>" alt="<?php echo $new['news_title'];?>" class="responsive-img">
                             </div>
                             <div class="card-content">
-                                <span class="pink-text card-title"><?php echo $news['news_title'];?></span>
-                                <p class="grey-text text-darken-2">' . $news["text"] . '</p>
+                                <span class="pink-text card-title"><?php echo $new['news_title'];?></span>
+                                <p class="grey-text text-darken-2"><?php echo $new['news_description']; ?></p>
                             </div>
                             <div class="card-action">
-                                <a href="#Sports" class=" modal-trigger">Read More</a>                    
-                        <div class="modal" id="Sports">
-                            <div class="container">
-                                <img src="./img/20240214_125622.jpg" alt="' . $item["title"] . '" class="responsive-img">
-                                <h4 class="grey-text text-darken-3">Hi there,</h4>
-                                <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus recusandae neque vero dolore officia ducimus excepturi illo est! Ratione blanditiis id ad nobis, unde itaque quia voluptatem quidem optio?</p>
+                                <a href="#<?php echo $new['news_title'];?>" class="modal-trigger">Read More</a>
                             </div>
                         </div>
-                            </div>
+                        
+                    </div>
+                    <div id="<?php echo $new['news_title'];?>" class="modal">
+                        <div class="modal-content">
+                        <img src="<?php echo $new['news_pic'];?>" alt="<?php echo $new['news_title'];?>" class="responsive-img">
+                            <br> <br>
+                            <h4 class="pink-text"><?php echo $new['news_title'];?></h4>
+                            <p><?php echo $new['news_text'];?></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                         </div>
                     </div>
                 <?php } ?> 
@@ -256,7 +276,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             $('.tooltipped').tooltip();
             $('.modal').modal();
             $('.slider').slider({
-                height:500
+                height:600
             });
             $(window).scroll(function () {
                 const sliderHeight = $('.slider').height(); 
@@ -270,12 +290,11 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0
         );
     }
+
 
     // Function to add 'visible' class to elements in the viewport
     function addVisibleClass() {
