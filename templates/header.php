@@ -129,12 +129,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only ">
-                            <a href="homepage.php" class="brand-logo blue-text bold-txt" >WICE</a>
+                            <a href="index.php" class="brand-logo blue-text bold-txt" >WICE</a>
                             <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">
                             <li>
-                                <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
+                                <a href="index.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
                             </li>
                             <li>
                                 <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>
@@ -153,7 +153,7 @@
         
         <ul class="sidenav navbar-fixed" id="sidenav">
         <li>
-            <a href="homepage.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
+            <a href="index.php" class="blue-text"><i class="material-icons left">home</i>Home</a>
         </li>
         <li>
             <a href="aboutUs.php" class="blue-text"><i class="material-icons left">people</i>About Us</a>

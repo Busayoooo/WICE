@@ -68,6 +68,7 @@ include("./templates/header.php");
     }
     
     /* Card Action Default State */
+
 .card-action {
     position: relative;
     padding: 10px;
@@ -80,18 +81,17 @@ include("./templates/header.php");
 .card-action .primary-action {
     font-weight: bold;
     color: #E91E63; /* Pink text for the link */
-    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
 /* Hover Effect for Card Action */
 .hover-trigger:hover {
-    background-color: #E91E63; /* Pink background on hover */
+    background-color: #E91E63 !important; /* Pink background on hover */
 }
 
 /* Change Primary Link Color on Hover */
 .hover-trigger:hover .primary-action {
-    color: white; /* Change link text color to white */
+    color: white !important; /* Change link text color to white */
 }
 
 /* Contact Icons Hidden Initially */
@@ -129,13 +129,13 @@ include("./templates/header.php");
     opacity: 1;
 }
 
-
+/* 
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
         color: #E91E63;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
         color: #E91E63;
-    }
+    } */
     .slider-div{
         position: relative;
     }
@@ -178,47 +178,44 @@ include("./templates/header.php");
         color: #F8BBD0;
     }
     .pulsating-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #f0f0f0;
-    opacity: 0; /* Start as hidden */
-    transform: scale(1); /* Normal scale */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
-}
+        padding: 50px;
+        text-align: center;
+        background-color: #f0f0f0;
+        opacity: 0; /* Start as hidden */
+        transform: scale(1); /* Normal scale */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    }
 
-.pulsating-section.visible {
-    opacity: 1; /* Become visible */
-    transform: scale(1.05); /* Slightly scale up */
-}
+    .pulsating-section.visible {
+        opacity: 1; /* Become visible */
+        transform: scale(1.05); /* Slightly scale up */
+    }
 
-    .pulsate-line {
-    display: flex; /* Align words in a line */
-    justify-content: center;
-    gap: 10px; /* Space between words */
+        .pulsate-line {
+        display: flex; /* Align words in a line */
+        justify-content: center;
+        gap: 10px; /* Space between words */
     
-}
+    }
 
-.word {
-    font-size: 15px; /* Smaller initial size */
-    font-weight: bold;
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.9); /* Slightly smaller than normal */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
-}
-
-
-
-.word.visible {
-    opacity: 1; /* Fully visible */
-    transform: scale(1.1); /* Grow slightly bigger */
-}
+    .word {
+        font-size: 15px; /* Smaller initial size */
+        font-weight: bold;
+        opacity: 0; /* Initially hidden */
+        transform: scale(0.9); /* Slightly smaller than normal */
+        transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+    }
+    
+    .word.visible {
+        opacity: 1; /* Fully visible */
+        transform: scale(1.1); /* Grow slightly bigger */
+    }
 
 
-    .btn {
-            border-radius: 30px;
-            text-transform: none;
-        }
-
+    div.slider-div div a{
+        border-radius: 30px !important ; 
+        text-transform: none !important ;
+    }
 </style>
 <body class="background">
     <!-- Hero section -->
@@ -226,7 +223,7 @@ include("./templates/header.php");
         <ul class="slides">
             <li>
                 <div class="slider-div">
-                    <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
+                    <img src="img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
@@ -235,13 +232,13 @@ include("./templates/header.php");
                     <div class="container video-txt white-text center hide-on-large-only">
                     <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text center">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    <a href="aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="banner-div">
-                    <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
+                    <img src="img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
@@ -256,7 +253,7 @@ include("./templates/header.php");
             </li>
             <li>
                 <div class="banner-div">
-                    <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
+                    <img src="img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
@@ -288,10 +285,10 @@ include("./templates/header.php");
     </div>
     <br>
 
-    <!-- History of WISE -->
+    <!-- History of WICE -->
     <div class="container hidden fade-in-left">
-        <h2 class="blue-text section-heading text-lighten-1 bold-txt hide-on-med-and-down">History of WISE</h2>
-        <h3 class="blue-text section-heading text-lighten-1 bold-txt hide-on-large-only center">History of WISE</h3>
+        <h2 class="blue-text section-heading text-lighten-1 bold-txt hide-on-med-and-down">History of WICE</h2>
+        <h3 class="blue-text section-heading text-lighten-1 bold-txt hide-on-large-only center">History of WICE</h3>
         <p class=" grey-text text-darken-3 flow-text">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
             <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> <br> <br>
         In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary      individuals came together to establish a private school that would provide quality education to the children of the community. The year was     2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty,     limited access to education, and a lack of opportunities for social mobility... 
@@ -359,10 +356,10 @@ include("./templates/header.php");
                     <div class="card-action hover-trigger">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
-                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
                                 <i class="material-icons">phone</i>
                             </a>
-                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                            <a href="mailto:Wceiwopin@gmail.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Me">
                                 <i class="material-icons">email</i>
                             </a>
                         </div>
@@ -381,10 +378,10 @@ include("./templates/header.php");
                     <div class="card-action hover-trigger">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
-                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
                                 <i class="material-icons">phone</i>
                             </a>
-                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                            <a href="mailto:Wceiwopin@gmail.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Me">
                                 <i class="material-icons">email</i>
                             </a>
                         </div>
@@ -403,10 +400,10 @@ include("./templates/header.php");
                     <div class="card-action hover-trigger">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
-                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Us">
+                            <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
                                 <i class="material-icons">phone</i>
                             </a>
-                            <a href="mailto:info@example.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Us">
+                            <a href="mailto:Wceiwopin@gmail.com" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Email Me">
                                 <i class="material-icons">email</i>
                             </a>
                         </div>
@@ -419,7 +416,7 @@ include("./templates/header.php");
 
 <!-- Call to Action Section -->
 <div class="cta-section blue pulsating-section">
-        <h4>Ready to join the WISE Community?</h4>
+        <h4>Ready to join the WICE Community?</h4>
         <p>
             Enroll your child today and take the first step towards a brighter future.
             <br>
@@ -570,5 +567,7 @@ include("./templates/header.php");
 
     });
     </script>
+
+    <?php include("./templates/footer.php"); ?>
 </body>
 </html>

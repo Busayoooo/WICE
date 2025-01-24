@@ -19,3 +19,21 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php 
+
+include("./templates/header.php");
+include("./templates/connect.php");
+
+//write the fetch query
+$fetch_query = "SELECT * FROM `news`";
+
+//send the query to the server
+$send_fetch_query = mysqli_query($db_connect, $fetch_query);
+
+//receive data from server
+$news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
+
+// print_r($news);
+
+?>

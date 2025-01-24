@@ -134,9 +134,9 @@ if (isset($_POST['submit'])) {
     .bold-txt{
         font-weight: bold;
     }
-    .btn {
-            border-radius: 30px;
-            text-transform: none;
+    div.banner-div div a{
+        border-radius: 30px !important ; 
+        text-transform: none !important ;
         }
 </style>
 <body class="background">
@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="bttn btn-large pink lighten-2 hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
                     <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
@@ -257,7 +257,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
     <!-- Available classes section -->
-    <div class="row blue">
+    <div class="row blue hidden fade-in-bottom">
         <br>
         <h2 class="background-text center white-text">Classes Available</h2>
         <div class="col l3 grey-text text-darken-3 s6 center ">
@@ -297,9 +297,9 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="row form-bg hidden fade-in-right">
             <div class="col s12 l6">
-                <h3 class=" grey-text text-darken-1">Want to join the <span class="Blue-text">WISE</span> family?</h3>
+                <h3 class=" grey-text text-darken-1">Want to join the <span class="Blue-text">WICE</span> family?</h3>
                 <p class=" grey-text flow-text">Click the button below to register now 👇</p>
-                <a href="mailto:abassalex49@gmail.com" class= "hide-on-med-and-down blue white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
+                <a href="mailto:Wceiwopin@gmail.com" class= "hide-on-med-and-down blue white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
                 <a class= "hide-on-large-only btn btn-large hoverable blue white-text right">Call us Now<i class=" material-icons right">phone</i></a>
             </div>
                 <div class="col s12 l6">
@@ -342,30 +342,30 @@ if (isset($_POST['submit'])) {
     <!-- Nursery Section -->
     <div class="parallax-container hide-on-med-and-down">
         <div class="parallax">
-            <img src="./img/3.png" alt="" class="">
+            <img src="./img/Nursery.jpg" alt="" class="">
         </div>
     </div>
     <div class="hide-on-large-only">
-        <img src="./img/3.png" alt="" class="responsive-img">
+        <img src="./img/Nursery.jpg" alt="" class="responsive-img">
     </div>  
     <div class="container">
         <div class="hidden fade-in-left"><h2 class="blue-text section-heading">Nursery</h2></div>
-        <p class="flow-text hidden fade-in-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
+        <p class="flow-text hidden fade-in-right">Welcome to our Nursery, where young minds blossom! Our nurturing environment is designed to spark curiosity, creativity, and a love for learning. Through play-based activities and hands-on experiences, we lay the foundation for a bright and exciting educational journey.</p>
     </div>
 
     <!-- Primary section -->
     <div class="parallax-container hide-on-med-and-down">
         <div class="parallax">
-            <img src="./img/3.png" alt="" class="">
+            <img src="./img/Primary.jpg" alt="" class="">
         </div>
     </div>
     <div class="hide-on-large-only">
         
-        <img src="./img/3.png" alt="" class="responsive-img">
+        <img src="./img/Primary.jpg" alt="" class="responsive-img">
     </div>  
     <div class="container">
         <div class="hidden fade-in-left"><h2 class="blue-text section-heading">Primary</h2></div>
-        <p class="flow-text hidden fade-in-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
+        <p class="flow-text hidden fade-in-right">At our Primary School, we focus on building strong academic skills while fostering a sense of responsibility and independence. With engaging lessons and interactive learning, we encourage children to explore, ask questions, and grow into confident learners ready for the challenges ahead.</p>
     </div>
 
     <div class="parallax-container hide-on-med-and-down">
@@ -378,7 +378,7 @@ if (isset($_POST['submit'])) {
     </div>  
     <div class="container">
         <div class="hidden fade-in-left"><h2 class="blue-text section-heading">Secondary</h2></div>
-        <p class="flow-text fade-in-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id ex repellat, ut laborum aliquid consequuntur asperiores tempora ab totam officiis quos voluptate, harum quod nihil dolor odit explicabo exercitationem. </p>
+        <p class="flow-text fade-in-right">Our Secondary School offers a comprehensive education, preparing students for the future with a well-rounded curriculum. With a focus on critical thinking, teamwork, and personal development, we equip our students with the skills and confidence to succeed in both academic and real-world challenges.</p>
     </div>
 
     <script src="js/jquery.js"></script>
@@ -506,5 +506,7 @@ if (isset($_POST['submit'])) {
 
     });
     </script>
+
+    <?php include("./templates/footer.php"); ?>
 </body>
 </html>
