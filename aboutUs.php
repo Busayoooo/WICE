@@ -237,7 +237,7 @@ include("./templates/header.php");
                 </div>
             </li>
             <li>
-                <div class="banner-div">
+                <div class="slider-div">
                     <img src="img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
@@ -252,7 +252,7 @@ include("./templates/header.php");
                 </div>
             </li>
             <li>
-                <div class="banner-div">
+                <div class="slider-div">
                     <img src="img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
@@ -267,7 +267,7 @@ include("./templates/header.php");
                 </div>
             </li>
             <li>
-                <div class="banner-div">
+                <div class="slider-div">
                     <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
                     <div class="caption center-align hide-on-med-and-down">
                         <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
