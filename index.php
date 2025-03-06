@@ -25,7 +25,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>Homepage</title>
 </head>
 <style>
     .slider .indicators .indicator-item.active {
@@ -34,56 +34,14 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     section{
         padding: 50px 0px;
     }
+    .card .card-content {
+        border-radius: 200px;
+    }
     .bold-txt{
         font-weight: bold;
     }
     .background{
         background-color: #f3f4f6;
-    }
-    
-    /* Default hidden state */
-    .hidden {
-        opacity: 0;
-        transform: translateY(50px); /* Start slightly below */
-        transition: 1s all 0.2s ease-out; /* Smooth transition */
-    }
-
-    /* Visible state (triggered by JS) */
-    .visible {
-        opacity: 1;
-        transform: translateY(0); /* Move to original position */
-    }
-
-    .fade-in-left.hidden {
-        opacity: 0; /* Completely transparent */
-        transform: translateX(-50px); /* Start 50px to the left */
-        transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
-    }
-
-    /* Visible state (triggered by adding the 'visible' class) */
-    .fade-in-left.visible {
-        opacity: 1; /* Fully visible */
-        transform: translateX(0); /* Move to original position */
-    }
-
-    /* Fade-in from the right */
-    .fade-in-right.hidden {
-        transform: translateX(50px); /* Start 50px to the right */
-    }
-
-    .fade-in-right.visible {
-        opacity: 1;
-        transform: translateX(0); /* Move to its original position */
-    }
-
-    /* Fade-in from the bottom */
-    .fade-in-bottom.hidden {
-        transform: translateY(50px); /* Start 50px below */
-    }
-
-    .fade-in-bottom.visible {
-        opacity: 1;
-        transform: translateY(0); /* Move to its original position */
     }
     .dark-text{
         color: #212121;
@@ -92,20 +50,36 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         background-color: #E91E63;
     }
     .mission-section{
-        background-color: #E91E63;
         color: white;
         padding: 30px 200px;
     }
     .mission-mobile{
-        background-color: #E91E63;
         color: white;
         padding: 30px 20px;
     }
     
     .banner-div{
         position: relative;
-    } 
+    }
+    .cta-section {
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
 
+    .cta-section h4 {
+        margin-bottom: 20px;
+    }
+
+    .cta-section a {
+        color: #E91E63;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .cta-section a:hover {
+        color: #F8BBD0;
+    }
     .video-txt{
         position:absolute;
         top: 35%;
@@ -203,10 +177,10 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
         <!-- Overview Section -->
     <section>
-        <div class="container hidden fade-in-left">
-            <h2 class="blue-text bold-txt section-heading center hide-on-med-and-down">Overview of WICE</h2>
-            <h4 class="blue-text bold-txt section-heading center hide-on-large-only">Overview of WICE</h4>
-            <p class="grey-text text-darken-2 flow-text overview-text">
+        <div class="container">
+            <h2 class="blue-text bold-txt hidden fade-in-left section-heading center hide-on-med-and-down">Overview of WICE</h2>
+            <h4 class="blue-text bold-txt hidden fade-in-left section-heading center hide-on-large-only">Overview of WICE</h4>
+            <p class="grey-text text-darken-2 hidden fade-in-right flow-text overview-text">
             Wisdom College of Excellence (WICE) located in the serene and picturesque town of Iwopin, Ogun Waterside Local Government Area, Ogun State, Nigeria, Wisdom College of Excellence (WICE) is a premier educational institution dedicated to providing a holistic and inclusive learning experience for students.
             <br> <br>
             <!-- At WICE, we recognize the importance of fostering a love for learning, creativity, and critical thinking in our students. To achieve this, we have implemented a range of innovative programs and initiatives that cater to the diverse needs and interests of our students. -->
@@ -216,18 +190,66 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </section>
 
     <!-- Mission Section -->
-    <div class="mission-section hidden hide-on-med-and-down">
+    <div class="mission-section hidden hide-on-med-and-down blue">
         <h3 class="bold-txt section-heading">Our Mission</h3>
         <p class="flow-text mission-text">
                 To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
         </p>
     </div>
-    <div class="mission-mobile hidden hide-on-large-only">
+    <div class="mission-mobile hidden hide-on-large-only blue">
         <h4 class="bold-txt section-heading white-text">Our Mission</h4>
         <p class="flow-text mission-text white-text">
                 To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
         </p>
     </div>
+
+    <!-- Our Commitments -->
+    <div class="container center">
+        <h2 class="blue-text section-heading"> Commitments </h2>
+        <div class="row">
+            <div class="col s12 l4 ">
+                <div class="card pink hoverable commitment">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>Promoting Student Leadership</strong></span>
+                        <div class="divider black"></div>
+                        <p>We empower students to take initiative, develop critical decision-making skills, and lead with confidence through student councils, mentorship programs, leadership workshops, and specialized training.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l4">
+                <div class="card pink hoverable commitment">
+                    <div class="card-content white-text">
+                        <span class="card-title"><Strong>Promoting Student Entrepreneurship</Strong></span>
+                        <div class="divider black"></div>
+                        <p>We nurture creativity and innovation by equipping students with entrepreneurial skills, fostering a problem-solving mindset, and providing opportunities to develop and launch business ideas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l4">
+                <div class="card pink hoverable commitment">
+                    <div class="card-content white-text">
+                        <span class="card-title white-text"><strong>Promoting Student Global Exposure</strong></span>
+                        <div class="divider black"></div>
+                        <p>We prepare students for a connected world by offering exchange programs, international collaborations, and exposure to diverse cultures, broadening their perspectives and global competencies.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+<div class="cta-section blue pulsating-section">
+        <h4>Ready to join the WICE Community?</h4>
+        <p>
+            Enroll your child today and take the first step towards a brighter future.
+            <br>
+            <a href="./academics.php#target-section">Click here to get started</a>
+        </p>
+    </div>
+
     <br>
 
         <!-- News Section -->

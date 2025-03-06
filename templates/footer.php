@@ -46,31 +46,31 @@
         <div class="row">
             <!-- About Section -->
             <div class="col l4 s12 center">
-                <img src="./img/logo.png" alt="School Logo" width="100px" class="responsive-img brand-logo center">
-                <h5 class="grey-text text-lighten-4">
+                <img src="./img/logo.png" alt="School Logo" width="230px" class="responsive-img brand-logo center">
+                <!-- <h5 class="grey-text text-lighten-4">
                     Wisdom College of Excellence
-                </h5>
+                </h5> -->
             </div>
 
             <!-- Quick Links -->
-            <div class="col l4 s12">
+            <div class="col l3 s12">
                 <h5 class="white-text">Quick Links</h5>
                 <ul>
                     <li><a class="white-text" href="./aboutUs.php">About Us</a></li>
                     <li><a class="white-text" href="./academics.php#target-section">Register</a></li>
-                    <li><a class="white-text" href="./homepage.php#news">Latest News</a></li>
+                    <li><a class="white-text" href="./index.php#news">Latest News</a></li>
                     <li><a class="white-text" href="./contactUs.php">Contact Us</a></li>
                 </ul>
             </div>
 
             <!-- Contact Section -->
-            <div class="col l4 s12">
+            <div class="col l5 s12">
                 <h5 class="white-text">Contact</h5>
                 <ul>
                     <li><i class="material-icons tiny">phone</i> <a class="white-text" href="tel:+2348135958262
 ">+234 813 595 8262</a></li>
-                    <li><i class="material-icons tiny">email</i> <a class="white-text" href="mailto:Wceiwopin@gmail.com
-">Wceiwopin@gmail.com</a></li>
+                    <li><i class="material-icons tiny">email</i> <a class="white-text" href="mailto:info@wisdomcollegeofexcellence.org
+">info@wisdomcollegeofexcellence.org</a></li>
                     <li><i class="material-icons tiny">location_on</i> <span class="white-text">Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</span></li>
                 </ul>
             </div>
@@ -85,6 +85,16 @@
         </div>
     </div>
 </footer>
+
+<script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.datepicker').datepicker();
+            $('.tooltipped').tooltip();
+            $('.modal').modal();
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
 
 </body>
 </html>

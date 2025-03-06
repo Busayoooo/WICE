@@ -11,7 +11,7 @@ include("./templates/header.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>About Us Page</title>
 </head>
 <style>
     .video-txt{
@@ -19,50 +19,6 @@ include("./templates/header.php");
         top: 35%;
         left: 5%;
     }
-    /* Default hidden state */
-    .hidden {
-    opacity: 0;
-    transform: translateY(50px); /* Start slightly below */
-    transition: 1s all 0.2s ease-out; /* Smooth transition */
-}
-
-/* Visible state (triggered by JS) */
-.visible {
-    opacity: 1;
-    transform: translateY(0); /* Move to original position */
-}
-
-.fade-in-left.hidden {
-    opacity: 0; /* Completely transparent */
-    transform: translateX(-50px); /* Start 50px to the left */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
-}
-
-/* Visible state (triggered by adding the 'visible' class) */
-.fade-in-left.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Move to original position */
-}
-
-/* Fade-in from the right */
-.fade-in-right.hidden {
-    transform: translateX(50px); /* Start 50px to the right */
-}
-
-.fade-in-right.visible {
-    opacity: 1;
-    transform: translateX(0); /* Move to its original position */
-}
-
-/* Fade-in from the bottom */
-.fade-in-bottom.hidden {
-    transform: translateY(50px); /* Start 50px below */
-}
-
-.fade-in-bottom.visible {
-    opacity: 1;
-    transform: translateY(0); /* Move to its original position */
-}
     .bold-txt{
         font-weight: bold;
     }
@@ -157,25 +113,6 @@ include("./templates/header.php");
         color: white;
         top: 40%;
         left: 10%;
-    }
-    .cta-section {
-        color: white;
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .cta-section h4 {
-        margin-bottom: 20px;
-    }
-
-    .cta-section a {
-        color: #E91E63;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-
-    .cta-section a:hover {
-        color: #F8BBD0;
     }
     .pulsating-section {
         padding: 50px;
@@ -286,10 +223,10 @@ include("./templates/header.php");
     <br>
 
     <!-- History of WICE -->
-    <div class="container hidden fade-in-left">
-        <h2 class="blue-text section-heading text-lighten-1 bold-txt hide-on-med-and-down">History of WICE</h2>
-        <h3 class="blue-text section-heading text-lighten-1 bold-txt hide-on-large-only center">History of WICE</h3>
-        <p class=" grey-text text-darken-3 flow-text">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
+    <div class="container">
+        <h2 class="blue-text section-heading text-lighten-1 hidden fade-in-left bold-txt hide-on-med-and-down">History of WICE</h2>
+        <h3 class="blue-text section-heading text-lighten-1 hidden fade-in-left bold-txt hide-on-large-only center">History of WICE</h3>
+        <p class=" grey-text text-darken-3 flow-text hidden fade-in-right">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
             <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> <br> <br>
         In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary      individuals came together to establish a private school that would provide quality education to the children of the community. The year was     2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty,     limited access to education, and a lack of opportunities for social mobility... 
         <a href="#History" class="pink-text modal-trigger">Read More</a>
@@ -414,18 +351,6 @@ include("./templates/header.php");
     </div>
 <br>
 
-<!-- Call to Action Section -->
-<div class="cta-section blue pulsating-section">
-        <h4>Ready to join the WICE Community?</h4>
-        <p>
-            Enroll your child today and take the first step towards a brighter future.
-            <br>
-            <a href="./academics.php#target-section">Click here to get started</a>
-        </p>
-    </div>
-
-    <br> <br>
-
     <div class="container">
         <!-- Values Section -->
         <h4 class="blue-text bold-txt section-heading">Our Values</h4>
@@ -438,9 +363,8 @@ include("./templates/header.php");
             <span class="col word s3 center values-item pink-text">Teamwork</span>
         </div>
         <div class="divider blue"></div>
+        <br> <br>
     </div>
-
-    <br> <br>
 
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>

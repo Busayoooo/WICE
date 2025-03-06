@@ -92,14 +92,25 @@
     opacity: 1;
     transform: translateY(0); /* Move to original position */
 }
-/* General hidden state for fade-in from the left */
+.fade-in-top.hidden {
+        transform: translateY(-50px); /* Start 50px below */
+    }
+
+    .fade-in-top.visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to its original position */
+    }
+/* General hidden state */
 .fade-in-left.hidden {
+    opacity: 0;
     transform: translateX(-50px); /* Start from the left */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* When the section becomes visible */
 .fade-in-left.visible {
     opacity: 1;
+    transform: translateX(0);
 }
 /* Fade-in from the right */
 .fade-in-right.hidden {

@@ -293,49 +293,49 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </div>
-        <!-- Social Links Desktop-->
-        <div class="socials center hide-on-med-and-down hidden fade-in-bottom">
-            <h4>Follow Us on Social Media</h4>
-            <div class="row social">
-                <div class="col s12 m3">
-                    <a href="mailto:Wceiwopin@gmail.com" class="center"><i class="material-icons social-icons">email</i>Email</a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="tel:+2348135958262" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
-                </div>
+    <!-- Social Links Desktop-->
+    <div class="socials center scrollspy hide-on-med-and-down hidden fade-in-bottom">
+        <h4>Follow Us on Social Media</h4>
+        <div class="row social">
+            <div class="col s12 m3">
+                <a href="mailto:Wceiwopin@gmail.com" class="center"><i class="material-icons social-icons">email</i>Email</a>
+            </div>
+            <div class="col s12 m3">
+                <a href="tel:+2348135958262" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
+            </div>
+            <div class="col s12 m3">
+                <a href="" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
+            </div>
+            <div class="col s12 m3">
+                <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
             </div>
         </div>
-        <!-- Social Links Mobile-->
-        <div class="socials center hide-on-large-only hidden fade-in-bottom">
-            <h4>Follow Us on Social Media</h4>
-            <br>
-            <div class="row container center">
-                <div class="col s6 m3">
-                    <a href="#" class="center"><i class="material-icons social-icons">email</i>Email</a>
-                </div>
-                <div class="col s6 m3">
-                    <a href="#" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
-                </div>
-                <div class="col s6 m3">
-                    <a href="#" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
-                </div>
-                <div class="col s6 m3">
-                    <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
-                </div>
+    </div>
+    <!-- Social Links Mobile-->
+    <div class="socials center hide-on-large-only hidden fade-in-bottom">
+        <h4>Follow Us on Social Media</h4>
+        <br>
+        <div class="row container center">
+            <div class="col s6 m3">
+                <a href="#" class="center"><i class="material-icons social-icons">email</i>Email</a>
+            </div>
+            <div class="col s6 m3">
+                <a href="#" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
+            </div>
+            <div class="col s6 m3">
+                <a href="#" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
+            </div>
+            <div class="col s6 m3">
+                <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
             </div>
         </div>
+    </div>
 
     <div class="container">
         <!-- FAQ Section -->
         <div class="faq hidden fade-in-right">
             <h5 class="blue-text bold-txt section-heading">Frequently Asked Questions</h5>
-            <ul class="collapsible ">
+            <ul class="collapsible">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">help_outline</i>What is the school's admission process?</div>
                     <div class="collapsible-body"><span>Our admission process involves an online application, a personal interview, and document submission. You can contact us for more details.</span></div>
@@ -359,7 +359,10 @@ if (isset($_POST['submit'])) {
         $(document).ready(function(){
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
+            $('.collapsible').collapsible();
             $('.modal').modal();
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
             $('.slider').slider({
                 height:600
             });
