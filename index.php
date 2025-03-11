@@ -252,6 +252,41 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
     <br>
 
+    <!-- SDG Section -->
+    <div class="SDG">
+        <div class="Center"><h2 class="center section-heading blue-text">SDGs</h2></div>
+        <div class="row">
+            <div class="col s6 l3 ">
+                <div class="card hoverable blue">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>SDG 1</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 l3 ">
+                <div class="card hoverable blue">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>SDG 3</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 l3 ">
+                <div class="card hoverable blue">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>SDG 4</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 l3 ">
+                <div class="card hoverable blue">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>SDG 5</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <!-- News Section -->
     <section>
         <div class="container scrollspy" id="news">
