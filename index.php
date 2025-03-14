@@ -109,6 +109,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
 </style>
 <body class="background">
+    <div class="" style="margin-top: 3px;"></div>
     <!-- Hero section -->
     <div class="slider">
         <ul class="slides">
