@@ -28,6 +28,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <title>Homepage</title>
 </head>
 <style>
+
     .slider .indicators .indicator-item.active {
         background-color: #E91E63;
     }
@@ -39,9 +40,6 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
     .bold-txt{
         font-weight: bold;
-    }
-    .background{
-        background-color: #f3f4f6;
     }
     .dark-text{
         color: #212121;
@@ -72,7 +70,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
 
     .cta-section a {
-        color: #E91E63;
+        color: #F472B6;
         font-weight: bold;
         text-decoration: underline;
     }
@@ -87,26 +85,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
     .overview-text, .mission-text {
             line-height: 1.8;
+            color: #E5E7EB;
     }
     div.banner-div div a{
         border-radius: 30px !important ; 
         text-transform: none !important ;
         }
-    .section-heading {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 10px;
-    }
-    .section-heading::after {
-        content: "";
-        width: 50px;
-        height: 4px;
-        background-color: #E91E63;
-        position: absolute; 
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 </style>
 <body class="background">
     <div class="" style="margin-top: 3px;"></div>
@@ -179,9 +163,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         <!-- Overview Section -->
     <section>
         <div class="container">
-            <h2 class="blue-text bold-txt hidden fade-in-left section-heading center hide-on-med-and-down">Overview of WICE</h2>
-            <h4 class="blue-text bold-txt hidden fade-in-left section-heading center hide-on-large-only">Overview of WICE</h4>
-            <p class="grey-text text-darken-2 hidden fade-in-right flow-text overview-text">
+            <h2 class="primary-text bold-txt hidden fade-in-left section-heading center hide-on-med-and-down">Overview of WICE</h2>
+            <h4 class="primary-text bold-txt hidden fade-in-left section-heading center hide-on-large-only">Overview of WICE</h4>
+            <p class="general hidden fade-in-right flow-text overview-text">
             Wisdom College of Excellence (WICE) located in the serene and picturesque town of Iwopin, Ogun Waterside Local Government Area, Ogun State, Nigeria, Wisdom College of Excellence (WICE) is a premier educational institution dedicated to providing a holistic and inclusive learning experience for students.
             <br> <br>
             <!-- At WICE, we recognize the importance of fostering a love for learning, creativity, and critical thinking in our students. To achieve this, we have implemented a range of innovative programs and initiatives that cater to the diverse needs and interests of our students. -->
@@ -191,48 +175,48 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </section>
 
     <!-- Mission Section -->
-    <div class="mission-section hidden hide-on-med-and-down blue">
-        <h3 class="bold-txt section-heading">Our Mission</h3>
-        <p class="flow-text mission-text">
+    <div class="mission-section hidden hide-on-med-and-down secondary">
+        <h3 class="bold-txt accent-text">Our Mission</h3>
+        <p class="flow-text mission-text general">
                 To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
         </p>
     </div>
-    <div class="mission-mobile hidden hide-on-large-only blue">
-        <h4 class="bold-txt section-heading white-text">Our Mission</h4>
-        <p class="flow-text mission-text white-text">
+    <div class="mission-mobile hidden hide-on-large-only secondary">
+        <h4 class="bold-txt accent-text">Our Mission</h4>
+        <p class="flow-text mission-text general">
                 To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
         </p>
     </div>
 
     <!-- Our Commitments -->
     <div class="container center">
-        <h2 class="blue-text section-heading"> Commitments </h2>
+        <h2 class="primary-text section-heading"> Commitments </h2>
         <div class="row">
-            <div class="col s12 l4 ">
-                <div class="card pink hoverable commitment">
-                    <div class="card-content white-text">
-                        <span class="card-title"><strong>Promoting Student Leadership</strong></span>
-                        <div class="divider black"></div>
+            <div class="col s12 l4 hidden">
+                <div class="card secondary hoverable commitment">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>Promoting Student Leadership</strong></span>
+                        <div class="divider accent"></div>
                         <p>We empower students to take initiative, develop critical decision-making skills, and lead with confidence through student councils, mentorship programs, leadership workshops, and specialized training.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <div class="card pink hoverable commitment">
-                    <div class="card-content white-text">
-                        <span class="card-title"><Strong>Promoting Student Entrepreneurship</Strong></span>
-                        <div class="divider black"></div>
+            <div class="col s12 l4 hidden">
+                <div class="card secondary hoverable commitment">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><Strong>Promoting Student Entrepreneurship</Strong></span>
+                        <div class="divider accent"></div>
                         <p>We nurture creativity and innovation by equipping students with entrepreneurial skills, fostering a problem-solving mindset, and providing opportunities to develop and launch business ideas.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <div class="card pink hoverable commitment">
-                    <div class="card-content white-text">
-                        <span class="card-title white-text"><strong>Promoting Student Global Exposure</strong></span>
-                        <div class="divider black"></div>
+            <div class="col s12 l4 hidden">
+                <div class="card secondary hoverable commitment">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>Promoting Student Global Exposure</strong></span>
+                        <div class="divider accent"></div>
                         <p>We prepare students for a connected world by offering exchange programs, international collaborations, and exposure to diverse cultures, broadening their perspectives and global competencies.
                     </p>
                     </div>
@@ -242,46 +226,74 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </div>
 
     <!-- Call to Action Section -->
-<div class="cta-section blue pulsating-section">
-        <h4>Ready to join the WICE Community?</h4>
-        <p>
+    <div class="cta-section secondary pulsating-section">
+        <div class="general">
+            <h4 class="primary-text">Ready to join the WICE Community?</h4>
+            <p>
             Enroll your child today and take the first step towards a brighter future.
             <br>
             <a href="./academics.php#target-section">Click here to get started</a>
-        </p>
+            </p>
+        </div>
     </div>
 
     <br>
 
     <!-- SDG Section -->
     <div class="SDG">
-        <div class="Center"><h2 class="center section-heading blue-text">SDGs</h2></div>
+        <div class="Center"><h2 class="center section-heading primary-text">SDGs</h2></div>
         <div class="row">
             <div class="col s6 l3 ">
-                <div class="card hoverable blue">
-                    <div class="card-content white-text">
-                        <span class="card-title"><strong>SDG 1</strong></span>
+                <div class="card hoverable secondary">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>SDG 1: No Poverty</strong></span>
+                        <p>1. Financial Literacy: Educate students on money management, saving, and investment principles.
+                        <br>
+                        2. Entrepreneurship: Teach business planning, problem-solving, and enterprise management skills.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col s6 l3 ">
-                <div class="card hoverable blue">
-                    <div class="card-content white-text">
-                        <span class="card-title"><strong>SDG 3</strong></span>
+                <div class="card hoverable secondary">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>SDG 3: Health and wellbeing
+                        </strong></span>
+                        <p>1. Medical Outreach: Raise awareness about health issues through community programs.
+                        <br>
+                        2. Health Education: Provide health education in schools to promote well-being.
+                        </p>
+
                     </div>
                 </div>
             </div>
             <div class="col s6 l3 ">
-                <div class="card hoverable blue">
-                    <div class="card-content white-text">
-                        <span class="card-title"><strong>SDG 4</strong></span>
+                <div class="card hoverable secondary">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>SDG 4: Quality Education</strong></span>
+                        <p>1. Inclusive Education: Provide resources and support for students with disabilities.
+                        <br>
+                        2. Literacy Programs: Improve reading and writing skills through literacy initiatives.
+                        <br>
+                        3. Teacher Training: Equip teachers with innovative teaching methods and technology.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col s6 l3 ">
-                <div class="card hoverable blue">
-                    <div class="card-content white-text">
-                        <span class="card-title"><strong>SDG 5</strong></span>
+                <div class="card hoverable secondary">
+                    <div class="card-content general">
+                        <span class="card-title primary-text"><strong>SDG 5: Gender Equality, empower all women and girls</strong></span>
+                        <p>
+                        1. Prevent disciminstion
+                        <br>
+                        2. Prevent Sexual & Gender based violence
+                        <br>
+                        3. Digital literacy for all
+                        <br>
+                        4. Making Future Female Scientist.
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -291,7 +303,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         <!-- News Section -->
     <section>
         <div class="container scrollspy" id="news">
-            <div class="hidden fade-in-left"><h2 class="blue-text center section-heading">Latest News</h2></div>
+            <div class="hidden fade-in-left"><h2 class="primary-text center section-heading">Latest News</h2></div>
             <div class="row">
                 <?php foreach ($news as $new) { ?>
                     <div class="col m4 s12 hidden fade-in-bottom">

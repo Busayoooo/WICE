@@ -134,82 +134,17 @@ if (isset($_POST['submit'])) {
     .bold-txt{
         font-weight: bold;
     }
+
     div.banner-div div a{
         border-radius: 30px !important ; 
         text-transform: none !important ;
         }
 </style>
 <body class="background">
-    <!-- Hero section -->
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <div class="banner-div">
-                    <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="bttn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="banner-div">
-                    <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="banner-div">
-                    <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="banner-div">
-                    <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <br>
     <!-- Curriculum section -->
     <div class="container">
-        <h2 class="blue-text bold-txt hide-on-med-and-down section-heading hidden fade-in-left">Curriculum</h2>
-        <h4 class="blue-text bold-txt center hide-on-large-only section-heading hidden fade-in-left">Curriculum</h4>
+        <h2 class="grey-text text-darken-3 bold-txt hide-on-med-and-down section-heading hidden fade-in-left">Curriculum</h2>
+        <h4 class="grey-text text-darken-3 bold-txt center hide-on-large-only section-heading hidden fade-in-left">Curriculum</h4>
         <div class="row form-bg hidden fade-in-right">
             <div class="col l6 s12">
                 <img src="./img/20241004_083415.jpg" alt="" class="responsive-img">
@@ -289,11 +224,12 @@ if (isset($_POST['submit'])) {
             <p class="grey-text text-lighten-2" href="">SSS 3 </p>
         </div>
     </div>
+
     <!-- Register form -->
     <div class="container section scrollspy" id="target-section">
         <div class="hidden fade-in-left">
-            <h2 class="blue-text hide-on-med-and-down section-heading">Register</h2>
-            <h3 class="hide-on-large-only blue-text center section-heading">Register</h3>
+            <h2 class="grey-text text-darken-3 hide-on-med-and-down section-heading">Register</h2>
+            <h3 class="hide-on-large-only grey-text text-darken-3 center section-heading">Register</h3>
         </div>
         <div class="row form-bg hidden fade-in-right">
             <div class="col s12 l6">

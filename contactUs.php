@@ -244,6 +244,7 @@ if (isset($_POST['submit'])) {
                     <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a href="tel:+2348135958262">+234 813 595 8262</a></p>
                 </div>
             </div>
+          
             <!-- Contact Form -->
             <div class="col s12 l8">
                 <h4 class="blue-text hide-on-med-and-down center-align">Need More info? Drop a Message!</h4>

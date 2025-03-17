@@ -26,33 +26,28 @@ $current_file = $_SERVER['PHP_SELF'];
         font-family: 'Poppins', sans-serif;
         background-color: #f3f4f6;
     }
-    .slider .indicators .indicator-item.active {
-        background-color: #2196f3;
-    }
 
-    .outline{
-        border: solid #2196f3;
-        border: solid #E91E63;
-        border-width:1px;
-        border-radius: 1px;
+    .navbar{
+        background-color:rgb(52, 55, 253);
+        color: white;
     }
-    .bold-txt{
-        font-weight: bold;
+    .navbar a{
+        color:white ;
     }
     .background{
-        background-color: #f3f4f6;
+        background-color: #FFFFFF !important;
     }
-    .background-text{
-        color: #f3f4f6;
+    .primary{
+        background-color: rgb(52, 55, 253) !important;
     }
-    .dark-text{
-        color: #212121;
+    .primary-text{
+        color: rgb(52, 55, 253) !important;
     }
-    .secondary-color{
-        background-color: #E91E63;
+    .secondary{
+        background-color: #F3F4F6 !important;
     }
-    .light-text{
-        color: #FFFFFF;
+    .secondary-text{
+        color: #F3F4F6;
     }
     .section-heading {
         position: relative;
@@ -63,7 +58,7 @@ $current_file = $_SERVER['PHP_SELF'];
         content: "";
         width: 50px;
         height: 4px;
-        background-color: #E91E63;
+        background-color: #F472B6;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -168,10 +163,11 @@ $current_file = $_SERVER['PHP_SELF'];
                 <div class="container">
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only ">
-                            <a href="index.php" class="brand-logo blue-text bold-txt" >WICE</a>
-                            <a href="#sidenav" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
+                            <a href="index.php" class="brand-logo bold-txt" >WICE</a>
+                            <a href="#sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">
+
                             <li class="nav-list <?= stripos( $current_file, 'index.php' ) ? 'active' : '' ;  ?>">
                                 <a href="index.php" class="blue-text nav-link"><i class="material-icons left">home</i>Home</a>
                             </li>
@@ -204,6 +200,73 @@ $current_file = $_SERVER['PHP_SELF'];
                 <a href="contactUs.php" class="blue-text"><i class="material-icons left">contact_mail</i>Contact Us</a>
             </li>
         </ul>
+
+
+        <!-- Hero section -->
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large accent hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                        <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
+                        <p class="white-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn hide-on-large-only accent hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large accent hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only accent hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large accent hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only accent hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-div">
+                    <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
+                    <div class="caption center-align hide-on-med-and-down">
+                        <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
+                        <p class="white-text flow-text">Skills for today, future leaders</p>
+                        <a href="./aboutUs.php" class="btn btn-large accent hoverable">Learn More</a>
+                    </div>
+                    <div class="container video-txt white-text center hide-on-large-only">
+                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
+                    <p class="white-text">Skills for today, future leaders</p>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only accent hoverable">Learn More</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     </header>
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>

@@ -30,7 +30,7 @@
 }
 
 .page-footer ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 /* Icons in Contact Section */
@@ -39,6 +39,13 @@
     vertical-align: middle;
     color: white;
 }
+    .primary{
+        background-color: #1E3A8A;
+    }
+    .copyright{
+        background-color: #1E3A8A;
+    }
+    
 </style>
 <body>
 <footer class="page-footer blue lighten-2">
