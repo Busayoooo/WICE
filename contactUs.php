@@ -102,134 +102,188 @@ if (isset($_POST['submit'])) {
         transform: translateY(0); /* Move to its original position */
     }
 
-        .btn-custom {
-            background-color: #2196F3;
-            color: white;
-            transition: background-color 0.3s;
-        }
+    .btn-custom {
+        background-color: #2196F3;
+        color: white;
+        transition: background-color 0.3s;
+    }
 
-        .btn-custom:hover {
-            background-color: #1565C0;
-        }
+    .btn-custom:hover {
+        background-color: #1565C0;
+    }
 
-        .social{
-            padding-left: 150px;
-        }
+    .social{
+        padding-left: 150px;
+    }
 
-        .socials {
-            padding: 30px 0;
-            background-color: #2196F3;
-            color: white;
-        }
+    .socials {
+        padding: 30px 0;
+        background-color: #2196F3;
+        color: white;
+    }
 
-        .socials a {
-            color: #ffffff;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: color 0.3s;
-        }
+    .socials a {
+        color: #ffffff;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.3s;
+    }
 
-        .socials a:hover {
-            color: #ff4081;
-        }
+    .socials a:hover {
+        color: #ff4081;
+    }
 
-        .social-icons i {
-            font-size: 1.8rem;
-        }
+    .social-icons i {
+        font-size: 1.8rem;
+    }
 
-        .address {
-            padding: 20px 0;
-        }
+    .address {
+        padding: 20px 0;
+    }
 
-        .faq {
-            margin: 20px 0;
-        }
+    .faq {
+        margin: 20px 0;
+    }
 
-        /* .faq h5 {
-            font-weight: 700;
-            color: #2196F3;
-        } */
-        div.page-header p{
-            padding: 0px 20px;
-        }
-        .form-bg{
-            background-color: rgb(221, 224, 235);
-            padding: 20px 20px;
-        }
-        div.banner-div div a{
+    /* .faq h5 {
+        font-weight: 700;
+        color: #2196F3;
+    } */
+    div.page-header p{
+        padding: 0px 20px;
+    }
+    .form-bg{
+        background-color: rgb(221, 224, 235);
+        padding: 20px 20px;
+    }
+    div.banner-div div a{
         border-radius: 30px !important ; 
         text-transform: none !important ;
     }
+    .container-fluid {
+        width: 100%;
+        max-width: 100%;
+        height: 350px; 
+        position: relative;
+    }
+
+    .container-fluid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(40%);
+    }   
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 2; 
+    }
+    /* Default Button Style (Outline) */
+    .btn-outline {
+        background-color: transparent !important;
+        border: 2px solid #007bff !important;
+        color: #007bff !important;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    /* Hover Effect */
+    .btn-outline:hover {
+        background-color: #007bff !important;
+        color: #fff !important;
+    }
+        
+
     </style>
 </head>
 <body>
-    <!-- Page Header -->
-<div class="page-header">
-    <h1 class="blue-text hide-on-med-and-down hidden fade-in-top">Get in <span class="pink-text text-accent-2">Touch</span></h1>
-    <h2 class="blue-text hide-on-large-only hidden fade-in-top">Get in <span class="pink-text text-accent-2">Touch</span></h2>
-    <p class="flow-text grey-text text-darken-1 hidden fade-in-bottom">We'd love to hear from you! Let us know how we can help.</p>
-</div>
-
-    <div class="container">
-        <!-- Form and Contact Information -->
-        <div class="row form-bg hidden fade-in-right">
-            <!-- Contact Form -->
-            <div class="col s12 l6">
-                <h4 class="blue-text hide-on-med-and-down">Need Assistance? Drop Us a Message!</h4>
-                <h4 class="blue-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
-                <form action="./contactUs.php" method="post" id="contact-form">
-                    <div class="input-field">
-                        <input type="text" name="name" id="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="tel" name="phone_number" id="phone_number" required>
-                        <label for="phone_number">Your Phone Number</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="email" name="email" id="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="input-field">
-                        <textarea name="message" id="message" class="materialize-textarea" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <div class="input-field center">
-                        <input class="btn btn-large blush-pink creamy-white-text center" type="submit" name="submit" id="submit" value="Send" >
-                    </div>
-                </form>
+    <div class="container-fluid">
+        <div class="image-container">
+            <img src="./img/20240214_125218.jpg" alt="Background Image">
+            
+            <!-- Medium and Large Screens -->
+            <div class="text-container hide-on-small-only">
+                <h1>Contact Us</h1>
             </div>
 
-            <!-- Office Information -->
-            <div class="col s12 l6">
-                <h4 class="blue-text center-on-small-only">Reach Out to Us</h4>
-                <div class=" hide-on-med-and-down">
-                <p class=""><strong>Address:</strong>Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
-                <p class=""><strong>Email:</strong> <a href="mailto:Wceiwopin@gmail.com
-">Wceiwopin@gmail.com
-</a></p>
-                <p class=""><strong>Phone:</strong> <a href="tel:+2348135958262">+234 813 595 8262</a></p>
-                </div>
-                <div class="container hide-on-large-only">
-                <p class=""><strong>Address:</strong>Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
-                <p class=""><strong>Email:</strong> <a href="mailto:Wceiwopin@gmail.com
-">Wceiwopin@gmail.com
-</a></p>
-                <p class=""><strong>Phone:</strong> <a href="tel:+2348135958262">+234 813 595 8262</a></p>
-                </div>
-                <p class="center-on-small-only"><strong>Operating Hours:</strong></p>
-                <ul class="center-on-small-only">
-                    <li>Monday - Friday: 8:00 AM - 2:00 PM</li>
-                    <li>Saturday: Closed</li>
-                    <li>Sunday: Closed</li>
-                </ul>
+            <!--Small Screens -->
+            <div class="text-container hide-on-med-and-up">
+                <h1 style="font-size: 2.5rem;">Contact Us</h1>
             </div>
         </div>
     </div>
+
+
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+        <!-- Form and Contact Information -->
+        <div class="row grey lighten-4 hidden fade-in-right">
+            <!-- Office Information -->
+            <div class="col s12 l4">
+                <h4 class="blue-text center-on-small-only center-align" style="padding-bottom: 10px;">Reach Out to Us</h4>
+                <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
+                    <i class=" material-icons medium left">map</i>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Address</strong><br> Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
+                </div>
+                <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
+                    <i class=" material-icons medium left">mail</i>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email</strong><br> <a style="text-decoration: underline;" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                </div>
+                <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
+                    <i class=" material-icons medium left">phone</i>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone</strong><br> <a style="text-decoration: underline;" href="tel:+2348135958262">+234 813 595 8262</a></p>
+                </div>
+                <div class="container hide-on-large-only center-align">
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Address <br></strong>Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email <br></strong> <a href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a href="tel:+2348135958262">+234 813 595 8262</a></p>
+                </div>
+            </div>
+          
+            <!-- Contact Form -->
+            <div class="col s12 l8">
+                <h4 class="blue-text hide-on-med-and-down center-align">Need More info? Drop a Message!</h4>
+                <h4 class="blue-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
+                <form action="./contactUs.php" method="post" id="contact-form">
+                    <div class="row"> 
+                        <div class="input-field col l6 s12">
+                            <input type="text" name="name" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="subject" id="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea name="message" id="message" class="materialize-textarea" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="input-field col s12">
+                            <button class="btn btn-large btn-outline" type="submit" name="submit" id="submit"><i class=" material-icons left">send</i>Sumbit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Social Links Desktop-->
-    <div class="socials center scrollspy hide-on-med-and-down hidden fade-in-bottom">
+    <!-- <div class="socials center scrollspy hide-on-med-and-down hidden fade-in-bottom">
         <h4>Follow Us on Social Media</h4>
         <div class="row social">
             <div class="col s12 m3">
@@ -245,31 +299,12 @@ if (isset($_POST['submit'])) {
                 <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
             </div>
         </div>
-    </div>
-    <!-- Social Links Mobile-->
-    <div class="socials center hide-on-large-only hidden fade-in-bottom">
-        <h4>Follow Us on Social Media</h4>
-        <br>
-        <div class="row container center">
-            <div class="col s6 m3">
-                <a href="#" class="center"><i class="material-icons social-icons">email</i>Email</a>
-            </div>
-            <div class="col s6 m3">
-                <a href="#" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
-            </div>
-            <div class="col s6 m3">
-                <a href="#" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
-            </div>
-            <div class="col s6 m3">
-                <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
-            </div>
-        </div>
-    </div>
+    </div> -->
 
-    <div class="container">
-        <!-- FAQ Section -->
+    <!-- <div class="container" style="margin-bottom: 40px;">
+        FAQ Section
         <div class="faq hidden fade-in-right">
-            <h5 class="blue-text bold-txt section-heading">Frequently Asked Questions</h5>
+            <h5 class="blue-text bold-txt center-align" style="padding: 20px;">Frequently Asked Questions</h5>
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">help_outline</i>What is the school's admission process?</div>
@@ -285,7 +320,7 @@ if (isset($_POST['submit'])) {
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <!-- Scripts -->
     <script src="js/jquery.js"></script>

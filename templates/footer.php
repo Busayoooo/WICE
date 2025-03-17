@@ -48,7 +48,7 @@
     
 </style>
 <body>
-<footer class="page-footer primary">
+<footer class="page-footer blue lighten-2">
     <div class="container">
         <div class="row">
             <!-- About Section -->
@@ -74,10 +74,8 @@
             <div class="col l5 s12">
                 <h5 class="white-text">Contact</h5>
                 <ul>
-                    <li><i class="material-icons tiny">phone</i> <a class="white-text" href="tel:+2348135958262
-">+234 813 595 8262</a></li>
-                    <li><i class="material-icons tiny">email</i> <a class="white-text" href="mailto:info@wisdomcollegeofexcellence.org
-">info@wisdomcollegeofexcellence.org</a></li>
+                    <li><i class="material-icons tiny">phone</i> <a class="white-text" href="tel:+2348135958262">+234 813 595 8262</a></li>
+                    <li><i class="material-icons tiny">email</i> <a class="white-text" href="mailto:info@wisdomcollegeofexcellence.org">info@wisdomcollegeofexcellence.org</a></li>
                     <li><i class="material-icons tiny">location_on</i> <span class="white-text">Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</span></li>
                 </ul>
             </div>
@@ -85,7 +83,7 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="footer-copyright center copyright">
+    <div class="footer-copyright center blue darken-2">
         <div class="container ">
             © <?php echo date("Y"); ?> Wisdom College of Excellence. All rights reserved.
             <a class="white-text" href="#!">Privacy Policy</a>
@@ -93,7 +91,7 @@
     </div>
 </footer>
 
-<script src="js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
         $(document).ready(function(){
@@ -102,6 +100,7 @@
             $('.modal').modal();
             $('.scrollspy').scrollSpy();
             $('.parallax').parallax();
-
+            })
+    </script>
 </body>
 </html>
