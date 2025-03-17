@@ -1,7 +1,7 @@
 <?php 
 
-include("./templates/header.php");
 include("./templates/connect.php");
+include("./templates/header.php");
 
 //write the fetch query
 $fetch_query = "SELECT * FROM `news`";
@@ -30,7 +30,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 <style>
 
     .slider .indicators .indicator-item.active {
-        background-color: #E91E63;
+        background-color: rgb(52, 55, 253) !important;
     }
     section{
         padding: 50px 0px;
@@ -70,13 +70,15 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
 
     .cta-section a {
-        color: #F472B6;
+        /* color: #F472B6; */
         font-weight: bold;
-        text-decoration: underline;
+        background-color: rgb(52, 55, 253);
+        margin-top: 10px
+        /* text-decoration: underline; */
     }
 
     .cta-section a:hover {
-        color: #F8BBD0;
+        background-color: rgb(31, 35, 247) !important;
     }
     .video-txt{
         position:absolute;
@@ -87,10 +89,21 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             line-height: 1.8;
             color: #E5E7EB;
     }
-    div.banner-div div a{
+    .banner-div div a{
         border-radius: 30px !important ; 
         text-transform: none !important ;
-        }
+    }
+    /* Thedyys edits start */
+    .banner-div img{
+        filter: brightness(50%)
+    }
+    .commitment-container{
+        padding-top: 1.4rem;
+        padding-bottom: 1.8rem;
+    }
+    .slide-btn{
+        background-color: rgb(52, 55, 253)  !important;
+    }
 </style>
 <body class="background">
     <div class="" style="margin-top: 3px;"></div>
@@ -103,12 +116,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn btn-large slide-btn hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
                         <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
                         <p class="white-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn hide-on-large-only slide-btn hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
@@ -118,12 +131,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn btn-large slide-btn hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
                     <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only slide-btn hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
@@ -133,12 +146,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="caption center-align hide-on-med-and-down">
                         <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn btn-large slide-btn hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
                     <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only slide-btn hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
@@ -148,12 +161,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="caption center-align hide-on-med-and-down">
                         <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
                         <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
+                        <a href="./aboutUs.php" class="btn btn-large slide-btn hoverable">Learn More</a>
                     </div>
                     <div class="container video-txt white-text center hide-on-large-only">
                     <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
                     <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
+                    <a href="./aboutUs.php" class="btn hide-on-large-only slide-btn hoverable">Learn More</a>
                     </div>
                 </div>
             </li>
@@ -165,7 +178,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         <div class="container">
             <h2 class="primary-text bold-txt hidden fade-in-left section-heading center hide-on-med-and-down">Overview of WICE</h2>
             <h4 class="primary-text bold-txt hidden fade-in-left section-heading center hide-on-large-only">Overview of WICE</h4>
-            <p class="general hidden fade-in-right flow-text overview-text">
+            <p class="general hidden fade-in-right flow-text overview-text black-text">
             Wisdom College of Excellence (WICE) located in the serene and picturesque town of Iwopin, Ogun Waterside Local Government Area, Ogun State, Nigeria, Wisdom College of Excellence (WICE) is a premier educational institution dedicated to providing a holistic and inclusive learning experience for students.
             <br> <br>
             <!-- At WICE, we recognize the importance of fostering a love for learning, creativity, and critical thinking in our students. To achieve this, we have implemented a range of innovative programs and initiatives that cater to the diverse needs and interests of our students. -->
@@ -175,11 +188,13 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </section>
 
     <!-- Mission Section -->
-    <div class="mission-section hidden hide-on-med-and-down secondary">
-        <h3 class="bold-txt accent-text">Our Mission</h3>
-        <p class="flow-text mission-text general">
-                To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
-        </p>
+    <div class="mission-section hidden hide-on-med-and-down secondary right-align">
+        <div class="container">
+            <h2 class="primary-text bold-txt hidden fade-in-left section-heading center hide-on-med-and-down">Our Mission</h2>
+            <p class="flow-text mission-text general black-text">
+                    To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
+            </p>
+        </div>
     </div>
     <div class="mission-mobile hidden hide-on-large-only secondary">
         <h4 class="bold-txt accent-text">Our Mission</h4>
@@ -189,7 +204,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     </div>
 
     <!-- Our Commitments -->
-    <div class="container center">
+    <div class="container commitment-container center">
         <h2 class="primary-text section-heading"> Commitments </h2>
         <div class="row">
             <div class="col s12 l4 hidden">
@@ -229,10 +244,10 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <div class="cta-section secondary pulsating-section">
         <div class="general">
             <h4 class="primary-text">Ready to join the WICE Community?</h4>
-            <p>
+            <p class="black-text">
             Enroll your child today and take the first step towards a brighter future.
             <br>
-            <a href="./academics.php#target-section">Click here to get started</a>
+            <a href="./academics.php#target-section" class="btn white-text">Click here to get started</a>
             </p>
         </div>
     </div>
@@ -240,13 +255,13 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <br>
 
     <!-- SDG Section -->
-    <div class="SDG">
+    <div class="SDG container">
         <div class="Center"><h2 class="center section-heading primary-text">SDGs</h2></div>
         <div class="row">
-            <div class="col s6 l3 ">
+            <div class="col s6 l6 ">
                 <div class="card hoverable secondary">
-                    <div class="card-content general">
-                        <span class="card-title primary-text"><strong>SDG 1: No Poverty</strong></span>
+                    <div class="card-content general" style="margin-bottom: 20px; margin-right: 40px;">
+                        <span class="card-title primary-text center-align"><strong>SDG 1: No Poverty</strong></span>
                         <p>1. Financial Literacy: Educate students on money management, saving, and investment principles.
                         <br>
                         2. Entrepreneurship: Teach business planning, problem-solving, and enterprise management skills.
@@ -254,10 +269,10 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     </div>
                 </div>
             </div>
-            <div class="col s6 l3 ">
+            <div class="col s6 l6 ">
                 <div class="card hoverable secondary">
-                    <div class="card-content general">
-                        <span class="card-title primary-text"><strong>SDG 3: Health and wellbeing
+                    <div class="card-content general" style="margin-bottom: 20px; margin-right: 40px;">
+                        <span class="card-title primary-text center-align"><strong>SDG 2: Health and wellbeing
                         </strong></span>
                         <p>1. Medical Outreach: Raise awareness about health issues through community programs.
                         <br>
@@ -267,10 +282,10 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     </div>
                 </div>
             </div>
-            <div class="col s6 l3 ">
+            <div class="col s6 l6 ">
                 <div class="card hoverable secondary">
-                    <div class="card-content general">
-                        <span class="card-title primary-text"><strong>SDG 4: Quality Education</strong></span>
+                    <div class="card-content general" style="margin-bottom: 20px; margin-right: 40px;">
+                        <span class="card-title primary-text center-align"><strong>SDG 3: Quality Education</strong></span>
                         <p>1. Inclusive Education: Provide resources and support for students with disabilities.
                         <br>
                         2. Literacy Programs: Improve reading and writing skills through literacy initiatives.
@@ -280,10 +295,10 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     </div>
                 </div>
             </div>
-            <div class="col s6 l3 ">
+            <div class="col s6 l6 ">
                 <div class="card hoverable secondary">
-                    <div class="card-content general">
-                        <span class="card-title primary-text"><strong>SDG 5: Gender Equality, empower all women and girls</strong></span>
+                    <div class="card-content general" style="margin-bottom: 20px; margin-right: 40px;">
+                        <span class="card-title primary-text center-align"><strong>SDG 4: Gender Equality, empower all women and girls</strong></span>
                         <p>
                         1. Prevent disciminstion
                         <br>
@@ -302,8 +317,8 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
         <!-- News Section -->
     <section>
-        <div class="container scrollspy" id="news">
-            <div class="hidden fade-in-left"><h2 class="primary-text center section-heading">Latest News</h2></div>
+        <div class="section secondary scrollspy" id="news">
+            <div class="container hidden fade-in-left"><h2 class="primary-text center section-heading">Latest News</h2></div>
             <div class="row">
                 <?php foreach ($news as $new) { ?>
                     <div class="col m4 s12 hidden fade-in-bottom">

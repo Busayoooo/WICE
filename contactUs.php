@@ -103,7 +103,7 @@ if (isset($_POST['submit'])) {
     }
 
     .btn-custom {
-        background-color: #2196F3;
+        background-color: rgb(52, 55, 253);
         color: white;
         transition: background-color 0.3s;
     }
@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
 
     .socials {
         padding: 30px 0;
-        background-color: #2196F3;
+        background-color: rgb(52, 55, 253);
         color: white;
     }
 
@@ -188,14 +188,14 @@ if (isset($_POST['submit'])) {
     /* Default Button Style (Outline) */
     .btn-outline {
         background-color: transparent !important;
-        border: 2px solid #007bff !important;
-        color: #007bff !important;
+        border: 2px solid rgb(52, 55, 253) !important;
+        color: rgb(52, 55, 253) !important;
         transition: all 0.3s ease-in-out !important;
     }
 
     /* Hover Effect */
     .btn-outline:hover {
-        background-color: #007bff !important;
+        background-color: rgb(52, 55, 253) !important;
         color: #fff !important;
     }
         
@@ -225,30 +225,30 @@ if (isset($_POST['submit'])) {
         <div class="row grey lighten-4 hidden fade-in-right">
             <!-- Office Information -->
             <div class="col s12 l4">
-                <h4 class="blue-text center-on-small-only center-align" style="padding-bottom: 10px;">Reach Out to Us</h4>
+                <h4 class="primary-text center-on-small-only center-align" style="padding-bottom: 10px;">Reach Out to Us</h4>
                 <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
                     <i class=" material-icons medium left">map</i>
                     <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Address</strong><br> Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
                 </div>
                 <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
                     <i class=" material-icons medium left">mail</i>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email</strong><br> <a style="text-decoration: underline;" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email</strong><br> <a style="text-decoration: underline; color: rgb(52, 55, 253);" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
                 </div>
                 <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
                     <i class=" material-icons medium left">phone</i>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone</strong><br> <a style="text-decoration: underline;" href="tel:+2348135958262">+234 813 595 8262</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone</strong><br> <a style="text-decoration: underline; color: rgb(52, 55, 253);" href="tel:+2348135958262">+234 813 595 8262</a></p>
                 </div>
                 <div class="container hide-on-large-only center-align">
                     <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Address <br></strong>Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email <br></strong> <a href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a href="tel:+2348135958262">+234 813 595 8262</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email <br></strong> <a style="color: rgb(52, 55, 253);" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a style="color: rgb(52, 55, 253);" href="tel:+2348135958262">+234 813 595 8262</a></p>
                 </div>
             </div>
-          
+        
             <!-- Contact Form -->
             <div class="col s12 l8">
-                <h4 class="blue-text hide-on-med-and-down center-align">Need More info? Drop a Message!</h4>
-                <h4 class="blue-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
+                <h4 class="primary-text hide-on-med-and-down center-align">Need More info? Drop a Message!</h4>
+                <h4 class="primary-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
                 <form action="./contactUs.php" method="post" id="contact-form">
                     <div class="row"> 
                         <div class="input-field col l6 s12">
@@ -304,7 +304,7 @@ if (isset($_POST['submit'])) {
     <!-- <div class="container" style="margin-bottom: 40px;">
         FAQ Section
         <div class="faq hidden fade-in-right">
-            <h5 class="blue-text bold-txt center-align" style="padding: 20px;">Frequently Asked Questions</h5>
+            <h5 class="primary-text bold-txt center-align" style="padding: 20px;">Frequently Asked Questions</h5>
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">help_outline</i>What is the school's admission process?</div>
