@@ -92,14 +92,18 @@ include("./templates/header.php");
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
         color: #E91E63;
     } */
+    div.banner-div div a{
+        border-radius: 30px !important ; 
+        text-transform: none !important ;
+    }
     .slider-div{
         position: relative;
     }
-    .banner-div{
+    .vision-div{
         position: relative;
     }
 
-    .banner-div.parallax h5{
+    .vision-div.parallax h5{
         padding: 20px;
         position: absolute;
         color: white;
@@ -107,7 +111,7 @@ include("./templates/header.php");
         left: 10%;
     }
 
-    .banner-div p{
+    .vision-div p{
         padding: 20px;
         position: absolute;
         color: white;
@@ -155,73 +159,6 @@ include("./templates/header.php");
     }
 </style>
 <body class="background">
-    <!-- Hero section -->
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <div class="slider-div">
-                    <img src="img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text center">Skills for today, future leaders</p>
-                    <a href="aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slider-div">
-                    <img src="img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only bold-txt">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slider-div">
-                    <img src="img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3 class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slider-div">
-                    <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
-                    <div class="caption center-align hide-on-med-and-down">
-                        <h3  class="bold-txt">Welcome to Wisdom College of Excellence</h3>
-                        <p class="white-text flow-text">Skills for today, future leaders</p>
-                        <a href="./aboutUs.php" class="btn btn-large pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                    <div class="container video-txt white-text center hide-on-large-only">
-                    <h5 class="bold-txt hide-on-large-only">Welcome to Wisdom College of Excellence</h5>
-                    <p class="white-text">Skills for today, future leaders</p>
-                    <a href="./aboutUs.php" class="btn hide-on-large-only pink lighten-2 hoverable">Learn More</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <br>
-
     <!-- History of WICE -->
     <div class="container">
         <h2 class="blue-text section-heading text-lighten-1 hidden fade-in-left bold-txt hide-on-med-and-down">History of WICE</h2>
@@ -264,14 +201,14 @@ include("./templates/header.php");
 
     <!-- Vision Section with Parallax -->
     <div class="parallax-container hide-on-med-and-down">
-        <div class="banner-div parallax">
+        <div class="vision-div parallax">
             <img src="./img/20240810_113517.jpg" alt="Our Vision Background" class="responsive-img">
             <h5 class="white-text hide-on-med-and-down">"A society where learning  is transformed for Brighter Future"</h5>
         </div>
     </div>
 
     <div class="hide-on-large-only ">
-        <div class="banner-div">
+        <div class="vision-div">
             <img src="./img/20240810_113517.jpg" alt="Our Vision Background" class="responsive-img">
             <p class="white-text ">"A society where learning  is transformed for Brighter Future"</p>
         </div>

@@ -30,7 +30,7 @@
 }
 
 .page-footer ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 /* Icons in Contact Section */
@@ -39,9 +39,16 @@
     vertical-align: middle;
     color: white;
 }
+    .primary{
+        background-color: #1E3A8A;
+    }
+    .copyright{
+        background-color: #1E3A8A;
+    }
+    
 </style>
 <body>
-<footer class="page-footer pink lighten-2">
+<footer class="page-footer primary">
     <div class="container">
         <div class="row">
             <!-- About Section -->
@@ -78,7 +85,7 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="footer-copyright center pink darken-2">
+    <div class="footer-copyright center copyright">
         <div class="container ">
             © <?php echo date("Y"); ?> Wisdom College of Excellence. All rights reserved.
             <a class="white-text" href="#!">Privacy Policy</a>
