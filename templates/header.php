@@ -122,7 +122,7 @@ $current_file = $_SERVER['PHP_SELF'];
         transform: translateY(0); /* Move to its original position */
     }
 
-    /* Start Theddys Edits */
+    /* Start Theddys Editsss */
 
     .navbar {
         background-color: #fff;
@@ -157,7 +157,7 @@ $current_file = $_SERVER['PHP_SELF'];
         background-color: #FFFFFF;
     }
 
-    /* End Theddys Edits */
+    /* End Theddys Editsss */
 
 
 </style>
