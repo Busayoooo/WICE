@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            min-height: 500px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .question-list {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .question-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .question-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .question-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .question-btn:hover::before {
+            left: 100%;
+        }
+
+        .answer-page {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .answer-page.active {
+            display: block;
+        }
+
+        .answer-header {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .answer-header h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .answer-content {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            line-height: 1.6;
+            color: #2c3e50;
+            font-size: 1.1em;
+            border-left: 5px solid #4facfe;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            color: #2c3e50;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-list-page {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .question-list-page.hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .question-btn {
+                padding: 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Q&A Hub</h1>
+            <p>Click on any question to discover the answer</p>
+        </div>
+
+        <div class="content">
+            <div class="question-list-page" id="questionListPage">
+                <div class="question-list" id="questionList">
+                    <!-- Questions will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="answer-page" id="answerPage">
+                <div class="answer-header">
+                    <h2 id="answerQuestion"></h2>
+                </div>
+                <div class="answer-content" id="answerContent">
+                    <!-- Answer content will be populated by JavaScript -->
+                </div>
+                <button class="back-btn" onclick="goBack()">← Back to Questions</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the speed of light?",
+                answer: "The speed of light in a vacuum is approximately 299,792,458 meters per second (or about 186,282 miles per second). This is one of the fundamental constants of nature and is denoted by the symbol 'c'. Nothing can travel faster than light in a vacuum, making it the ultimate speed limit of the universe. This speed was first accurately measured by Albert Michelson and is crucial to Einstein's theory of relativity."
+            },
+            {
+                question: "How does photosynthesis work?",
+                answer: "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy (usually from the sun) into chemical energy stored in glucose. The process occurs in two main stages: the light-dependent reactions (which occur in the thylakoids) and the light-independent reactions or Calvin cycle (which occur in the stroma). The overall equation is: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. This process is essential for life on Earth as it produces the oxygen we breathe and forms the base of most food chains."
+            },
+            {
+                question: "What causes the seasons?",
+                answer: "Seasons are caused by the tilt of Earth's axis as it orbits around the Sun. Earth's axis is tilted at approximately 23.5 degrees relative to its orbital plane. As Earth travels around the Sun throughout the year, different parts of the planet receive varying amounts of direct sunlight. When the Northern Hemisphere is tilted toward the Sun, it experiences summer while the Southern Hemisphere experiences winter, and vice versa. The equinoxes occur when neither hemisphere is tilted toward the Sun, resulting in roughly equal day and night lengths globally."
+            },
+            {
+                question: "How do computers store data?",
+                answer: "Computers store data using binary code - a system of 1s and 0s that represent different states of electrical charge. At the most basic level, data is stored in memory cells that can be either 'on' (1) or 'off' (0). Modern computers use several types of storage: RAM (Random Access Memory) for temporary, fast-access storage; SSDs (Solid State Drives) or HDDs (Hard Disk Drives) for permanent storage; and cache memory for ultra-fast access to frequently used data. Each type uses different technologies - from magnetic fields in hard drives to electrical charges in flash memory - but all ultimately rely on the binary system to represent information."
+            },
+            {
+                question: "What is DNA and why is it important?",
+                answer: "DNA (Deoxyribonucleic Acid) is a molecule that contains the genetic instructions for all living organisms. It's structured as a double helix made up of four chemical bases: adenine (A), thymine (T), guanine (G), and cytosine (C). The sequence of these bases determines genetic information, much like letters form words. DNA is crucial because it stores hereditary information, controls protein synthesis, and enables reproduction. It's found in the nucleus of every cell and is responsible for passing traits from parents to offspring. DNA's discovery has revolutionized medicine, forensics, and our understanding of life itself."
+            },
+            {
+                question: "How does the internet work?",
+                answer: "The internet is a global network of interconnected computers that communicate using standardized protocols, primarily TCP/IP (Transmission Control Protocol/Internet Protocol). When you request a webpage, your device sends data packets through your internet service provider to routers and servers around the world. These packets travel through various pathways - fiber optic cables, wireless signals, and satellite connections - until they reach the destination server. The server then sends the requested information back to your device through a similar process. Domain Name System (DNS) servers translate human-readable website names into IP addresses that computers can understand, making navigation user-friendly."
+            }
+        ];
+
+        function renderQuestions() {
+            const questionList = document.getElementById('questionList');
+            questionList.innerHTML = '';
+            
+            questions.forEach((item, index) => {
+                const button = document.createElement('button');
+                button.className = 'question-btn';
+                button.textContent = item.question;
+                button.onclick = () => showAnswer(index);
+                questionList.appendChild(button);
+            });
+        }
+
+        function showAnswer(index) {
+            const question = questions[index];
+            document.getElementById('answerQuestion').textContent = question.question;
+            document.getElementById('answerContent').textContent = question.answer;
+            
+            document.getElementById('questionListPage').classList.add('hidden');
+            document.getElementById('answerPage').classList.add('active');
+        }
+
+        function goBack() {
+            document.getElementById('answerPage').classList.remove('active');
+            document.getElementById('questionListPage').classList.remove('hidden');
+        }
+
+        // Initialize the app
+        renderQuestions();
+    </script>
+</body>
+</html>

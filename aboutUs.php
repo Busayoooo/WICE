@@ -14,6 +14,19 @@ include("./templates/header.php");
     <title>About Us Page</title>
 </head>
 <style>
+    :root {
+        --primary-blue: #1565C0;
+        --light-blue: #42A5F5;
+        --primary-pink: #E91E63;
+        --light-pink: #F06292;
+        --text-dark: #424242;
+        --text-light: #757575;
+        --background-light: #FAFAFA;
+        --white: #FFFFFF;
+        --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+
     .video-txt{
         position:absolute;
         top: 35%;
@@ -40,14 +53,25 @@ include("./templates/header.php");
     transition: color 0.3s ease;
 }
 
+.card{
+    border: solid white !important;
+    border-radius: 40px !important;
+    padding: 5px !important;
+}
+
+.long-card{
+    height: 90% !important;
+}
+
+.card img, .card-action{
+    border: solid white !important;
+    border-radius: 30px !important ;  
+}
+
 /* Hover Effect for Card Action */
 .hover-trigger:hover {
     background-color: #E91E63 !important; /* Pink background on hover */
-}
-
-/* Change Primary Link Color on Hover */
-.hover-trigger:hover .primary-action {
-    color: white !important; /* Change link text color to white */
+   
 }
 
 /* Contact Icons Hidden Initially */
@@ -85,39 +109,48 @@ include("./templates/header.php");
     opacity: 1;
 }
 
-/* 
-    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-        color: #E91E63;
-    }
-    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
-        color: #E91E63;
-    } */
     div.banner-div div a{
         border-radius: 30px !important ; 
         text-transform: none !important ;
     }
+
     .slider-div{
         position: relative;
     }
-    .vision-div{
+    /* Vision Section */
+    .vision-div {
         position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
     }
 
-    .vision-div.parallax h5{
-        padding: 20px;
-        position: absolute;
-        color: white;
-        top: 40%;
-        left: 10%;
+    .vision-div img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
     }
 
-    .vision-div p{
-        padding: 20px;
-        position: absolute;
-        color: white;
-        top: 40%;
-        left: 10%;
+    .vision-div:hover img {
+        transform: scale(1.05);
     }
+
+    .vision-div h5, .vision-div p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        font-weight: 600;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+    }
+
     .pulsating-section {
         padding: 50px;
         text-align: center;
@@ -157,6 +190,19 @@ include("./templates/header.php");
         border-radius: 30px !important ; 
         text-transform: none !important ;
     }
+
+    .modal{
+        border: solid white ;
+        border-radius: 10px ;
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, #2196F3, #E91E63);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+    }
 </style>
 <body class="background">
     <!-- History of WICE -->
@@ -176,28 +222,44 @@ include("./templates/header.php");
     </div>
         
     <div id="History" class="modal">
-            <div class="modal-content">
-            <p class=" grey-text text-darken-3 flow-text">A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. <br> <br>
-                <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> <br> <br>
-                In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary individuals came together to establish a private school that would provide quality education to the children of the community. The year was 2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty, limited access to education, and a lack of opportunities for social mobility. <br> <br>
-                Despite these challenges, the founders of Wisdom College of Excellence (WICE) were determined to create a institution that would empower the children of Iwopin with the knowledge, skills, and values necessary to succeed in life. The school's mission was to provide a holistic education that would prepare students for academic excellence, personal growth, and community leadership. <br> <br>
-                <strong class="bold-txt">Early Years (2019-2020):</strong> <br> <br>
-                WICE began with a humble start, with a small group of students and a handful of teachers. The school was housed in a temporary facility, and the curriculum was focused on providing a solid foundation in core subjects such as English, mathematics, science, computer studies and social studies. Despite the challenges of limited resources and infrastructure, the school's founders and staff were committed to providing a high-quality education that would meet the needs of the community. <br> <br>
-                <strong class="bold-txt">Growth and Development (2020-Present):</strong> <br> <br>
-                In the years since its founding, WICE has experienced significant growth and development. The school has expanded its curriculum to include a range of subjects, including computer science, arts, and music. The school has also introduced extracurricular activities, such as sports, debate, and cultural clubs, to provide students with opportunities for personal growth and development. <br> <br>
-                In 2020, WICE relocated to a new, purpose-built facility that provides a safe and conducive learning environment for students. The school has also invested in modern technology, including computers, tablets, and educational software, to enhance the learning experience. <br> <br>
-                <strong class="bold-txt">Community Engagement and Partnerships:</strong> <br> <br>
-                WICE is committed to engaging with the local fishing community, established fish farm, advancing community health, Poverty reduction and forming partnerships with organizations and individuals who share its mission and values. The school has established relationships with local businesses, community groups, and government agencies to provide students with opportunities for internships, mentorship, and community service. This partnership is supporting to overcoming adversity in the community. <br> <br>
-                In 2022, WICE launched a community digital literacy outreach program, which provides support to young people, local families and individuals in need to learning computers and digital tools for growth and transformation. Other community outreach program includes initiatives such as literacy classes, Gender Based violence, health clinics, and economic empowerment schemes. <br> <br>
-                <strong class="bold-txt">Vision for the Future:</strong> <br> <br>
-                As WICE looks to the future, the school is committed to continuing its mission of providing a high-quality education that empowers the children of Iwopin to succeed in life. The school's vision is to become a leading institution in the region, known for its academic excellence, innovative approaches to education, and commitment to community development. <br> <br>
+        <div class="modal-content">
+            <h4 class="blue-text bold-txt">Complete History of WICE</h4>
+            <p class="">
+                A short history of Wisdom College of Excellence (WICE) in Iwopin, Ogun Waterside LGA, Ogun State, Nigeria. 
+                <br><br>
+                <strong class="bold-txt">The Founding of Wisdom College of Excellence (WICE):</strong> 
+                <br><br>
+                In the small fishing community of Iwopin, located in the Ogun Waterside Local Government Area of Ogun State, Nigeria, a group of visionary individuals came together to establish a private school that would provide quality education to the children of the community. The year was 2019, and the community was facing significant challenges, including overfishing, high mortality rate, early marriages/pregnancy, poverty, limited access to education, and a lack of opportunities for social mobility. 
+                <br><br>
+                Despite these challenges, the founders of Wisdom College of Excellence (WICE) were determined to create a institution that would empower the children of Iwopin with the knowledge, skills, and values necessary to succeed in life. The school's mission was to provide a holistic education that would prepare students for academic excellence, personal growth, and community leadership. 
+                <br><br>
+                <strong class="bold-txt">Early Years (2019-2020):</strong> 
+                <br><br>
+                WICE began with a humble start, with a small group of students and a handful of teachers. The school was housed in a temporary facility, and the curriculum was focused on providing a solid foundation in core subjects such as English, mathematics, science, computer studies and social studies. Despite the challenges of limited resources and infrastructure, the school's founders and staff were committed to providing a high-quality education that would meet the needs of the community. 
+                <br><br>
+                <strong class="bold-txt">Growth and Development (2020-Present):</strong> 
+                <br><br>
+                In the years since its founding, WICE has experienced significant growth and development. The school has expanded its curriculum to include a range of subjects, including computer science, arts, and music. The school has also introduced extracurricular activities, such as sports, debate, and cultural clubs, to provide students with opportunities for personal growth and development. 
+                <br><br>
+                In 2020, WICE relocated to a new, purpose-built facility that provides a safe and conducive learning environment for students. The school has also invested in modern technology, including computers, tablets, and educational software, to enhance the learning experience. 
+                <br><br>
+                <strong class="bold-txt">Community Engagement and Partnerships:</strong> 
+                <br><br>
+                WICE is committed to engaging with the local fishing community, established fish farm, advancing community health, Poverty reduction and forming partnerships with organizations and individuals who share its mission and values. The school has established relationships with local businesses, community groups, and government agencies to provide students with opportunities for internships, mentorship, and community service. This partnership is supporting to overcoming adversity in the community. 
+                <br><br>
+                In 2022, WICE launched a community digital literacy outreach program, which provides support to young people, local families and individuals in need to learning computers and digital tools for growth and transformation. Other community outreach program includes initiatives such as literacy classes, Gender Based violence, health clinics, and economic empowerment schemes. 
+                <br><br>
+                <strong class="bold-txt">Vision for the Future:</strong> 
+                <br><br>
+                As WICE looks to the future, the school is committed to continuing its mission of providing a high-quality education that empowers the children of Iwopin to succeed in life. The school's vision is to become a leading institution in the region, known for its academic excellence, innovative approaches to education, and commitment to community development. 
+                <br><br>
                 With the support of its founders, staff, students, and the local community, WICE is poised to make a positive impact on the lives of generations to come. The school's motto, "Skills for Today Future Leader," reflects its commitment to providing a holistic education that prepares students for success in all aspects of life.
             </p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-            </div>
         </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-blue btn-flat pink-text">Close</a>
+        </div>
+    </div>
 
     <!-- Vision Section with Parallax -->
     <div class="parallax-container hide-on-med-and-down">
@@ -227,7 +289,7 @@ include("./templates/header.php");
                         <h6 class="bold-txt pink-text card-title">Oke Abass Sheriff</h6>
                         <p class="grey-text text-darken-3">Scool Administrator</p>
                     </div>
-                    <div class="card-action hover-trigger">
+                    <div class="card-action hover-trigger center">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
                             <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
@@ -249,7 +311,7 @@ include("./templates/header.php");
                         <h6 class="bold-txt pink-text card-title">O. A Taiwo</h6>
                         <p class="grey-text text-darken-3">Ass. Head of Academics</p>
                     </div>
-                    <div class="card-action hover-trigger">
+                    <div class="card-action hover-trigger center">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
                             <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
@@ -271,7 +333,7 @@ include("./templates/header.php");
                         <h6 class="bold-txt pink-text card-title">Adams Agbro</h6>
                         <p class="grey-text text-darken-3">Head of Academics</p>
                     </div>
-                    <div class="card-action hover-trigger">
+                    <div class="card-action hover-trigger center">
                         <a href="#" class="primary-action">Contact</a>
                         <div class="contact-icons hidden">
                             <a href="tel:+1234567890" class="tooltipped icon-wrapper" data-position="top" data-tooltip="Call Me">
@@ -287,9 +349,149 @@ include("./templates/header.php");
         </div>
     </div>
 <br>
-
+    <!-- Community Impact section -->
+<div class="container section-spacing">
+    <div class="hidden fade-in-left">
+        <h3 class="blue-text section-heading bold-txt">Community Impact</h3>
+        <p class="center grey-text text-darken-2">Transforming lives through education, health, and sustainable development initiatives</p>
+    </div>
+    <div class="row">
+        <div class="col l4 m6 s12 hidden fade-in-bottom">
+            <div class="card long-card hoverable">
+                <div class="card-content center">
+                    <i class="material-icons large pink-text">computer</i>
+                    <h5 class="card-title">Digital Literacy Program</h5>
+                    <p>Free summer digital literacy program empowering young minds with essential 21st-century skills.</p>
+                    <ul class="left-align">
+                        <li><span class="pink-text">•</span> 245+ Children Trained</li>
+                        <li><span class="pink-text">•</span> Computer Skills Development</li>
+                        <li><span class="pink-text">•</span> Digital Citizenship</li>
+                        <li><span class="pink-text">•</span> Technology Confidence Building</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col l4 m6 s12 hidden fade-in-bottom">
+            <div class="card long-card hoverable">
+                <div class="card-content center">
+                    <i class="material-icons large pink-text">fitness_center</i>
+                    <h5 class="card-title">Health & Wellness</h5>
+                    <p>Community health outreach promoting physical well-being and preventive healthcare practices.</p>
+                    <ul class="left-align">
+                        <li><span class="pink-text">•</span> 300+ Male Participants</li>
+                        <li><span class="pink-text">•</span> 410+ Female Participants</li>
+                        <li><span class="pink-text">•</span> Keep Fit Programs</li>
+                        <li><span class="pink-text">•</span> Health Awareness Campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col l4 m6 s12 hidden fade-in-bottom">
+            <div class="card long-card hoverable">
+                <div class="card-content center">
+                    <i class="material-icons large pink-text">emoji_events</i>
+                    <h5 class="card-title">Academic Excellence</h5>
+                    <p>Literacy and numeracy competitions recognizing outstanding academic achievement in partnership with ISCON.</p>
+                    <ul class="left-align">
+                        <li><span class="pink-text">•</span> Primary School Competition</li>
+                        <li><span class="pink-text">•</span> Awards Ceremony</li>
+                        <li><span class="pink-text">•</span> Computer Donations</li>
+                        <li><span class="pink-text">•</span> ISCON Partnership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col l4 m6 s12 hidden fade-in-bottom">
+        <div class="card long-card hoverable">
+            <div class="card-content center">
+                <i class="material-icons large pink-text">videocam</i>
+                <h5 class="card-title">Cultural Preservation</h5>
+                <p>Documenting and celebrating local heritage through multimedia storytelling and community engagement.</p>
+                <ul class="left-align">
+                    <li><span class="pink-text">•</span> Iwopin Boat Regatta Film</li>
+                    <li><span class="pink-text">•</span> Okoshi Festival Documentation</li>
+                    <li><span class="pink-text">•</span> Cultural Heritage Preservation</li>
+                    <li><span class="pink-text">•</span> Community Pride Building</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col l4 m6 s12 hidden fade-in-bottom">
+        <div class="card long-card hoverable">
+            <div class="card-content center">
+                <i class="material-icons large pink-text">eco</i>
+                <h5 class="card-title">Green Jobs & Climate Action</h5>
+                <p>Environmental stewardship through tree nursery training and community tree planting initiatives.</p>
+                <ul class="left-align">
+                    <li><span class="pink-text">•</span> Tree Nursery Training</li>
+                    <li><span class="pink-text">•</span> Seedling Distribution</li>
+                    <li><span class="pink-text">•</span> Father's Day Celebration</li>
+                    <li><span class="pink-text">•</span> Environmental Awareness</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col l4 m6 s12 hidden fade-in-bottom">
+        <div class="card long-card hoverable">
+            <div class="card-content center">
+                <i class="material-icons large pink-text">waves</i>
+                <h5 class="card-title">Blue Economy Development</h5>
+                <p>Sustainable aquaculture and fisheries conservation through innovative school-based fish farm enterprise.</p>
+                <ul class="left-align">
+                    <li><span class="pink-text">•</span> School Fish Farm Enterprise</li>
+                    <li><span class="pink-text">•</span> Student Training Programs</li>
+                    <li><span class="pink-text">•</span> Stakeholder Engagement</li>
+                    <li><span class="pink-text">•</span> Fisheries Conservation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Community Impact Stats section -->
+<div class="cta-section achievements-section">
     <div class="container">
-        <!-- Values Section -->
+        <div class="hidden fade-in-left">
+            <h3 class="section-heading bold-txt white-text center">Community Impact by Numbers</h3>
+            <p class="center white-text" style="opacity: 0.9;">Measurable results that make a difference in our community</p>
+        </div>
+        <div class="row">
+            <div class="col l3 m6 s12 center hidden fade-in-bottom">
+                <div class="white-text">
+                    <i class="material-icons large">people</i>
+                    <h4 class="counter" data-target="745">0</h4>
+                    <p>Lives Directly Impacted</p>
+                </div>
+            </div>
+            <div class="col l3 m6 s12 center hidden fade-in-bottom">
+                <div class="white-text">
+                    <i class="material-icons large">computer</i>
+                    <h4 class="counter" data-target="245">0</h4>
+                    <p>Children Digitally Empowered</p>
+                </div>
+            </div>
+            <div class="col l3 m6 s12 center hidden fade-in-bottom">
+                <div class="white-text">
+                    <i class="material-icons large">favorite</i>
+                    <h4 class="counter" data-target="710">0</h4>
+                    <p>Health Program Participants</p>
+                </div>
+            </div>
+            <div class="col l3 m6 s12 center hidden fade-in-bottom">
+                <div class="white-text">
+                    <i class="material-icons large">eco</i>
+                    <h4 class="counter" data-target="100">0</h4>
+                    <p>% Sustainable Practices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Values Section -->
+    <div class="container">
         <h4 class="blue-text bold-txt section-heading">Our Values</h4>
         <div class="divider blue"></div>
         <br>
@@ -306,129 +508,117 @@ include("./templates/header.php");
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.datepicker').datepicker();
-            $('.tooltipped').tooltip();
-            $('.modal').modal();
-            $('.scrollspy').scrollSpy();
-            $('.parallax').parallax();
-            $('.slider').slider({
-                height:600
-            });
-            $(window).scroll(function () {
-                const sliderHeight = $('.slider').height(); 
-                if($(window).scrollTop() > sliderHeight){
-                    $(".navbar").addClass("scrolled");
-                } else {
-                    $(".navbar").removeClass("scrolled");
-                }
-            });
+        $(document).ready(function () {
+        // Initialize Materialize components
+        $('.datepicker').datepicker();
+        $('.tooltipped').tooltip();
+        $('.modal').modal();
+        $('.scrollspy').scrollSpy();
+        $('.parallax').parallax();
+        $('.slider').slider({ height: 600 });
 
-            // Function to check if an element is in the viewport
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
+        // Navbar scroll effect
+        $(window).scroll(function () {
+            const sliderHeight = $('.slider').height();
+            if ($(window).scrollTop() > sliderHeight) {
+                $(".navbar").addClass("scrolled");
+            } else {
+                $(".navbar").removeClass("scrolled");
+            }
+        });
 
-        // Add 'visible' class to elements with a delay
-        function addFadeInClass() {
-            const elements = document.querySelectorAll('.fade-in-bottom');
-            elements.forEach((element, index) => {
-                if (isInViewport(element)) {
-                    setTimeout(() => {
-                        element.classList.add('visible');
-                    }, index * 200); // Stagger delay of 200ms per card
-                }
-            });
-        }
-
-        // Trigger animation on scroll and initial load
-        window.addEventListener('scroll', addFadeInClass);
-        window.addEventListener('load', addFadeInClass);
-
-
-        // Function to check if an element is in the viewport
-        function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom > 0
-        );
-    }
-
-        // Function to add 'visible' class to elements in the viewport
-        function addVisibleClass() {
-            $('.hidden').each(function () {
-                if (isElementInViewport(this)) {
-                    $(this).addClass('visible');
-                }
-            });
-        }
-
-    // Check elements on scroll
-    $(window).on('scroll', function () {
-        addVisibleClass();
-    });
-
-    // Initial check
-    addVisibleClass();
-    
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
+        // === Unified IntersectionObserver for all fade-in effects ===
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Trigger the animation when the section becomes visible
-                    $('.pulsate-line .word').each(function (index) {
-                        setTimeout(() => {
-                            $(this)
-                                .addClass('visible') // Trigger CSS transition
-                                .delay(500) // Stay enlarged for 500ms
-                                .queue(function (next) {
-                                    $(this).css('transform', 'scale(1)'); // Return to normal size
-                                    next();
-                                });
-                        }, index * 800); // Delay for each word
-                    });
-
-                    // Disconnect the observer after animation
-                    observer.disconnect();
+                    entry.target.classList.add('visible');
                 }
             });
-        },
-        { threshold: 0.5 } // Trigger when 50% of the section is visible
-    );
+        }, { threshold: 0.2 });
 
-    // Observe the pulsate-line container
-    observer.observe(document.querySelector('.pulsate-line'));
+        // Observe all elements with class 'hidden'
+        document.querySelectorAll('.hidden').forEach(el => fadeInObserver.observe(el));
 
-    $(document).ready(function () {
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Trigger the pulsating effect when the section becomes visible
-                    $(entry.target).addClass('visible');
+        // === Counter Animation using requestAnimationFrame ===
+        function animateCounters() {
+            $('.counter').each(function () {
+                const $el = $(this);
+                const target = parseInt($el.data('target'));
+                let start = null;
 
-                    // Disconnect the observer after triggering the animation
-                    observer.disconnect();
+                function update(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    const duration = 2000; // 2 seconds
+                    const current = Math.min(Math.floor((progress / duration) * target), target);
+                    $el.text(current);
+                    if (current < target) {
+                        requestAnimationFrame(update);
+                    }
                 }
+
+                requestAnimationFrame(update);
             });
-        },
-        { threshold: 0.5 } // Trigger when 50% of the section is visible
-    );
+        }
 
-    // Observe the pulsating-section
-    observer.observe(document.querySelector('.pulsating-section'));
-});
+        // Animate counters when achievements section enters viewport
+        const achievementsSection = document.querySelector('.achievements-section');
+        if (achievementsSection) {
+            const achievementsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
 
+            achievementsObserver.observe(achievementsSection);
+        }
+
+        // === Optional: Pulsating Text Animation ===
+        const pulsateLine = document.querySelector('.pulsate-line');
+        if (pulsateLine) {
+            const pulsateObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $('.pulsate-line .word').each(function (index) {
+                            setTimeout(() => {
+                                $(this)
+                                    .addClass('visible')
+                                    .delay(500)
+                                    .queue(function (next) {
+                                        $(this).css('transform', 'scale(1)');
+                                        next();
+                                    });
+                            }, index * 800);
+                        });
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            pulsateObserver.observe(pulsateLine);
+        }
+
+        // === Optional: Pulsating Section Visibility ===
+        const pulsatingSection = document.querySelector('.pulsating-section');
+        if (pulsatingSection) {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(pulsatingSection);
+        }
     });
     </script>
-
-    <?php include("./templates/footer.php"); ?>
 </body>
 </html>
+<?php 
+include("./templates/footer.php");
+?>

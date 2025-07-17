@@ -39,16 +39,16 @@
     vertical-align: middle;
     color: white;
 }
-.primary{
-    background-color: rgb(52, 55, 253);
+.footer-copyright{
+    background: linear-gradient(135deg, #2196F3, #E91E63);
 }
-.copyright{
-    background-color: rgb(141, 143, 250);
+.page-footer{
+    background-color: #2196F3;
 }
     
 </style>
 <body>
-<footer class="page-footer copyright center-on-small-only">
+<footer class="page-footer center-on-small-only">
     <div class="container">
         <div class="row">
             <!-- About Section -->
@@ -83,7 +83,7 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="footer-copyright primary center-align">
+    <div class="footer-copyright center-align">
         <div class="container ">
             © <?php echo date("Y"); ?> Wisdom College of Excellence. All rights reserved.
             <a class="white-text" href="#!">Privacy Policy</a>

@@ -28,7 +28,7 @@ $current_file = $_SERVER['PHP_SELF'];
     }
 
     .navbar{
-        background-color:rgb(52, 55, 253);
+        background-color: #2196F3;
         color: white;
     }
     .navbar a{
@@ -38,10 +38,10 @@ $current_file = $_SERVER['PHP_SELF'];
         background-color: #FFFFFF !important;
     }
     .primary{
-        background-color: rgb(52, 55, 253) !important;
+        background-color: #2196F3 !important;
     }
     .primary-text{
-        color: rgb(52, 55, 253) !important;
+        color: #2196F3 !important;
     }
     .secondary{
         background-color: #F3F4F6 !important;
@@ -134,7 +134,7 @@ $current_file = $_SERVER['PHP_SELF'];
         bottom: 0;
         width: 100%;
         height: 3px;
-        background: rgb(52, 55, 253);
+        background: #2196F3;
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out;
         transform-origin: right;
