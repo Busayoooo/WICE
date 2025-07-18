@@ -188,14 +188,15 @@ if (isset($_POST['submit'])) {
     /* Default Button Style (Outline) */
     .btn-outline {
         background-color: transparent !important;
-        border: 2px solid rgb(52, 55, 253) !important;
-        color: rgb(52, 55, 253) !important;
+        color: #2196F3 !important;
         transition: all 0.3s ease-in-out !important;
+        border:solid  #2196F3;
+        border-radius: 30px !important;
     }
 
     /* Hover Effect */
     .btn-outline:hover {
-        background-color: rgb(52, 55, 253) !important;
+        background-color: #2196F3 !important;
         color: #fff !important;
     }
         
@@ -232,16 +233,16 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
                     <i class=" material-icons medium left">mail</i>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email</strong><br> <a style="text-decoration: underline; color: rgb(52, 55, 253);" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email</strong><br> <a style="text-decoration: underline; color: #2196F3;" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
                 </div>
                 <div class=" hide-on-med-and-down" style="padding-bottom: 10px;">
                     <i class=" material-icons medium left">phone</i>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone</strong><br> <a style="text-decoration: underline; color: rgb(52, 55, 253);" href="tel:+2348135958262">+234 813 595 8262</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone</strong><br> <a style="text-decoration: underline; color: #2196F3;" href="tel:+2348135958262">+234 813 595 8262</a></p>
                 </div>
                 <div class="container hide-on-large-only center-align">
                     <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Address <br></strong>Behind Chief Omokemi House, Moborode Street, Iwopin, Ogun State</p>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email <br></strong> <a style="color: rgb(52, 55, 253);" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
-                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a style="color: rgb(52, 55, 253);" href="tel:+2348135958262">+234 813 595 8262</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Email <br></strong> <a style="color: #2196F3;" href="mailto:Wceiwopin@gmail.com">Wceiwopin@gmail.com</a></p>
+                    <p class=""><strong style="font-size: 1.2rem; font-weight: bold;">Phone <br></strong> <a style="color: #2196F3;" href="tel:+2348135958262">+234 813 595 8262</a></p>
                 </div>
             </div>
         
@@ -282,45 +283,7 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    <!-- Social Links Desktop-->
-    <!-- <div class="socials center scrollspy hide-on-med-and-down hidden fade-in-bottom">
-        <h4>Follow Us on Social Media</h4>
-        <div class="row social">
-            <div class="col s12 m3">
-                <a href="mailto:Wceiwopin@gmail.com" class="center"><i class="material-icons social-icons">email</i>Email</a>
-            </div>
-            <div class="col s12 m3">
-                <a href="tel:+2348135958262" class="center"><i class="material-icons social-icons">phone</i>Phone</a>
-            </div>
-            <div class="col s12 m3">
-                <a href="" class="center"><i class="material-icons social-icons">camera_alt</i>Instagram</a>
-            </div>
-            <div class="col s12 m3">
-                <a href="#" class="center"><i class="material-icons social-icons">facebook</i>Facebook</a>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container" style="margin-bottom: 40px;">
-        FAQ Section
-        <div class="faq hidden fade-in-right">
-            <h5 class="primary-text bold-txt center-align" style="padding: 20px;">Frequently Asked Questions</h5>
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">help_outline</i>What is the school's admission process?</div>
-                    <div class="collapsible-body"><span>Our admission process involves an online application, a personal interview, and document submission. You can contact us for more details.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">help_outline</i>How can I schedule a school visit?</div>
-                    <div class="collapsible-body"><span>You can schedule a visit by calling our office or using the form above to request an appointment.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">help_outline</i>What programs do you offer?</div>
-                    <div class="collapsible-body"><span>We offer a wide range of programs from nursery to secondary levels, with extracurricular activities like sports, arts, and more.</span></div>
-                </li>
-            </ul>
-        </div>
-    </div> -->
+    
 
     <!-- Scripts -->
     <script src="js/jquery.js"></script>

@@ -30,9 +30,12 @@ if (isset($_POST['submit'])) {
     $send_query = mysqli_query($db_connect, $insert_query);
 
     if ($send_query) {
-        // echo 'Registration successful';    
+        // echo 'Registration successful';
+        echo "<script>$(document).ready(function() {
+    $('#success-modal').modal('open');
+    });
+    </script>";
     }
-
 
     if ($send_query) {
     } else {
