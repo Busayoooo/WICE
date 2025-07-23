@@ -51,12 +51,8 @@
 <footer class="page-footer center-on-small-only">
     <div class="container">
         <div class="row">
-            <!-- About Section -->
             <div class="col l4 s12 center">
                 <img src="./img/logo.png" alt="School Logo" width="230px" class="responsive-img brand-logo center">
-                <!-- <h5 class="grey-text text-lighten-4">
-                    Wisdom College of Excellence
-                </h5> -->
             </div>
 
             <!-- Quick Links -->

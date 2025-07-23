@@ -1,358 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Q&A App</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Farm Enterprise Assistant</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="./css/materialize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        .fish-farm-section {
+            background: linear-gradient(135deg, #2196F3 0%, #3F51B5 50%, #E91E63 100%);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px;
+        .fish-farm-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
-        .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        overflow: hidden;
-        min-height: 500px;
+        .section-content {
+            position: relative;
+            z-index: 2;
         }
 
-        .header {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        padding: 30px;
-        text-align: center;
-        color: white;
+        .main-title {
+            font-size: 3rem;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .header h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 300;
         }
 
-        .header p {
-        font-size: 1.1em;
-        opacity: 0.9;
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        .content {
-        padding: 40px;
+        .info-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .question-list {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .question-btn {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        border: none;
-        border-radius: 15px;
-        padding: 25px;
-        color: white;
-        font-size: 1.1em;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        position: relative;
-        overflow: hidden;
+        .info-card i {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        .question-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        .info-card h5 {
+            color: white;
+            font-weight: 400;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
-        .question-btn:active {
-        transform: translateY(-1px);
+        .info-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
         }
 
-        .question-btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent
-        );
-        transition: left 0.5s;
+        .cta-container {
+            text-align: center;
+            margin-top: 50px;
         }
 
-        .question-btn:hover::before {
-        left: 100%;
+        .cta-button {
+            background: linear-gradient(45deg, #E91E63, #AD1457);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            text-transform: none;
         }
 
-        .answer-page {
-        display: none;
-        animation: fadeIn 0.5s ease-in-out;
+        .cta-button:hover {
+            background: linear-gradient(45deg, #AD1457, #880E4F);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
+            color: white;
         }
 
-        .answer-page.active {
-        display: block;
+        .enterprise-stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
         }
 
-        .answer-header {
-        background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-        padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 30px;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
         }
 
-        .answer-header h2 {
-        color: #2c3e50;
-        font-size: 1.8em;
-        margin-bottom: 10px;
+        .stat-item {
+            color: white;
         }
 
-        .answer-content {
-        background: #f8f9fa;
-        padding: 30px;
-        border-radius: 15px;
-        line-height: 1.6;
-        color: #2c3e50;
-        font-size: 1.1em;
-        border-left: 5px solid #4facfe;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 5px;
         }
 
-        .back-btn {
-        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-        border: none;
-        border-radius: 10px;
-        padding: 12px 24px;
-        color: #2c3e50;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 20px;
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .back-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        /* Materialize customizations */
+        .btn-large.cta-button {
+            height: auto;
+            line-height: normal;
         }
 
-        @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        }
-
-        .question-list-page {
-        animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .question-list-page.hidden {
-        display: none;
-        }
-
-        @media (max-width: 600px) {
-        .header h1 {
-            font-size: 2em;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .question-btn {
-            padding: 20px;
-            font-size: 1em;
-        }
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            .info-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .fish-farm-section {
+                padding: 60px 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
-    </head>
-    <body>
-    <div class="container">
-        <div class="header">
-        <h1>Q&A Hub</h1>
-        <p>Click on any question to discover the answer</p>
-        </div>
-
-        <div class="content">
-        <div class="question-list-page" id="questionListPage">
-            <div class="question-list" id="questionList">
-            <!-- Questions will be populated by JavaScript -->
+</head>
+<body>
+    <section class="fish-farm-section">
+        <div class="container section-content">
+            <h2 class="main-title">Fish Farm Enterprise Assistant</h2>
+            <p class="subtitle">Get expert guidance for your aquaculture operations and business development</p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="material-icons">pets</i>
+                    <h5>Fish Care & Health</h5>
+                    <p>Learn proper feeding schedules, water quality management, disease prevention, and optimal growing conditions for different fish species.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="material-icons">trending_up</i>
+                    <h5>Business Operations</h5>
+                    <p>Understand market pricing, cost management, profit optimization, record keeping, and scaling your fish farm enterprise effectively.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="material-icons">science</i>
+                    <h5>Technical Support</h5>
+                    <p>Access guidance on equipment maintenance, water testing procedures, pond management, and troubleshooting common operational issues.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="material-icons">schedule</i>
+                    <h5>Fish Farm Routines</h5>
+                    <p>Get structured daily, weekly, and seasonal routines for pond maintenance, feeding cycles, and operational scheduling.</p>
+                </div>
+            </div>
+            
+            <!-- <div class="enterprise-stats">
+                <h5 style="color: white; margin-bottom: 0;">Supporting Student Success</h5>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Availability</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Topics Covered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Expert</span>
+                        <span class="stat-label">Knowledge Base</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Instant</span>
+                        <span class="stat-label">Responses</span>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="cta-container">
+                <a href="#chatbot" class="cta-button btn-large waves-effect waves-light">
+                    <i class="material-icons left">chat</i>
+                    Access Fish Farm Assistant
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="answer-page" id="answerPage">
-            <div class="answer-header">
-            <h2 id="answerQuestion"></h2>
-            </div>
-            <div class="answer-content" id="answerContent">
-            <!-- Answer content will be populated by JavaScript -->
-            </div>
-            <button class="back-btn" onclick="goBack()">
-            ← Back to Questions
-            </button>
-        </div>
-        </div>
-    </div>
-
-    <script>
-        const questions = [
-        {
-            question: "How to stock the fish pond?",
-            answer:
-            "To stock a fish pond, you need to consider the size of the pond, the type of fish you want to introduce, and the existing ecosystem. Start by testing the water quality and ensuring it is suitable for fish. Choose fish species that are compatible with each other and the pond environment. Prepare the tank or pond or reservoir with quality water, allow to rest for 2 days before introducing your fish gently.",
-        },
-        {
-            question: "How to make profit",
-            answer:
-            "Stock quality juvenile, feed well, ensure quality water and maintain good pond management practices. Monitor fish health regularly, control pests and diseases, and harvest at the right time. Consider value-added products like smoked or processed fish to increase profit margins. Marketing your fish effectively through local markets or online platforms can also enhance profitability.",
-        },
-        {
-            question: "How to hatch fish?",
-            answer:
-            "Get matured eggs from a broodstock, get sperm from the male, prepare your hatchery with quality water, mix sperm and egg, spread gently in the hatching tray or hapas in the quality water prepared in the hatchery. Maintain optimal water temperature and oxygen levels, and ensure proper aeration. After a few days, the eggs will hatch into fry. Feed them with appropriate starter feed and maintain water quality to ensure healthy growth.",
-        },
-        {
-            question: "What causes fish to die?",
-            answer:
-            "Overfeeding, poor quality water, poor quality water leading to contamination or infection, low oxygen levels, high ammonia or nitrite levels, and diseases can cause fish to die. Stress from overcrowding, sudden temperature changes, or poor handling can also lead to mortality. Regularly monitor water quality parameters, maintain a balanced diet, and ensure proper stocking density to prevent fish deaths.",
-        },
-        {
-            question: "What makes fish to be sick?",
-            answer:
-            "Fish can become sick due to various factors, including poor water quality, inadequate nutrition, stress from overcrowding, and the presence of pathogens such as bacteria, viruses, and parasites. Common signs of illness in fish include abnormal swimming behavior, loss of appetite, discoloration, and visible lesions. To prevent fish diseases, it's essential to maintain optimal water conditions, provide a balanced diet, and practice good hygiene in the aquarium or pond.",
-        },
-        {
-            question: "Why are my fish eating themselves?",
-            answer:
-            "Inadequate feeding, stocking oversized fish with smaller fishes, poor quality feeding, or stress can lead to fish eating themselves. This behavior, known as cannibalism, often occurs when fish are hungry or when they feel threatened. To prevent this, ensure that you provide a balanced diet, maintain appropriate stocking densities, and create a stress-free environment with adequate hiding spots and space for all fish.",
-        },
-        {
-            question: "What are the feeding methods?",
-            answer:
-            "Calculate 2% body mass to feed, Maintain feeding quantity and frequency based on the fish species and their growth stage. Common feeding methods include manual feeding, automatic feeders, broadcast feeding, target feeding, and supplemental feeding. Manual feeding involves hand-feeding fish with pellets or flakes, while automatic feeders dispense pre-measured amounts of food at scheduled intervals. Broadcast feeding scatters food across the water surface, allowing fish to forage naturally. Target feeding delivers food directly to specific fish, and supplemental feeding provides occasional treats like live or frozen foods to enhance nutrition.",
-        },
-        {
-            question: "How do i construct a fish pond?",
-            answer:
-            "Earthen or concrete or movable water reservoirs. Determine size, quantity of fish to stock, ensure water quality is good before stocking fish and maintain water quality throughout the life of the fish. Ensure proper drainage, aeration, and filtration systems are in place to maintain water quality. Regularly monitor water parameters such as pH, ammonia, nitrite, and nitrate levels to ensure a healthy environment for the fish.",
-        },
-        {
-            question: "Why does the water turn dirty after some time?",
-            answer:
-            "Overfeeding can lead to turbidity, high acidity or alkalinity. It is good to maintain the pH level between 6.5 and 7.5 for optimal fish health. Regularly check water quality parameters such as ammonia, nitrite, and nitrate levels, and perform partial water changes to maintain a clean and healthy environment for the fish. Additionally, ensure proper filtration and aeration systems are in place to prevent the buildup of organic matter and maintain water clarity.",
-        },
-        {
-            question: "How do i calculate the growth of the fish?",
-            answer:
-            " Feed the fish 2% of their body mass weekly, then use weighing scale to weigh the fish weekly. Record the weight and calculate the growth rate by subtracting the initial weight from the current weight, then divide by the number of weeks to get the average growth per week. This will help you monitor their growth and adjust feeding practices accordingly.",
-        },
-        {
-            question: "How to calculate income and profit?",
-            answer:
-            "Total amount made after selling the fish is income while the Total Expenditure minus the income is the profit made. To calculate income, multiply the number of fish sold by the selling price per fish. For profit, subtract total costs (including feed, maintenance, and other expenses) from the income. This will give you a clear picture of your financial performance in fish farming.",
-        },
-        {
-            question: "how to remove the poluted water?",
-            answer:
-            "When you observe the water is dirty or tuning white or smelling, please change it from your outlet devise. Ensure to remove about 20-30% of the water and replace it with fresh, dechlorinated water. This helps maintain water quality and provides a healthier environment for the fish. Regularly monitor water parameters and perform partial water changes as needed to keep the pond clean and clear.",
-        },
-        {
-            question: "Why does the water turn dirty after some time?",
-            answer:
-            "Overfeeding can lead to turbidity, high acidity or alkalinity. It is good to maintain the pH level between 6.5 and 7.5 for optimal fish health. Regularly check water quality parameters such as ammonia, nitrite, and nitrate levels, and perform partial water changes to maintain a clean and healthy environment for the fish. Additionally, ensure proper filtration and aeration systems are in place to prevent the buildup of organic matter and maintain water clarity.",
-        },
-        {
-            question: "how to calculate the fish consumption of fish feed?",
-            answer:
-            "To calculate the fish feed consumption, weigh a sample of fish to determine their average weight. Multiply the total weight of the fish by 0.02 (2%) to find the weekly feed requirement. For example, if you have 100 fish weighing an average of 200 grams each, the total weight is 20,000 grams (20 kg). Therefore, the weekly feed requirement would be 20 kg * 0.02 = 0.4 kg (400 grams) of feed per week.",
-        },
-        {
-            question: "What are the parts of a fish?",
-            answer:
-            "The main parts of a fish include the head, body, and tail. The head contains the eyes, mouth, and gills, which are essential for feeding and breathing. The body is covered in scales and contains the internal organs, including the stomach and intestines. The tail is used for propulsion and steering in the water.",
-        },
-        {
-            question: "What are the types of fresh water fish?",
-            answer:
-            "There are many types of freshwater fish, including popular species such as Tilapia spp, Catfish spp, Heterobranchus spp, Heterotis spp, Gymnarchus spp, Trout, and Bass. Each species has its own specific habitat requirements, feeding habits, and growth rates. When selecting freshwater fish for farming or aquariums, it's important to consider these factors to ensure a healthy and sustainable environment.",
-        },
-        {
-            question: "How to calculate the weight of a fish?",
-            answer:
-            "Use the wighing scale to calculate the weight in Kg",
-        },
-        {
-            question: "what do fish eat?",
-            answer:
-            "A balanced diet compouned into pellets",
-        },
-        {
-            question: "How to catch fish?",
-            answer:
-            "There are many methods you can use to catch fish, which are nets and traps",
-        },
-        {
-            question: "What is Fish Production?",
-            answer:
-            "This is the operation of fish farm from start, marketing  and preparing for restocking",
-        },
-        {
-            question: "What are the breeds of fish?",
-            answer:
-            "There are different type of breed eg catfish has the Clarias gariepinus and Heterbanchus spp",
-        },
-        ];
-
-        function renderQuestions() {
-        const questionList = document.getElementById("questionList");
-        questionList.innerHTML = "";
-
-        questions.forEach((item, index) => {
-            const button = document.createElement("button");
-            button.className = "question-btn";
-            button.textContent = item.question;
-            button.onclick = () => showAnswer(index);
-            questionList.appendChild(button);
-        });
-        }
-
-        function showAnswer(index) {
-        const question = questions[index];
-        document.getElementById("answerQuestion").textContent =
-            question.question;
-        document.getElementById("answerContent").textContent = question.answer;
-
-        document.getElementById("questionListPage").classList.add("hidden");
-        document.getElementById("answerPage").classList.add("active");
-        }
-
-        function goBack() {
-        document.getElementById("answerPage").classList.remove("active");
-        document.getElementById("questionListPage").classList.remove("hidden");
-        }
-
-      // Initialize the app
-        renderQuestions();
-    </script>
-    </body>
+    <!-- Materialize JavaScript -->
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+</body>
 </html>
