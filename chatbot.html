@@ -39,8 +39,6 @@
   }
 
   .button {
-    font-size: 20px !important;
-    padding: 40px 30px !important;
     border: none !important;
     border-radius: 50px !important;
     background: linear-gradient(135deg, #2196F3, #E91E63) !important;
@@ -55,6 +53,16 @@
   .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+  }
+
+  .btn-small{
+    padding: 25px 30px !important;
+    font-size: 15px !important;
+  }
+
+  .btn-large{
+    padding: 40px 30px !important;
+    font-size: 20px !important;
   }
 
   .mb {
@@ -74,7 +82,7 @@
 </style>
 
 <body>
-  <header>
+  <header >
     <div class="navbar-fixed z-depth-2">
       <nav class="nav-wrapper navbar">
         <div class="container">
@@ -83,7 +91,7 @@
               <a href="index.php" class="brand-logo bold-txt primary-text"><img src="./img/logo.png" alt=""
                   width="70px" /></a>
             </div>
-            <div class="col l8 s12 center">
+            <div class="col l8 s12 center hide-on-med-and-down">
               <h5 href="index.php" class="blue-text nav-link bold-txt">ChatBot - WICE Fish Farm </h5>
             </div>
           </div>
@@ -92,30 +100,43 @@
     </div>
   </header>
 
-  <br> <br> <br> <br> <br> <br>
-  <h4 class="center-align section-heading">What do you want to find out today?</h4>
+  <br>
+  <section class="hide-on-med-and-down">
+    <br> <br> <br> <br> <br> <br>
+  </section>
+
+  <section class="hide-on-large-only">
+    <br> 
+  </section>
+  
+  <h4 class="center-align section-heading hide-on-med-and-down">What do you want to find out today?</h4>
+  <h5 class="center-align section-heading hide-on-large-only">What do you want to find out today?</h5>
   <br>
 
   <div class="row center">
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="fish.html" class="btn btn-large button"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
+        <a href="fish.html" class="btn btn-large button hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
+        <a href="fish.html" class="btn btn-small button hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
       </div>
     </div>
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="water.html" class="button btn btn-large"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
+        <a href="water.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
+        <a href="water.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
       </div>
     </div>
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="pricing&supply.html" class="button btn btn-large"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
+        <a href="pricing&supply.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
+        <a href="pricing&supply.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
       </div>
     </div>
 
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="routines.html" class="button btn btn-large"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
+        <a href="routines.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
+        <a href="routines.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
       </div>
     </div>
   </div>
