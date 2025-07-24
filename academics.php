@@ -557,28 +557,28 @@ if (isset($_POST['submit'])) {
             <div class="row">
                 <div class="col l3 m6 s12 center hidden fade-in-bottom">
                     <div class="white-text">
-                        <i class="material-icons large">emoji_events</i>
+                        <i class="material-icons large white-text">emoji_events</i>
                         <h4 class="counter" data-target="13">0</h4>
                         <p>Tech Competition Awards</p>
                     </div>
                 </div>
                 <div class="col l3 m6 s12 center hidden fade-in-bottom">
                     <div class="white-text">
-                        <i class="material-icons large">school</i>
+                        <i class="material-icons large white-text">school</i>
                         <h4 class="counter" data-target="98">0</h4>
                         <p>% University Acceptance</p>
                     </div>
                 </div>
                 <div class="col l3 m6 s12 center hidden fade-in-bottom">
                     <div class="white-text">
-                        <i class="material-icons large">people</i>
+                        <i class="material-icons large white-text">people</i>
                         <h4 class="counter" data-target="500">0</h4>
                         <p>Students Graduated</p>
                     </div>
                 </div>
                 <div class="col l3 m6 s12 center hidden fade-in-bottom">
                     <div class="white-text">
-                        <i class="material-icons large">verified</i>
+                        <i class="material-icons large white-text">verified</i>
                         <h4 class="counter" data-target="25">0</h4>
                         <p>Industry Partnerships</p>
                     </div>
@@ -647,7 +647,7 @@ if (isset($_POST['submit'])) {
             </div> -->
 
             <div class="cta-container">
-                <a href="./chatbot.html" class="cta-button btn-large waves-effect waves-light">
+                <a href="chatbot" class="cta-button btn-large waves-effect waves-light">
                     <i class="material-icons left">chat</i>
                     Access Fish Farm Assistant
                 </a>

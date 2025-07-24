@@ -116,27 +116,27 @@
   <div class="row center">
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="fish.html" class="btn btn-large button hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
-        <a href="fish.html" class="btn btn-small button hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
+        <a href="fish" class="btn btn-large button hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
+        <a href="fish" class="btn btn-small button hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Fish</a>
       </div>
     </div>
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="water.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
-        <a href="water.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
+        <a href="water" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
+        <a href="water" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">opacity</i> --> About the Water</a>
       </div>
     </div>
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="pricing&supply.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
-        <a href="pricing&supply.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
+        <a href="pricing&supply" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
+        <a href="pricing&supply" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Pricing & Supply</a>
       </div>
     </div>
 
     <div class="col s12 l3 mb">
       <div class="button-container">
-        <a href="routines.html" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
-        <a href="routines.html" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
+        <a href="routines" class="button btn btn-large hide-on-med-and-down"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
+        <a href="routines" class="button btn btn-small hide-on-large-only"> <!-- <i class="material-icons">attach_money --> </i>Farm Routines</a>
       </div>
     </div>
   </div>
