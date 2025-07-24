@@ -6,6 +6,7 @@ $current_file = $_SERVER['PHP_SELF'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/WICE/">
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,28 +145,28 @@ $current_file = $_SERVER['PHP_SELF'];
                     </a>
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only">
-                            <a href="index.php" class="brand-logo bold-txt blue-text">
+                            <a href="" class="brand-logo bold-txt blue-text">
                                 <img src="./img/logo.png" alt="School Logo" width="70px">
                             </a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">
                             <li class="nav-list <?= stripos($current_file, 'index.php') ? 'active' : ''; ?>">
-                                <a href="index.php" class="blue-text nav-link">
+                                <a href="" class="blue-text nav-link">
                                     <i class="material-icons left">home</i>Home
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'aboutUs.php') ? 'active' : ''; ?>">
-                                <a href="aboutUs.php" class="blue-text nav-link">
+                                <a href="aboutUs" class="blue-text nav-link">
                                     <i class="material-icons left">people</i>About Us
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'academics.php') ? 'active' : ''; ?>">
-                                <a href="academics.php" class="blue-text nav-link">
+                                <a href="academics" class="blue-text nav-link">
                                     <i class="material-icons left">school</i>Academics
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'contactUs.php') ? 'active' : ''; ?>">
-                                <a href="contactUs.php" class="blue-text nav-link">
+                                <a href="contactUs" class="blue-text nav-link">
                                     <i class="material-icons left">contact_mail</i>Contact Us
                                 </a>
                             </li>
@@ -178,22 +179,22 @@ $current_file = $_SERVER['PHP_SELF'];
         <!-- Mobile Sidenav -->
         <ul class="sidenav" id="sidenav">
             <li class="<?= stripos($current_file, 'index.php') ? 'active' : ''; ?>">
-                <a href="index.php" class="blue-text">
+                <a href="" class="blue-text">
                     <i class="material-icons left">home</i>Home
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'aboutUs.php') ? 'active' : ''; ?>">
-                <a href="aboutUs.php" class="blue-text">
+                <a href="/aboutUs" class="blue-text">
                     <i class="material-icons left">people</i>About Us
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'academics.php') ? 'active' : ''; ?>">
-                <a href="academics.php" class="blue-text">
+                <a href="/academics" class="blue-text">
                     <i class="material-icons left">school</i>Academics
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'contactUs.php') ? 'active' : ''; ?>">
-                <a href="contactUs.php" class="blue-text">
+                <a href="WICE/contactUs" class="blue-text">
                     <i class="material-icons left">contact_mail</i>Contact Us
                 </a>
             </li>
@@ -213,7 +214,3 @@ $current_file = $_SERVER['PHP_SELF'];
 </body>
 
 </html>
-
-
-
-
