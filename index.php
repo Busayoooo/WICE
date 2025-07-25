@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 include("./templates/connect.php");
-include("./templates/header.php");
+include("./templates/navbar.php");
 
 //write the fe
 $fetch_query = "SELECT * FROM `news`";
@@ -17,13 +17,15 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 ?>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Homepage - Wisdom College of Excellence</title>
 </head>
@@ -127,14 +129,16 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     }
 
     /* Mission Section */
-    .mission-section, .mission-mobile {
+    .mission-section,
+    .mission-mobile {
         background: linear-gradient(135deg, #E91E63, #ad1457);
         color: white;
         padding: 80px 0;
         position: relative;
     }
 
-    .mission-section::before, .mission-mobile::before {
+    .mission-section::before,
+    .mission-mobile::before {
         content: '';
         position: absolute;
         top: 0;
@@ -324,6 +328,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             opacity: 0;
             transform: translateY(30px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -335,6 +340,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             opacity: 0;
             transform: translateX(-30px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
@@ -346,6 +352,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             opacity: 0;
             transform: translateX(30px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
@@ -378,15 +385,16 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         .section-heading {
             font-size: 2rem;
         }
-        
-        .mission-section, .mission-mobile {
+
+        .mission-section,
+        .mission-mobile {
             padding: 60px 20px;
         }
-        
+
         section {
             padding: 60px 0;
         }
-        
+
         .video-txt h5 {
             font-size: 1.5rem;
         }
@@ -396,11 +404,11 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
         .section-heading {
             font-size: 1.8rem;
         }
-        
+
         .card-content {
             padding: 20px !important;
         }
-        
+
         .slide-btn {
             padding: 10px 10px !important;
             font-size: 0.9rem !important;
@@ -442,9 +450,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240214_125218.jpg" alt="School Banner" class="responsive-img">
                     <div class="video-txt white-text">
-                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Welcome to Wisdom College of Excellence</h3>
-                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Welcome to Wisdom College of Excellence</h5>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Skills for today, future leaders of tomorrow</p>
+                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Welcome to
+                            Wisdom College of Excellence</h3>
+                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Welcome to Wisdom
+                            College of Excellence</h5>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Skills for today, future
+                            leaders of tomorrow</p>
                         <a href="./aboutUs.php" class="btn btn-large slide-btn hide-on-med-and-down">Discover More</a>
                         <a href="./aboutUs.php" class="btn btn-small slide-btn hide-on-large-only">Discover More</a>
                     </div>
@@ -454,9 +465,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240214_125622.jpg" alt="School Banner" class="responsive-img">
                     <div class="video-txt white-text">
-                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Excellence in Education</h3>
-                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Excellence in Education</h5>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Nurturing minds, building futures</p>
+                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Excellence in
+                            Education</h3>
+                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Excellence in
+                            Education</h5>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Nurturing minds, building
+                            futures</p>
                         <a href="./aboutUs.php" class="btn btn-large slide-btn">Learn More</a>
                     </div>
                 </div>
@@ -465,9 +479,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240525_090030.jpg" alt="School Banner" class="responsive-img">
                     <div class="video-txt white-text">
-                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Innovative Learning</h3>
-                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Innovative Learning</h5>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Where creativity meets knowledge</p>
+                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Innovative
+                            Learning</h3>
+                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Innovative
+                            Learning</h5>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Where creativity meets
+                            knowledge</p>
                         <a href="./aboutUs.php" class="btn btn-large slide-btn">Explore Now</a>
                     </div>
                 </div>
@@ -476,9 +493,12 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="banner-div">
                     <img src="./img/20240810_115158.jpg" alt="School Banner" class="responsive-img">
                     <div class="video-txt white-text">
-                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Global Perspectives</h3>
-                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Global Perspectives</h5>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Preparing students for a connected world</p>
+                        <h3 class="hide-on-med-and-down" style="font-weight: 700; margin-bottom: 20px;">Global
+                            Perspectives</h3>
+                        <h5 class="hide-on-large-only" style="font-weight: 700; margin-bottom: 20px;">Global
+                            Perspectives</h5>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Preparing students for a
+                            connected world</p>
                         <a href="./aboutUs.php" class="btn btn-large slide-btn">Join Us</a>
                     </div>
                 </div>
@@ -489,14 +509,20 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <!-- Overview Section -->
     <section>
         <div class="container">
-            <h2 class="gradient-text section-heading center hidden fade-in-left hide-on-med-and-down">Overview of WICE</h2>
-            <h4 class="gradient-text section-heading center hidden fade-in-left hide-on-large-only">Overview of WICE</h4>
+            <h2 class="gradient-text section-heading center hidden fade-in-left hide-on-med-and-down">Overview of WICE
+            </h2>
+            <h4 class="gradient-text section-heading center hidden fade-in-left hide-on-large-only">Overview of WICE
+            </h4>
             <div class="row">
                 <div class="col s12 l10 offset-l1">
                     <p class="overview-text hidden fade-in-right flow-text">
-                        Located in the serene and picturesque town of Iwopin, Ogun Waterside Local Government Area, Ogun State, Nigeria, <strong>Wisdom College of Excellence (WICE)</strong> is a premier educational institution dedicated to providing a holistic and inclusive learning experience for students.
+                        Located in the serene and picturesque town of Iwopin, Ogun Waterside Local Government Area, Ogun
+                        State, Nigeria, <strong>Wisdom College of Excellence (WICE)</strong> is a premier educational
+                        institution dedicated to providing a holistic and inclusive learning experience for students.
                         <br><br>
-                        At WICE, we believe in fostering a love for learning, creativity, and critical thinking. Our innovative programs and initiatives are designed to cater to the diverse needs and interests of our students, preparing them not just for academic success, but for life itself.
+                        At WICE, we believe in fostering a love for learning, creativity, and critical thinking. Our
+                        innovative programs and initiatives are designed to cater to the diverse needs and interests of
+                        our students, preparing them not just for academic success, but for life itself.
                     </p>
                 </div>
             </div>
@@ -510,18 +536,20 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             <div class="row">
                 <div class="col s12 l8 offset-l2">
                     <p class="mission-text center hidden fade-in-right" style="font-size: 1.3rem;">
-                        To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
+                        To enhance capacity, provide high-quality education and improve student outcomes through digital
+                        tools, targeted training, institutional development, and community engagement.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="mission-mobile hide-on-large-only">
         <div class="container">
             <h4 class="section-heading center">Our Mission</h4>
             <p class="mission-text center" style="font-size: 1.1rem;">
-                To enhance capacity, provide high-quality education and improve student outcomes through digital tools, targeted training, institutional development, and community engagement.
+                To enhance capacity, provide high-quality education and improve student outcomes through digital tools,
+                targeted training, institutional development, and community engagement.
             </p>
         </div>
     </div>
@@ -539,7 +567,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 Promoting Student Leadership
                             </span>
                             <div class="divider"></div>
-                            <p>We empower students to take initiative, develop critical decision-making skills, and lead with confidence through student councils, mentorship programs, leadership workshops, and specialized training.</p>
+                            <p>We empower students to take initiative, develop critical decision-making skills, and lead
+                                with confidence through student councils, mentorship programs, leadership workshops, and
+                                specialized training.</p>
                         </div>
                     </div>
                 </div>
@@ -551,7 +581,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 Promoting Student Entrepreneurship
                             </span>
                             <div class="divider"></div>
-                            <p>We nurture creativity and innovation by equipping students with entrepreneurial skills, fostering a problem-solving mindset, and providing opportunities to develop and launch business ideas.</p>
+                            <p>We nurture creativity and innovation by equipping students with entrepreneurial skills,
+                                fostering a problem-solving mindset, and providing opportunities to develop and launch
+                                business ideas.</p>
                         </div>
                     </div>
                 </div>
@@ -563,7 +595,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 Promoting Student Global Exposure
                             </span>
                             <div class="divider"></div>
-                            <p>We prepare students for a connected world by offering exchange programs, international collaborations, and exposure to diverse cultures, broadening their perspectives and global competencies.</p>
+                            <p>We prepare students for a connected world by offering exchange programs, international
+                                collaborations, and exposure to diverse cultures, broadening their perspectives and
+                                global competencies.</p>
                         </div>
                     </div>
                 </div>
@@ -597,9 +631,15 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 SDG 1: No Poverty
                             </span>
                             <div class="divider"></div>
-                            <p><strong>Financial Literacy Programs:</strong> We integrate comprehensive financial education into our curriculum, teaching students essential money management skills, budgeting techniques, and investment principles to break the cycle of poverty.</p>
-                            <p><strong>Entrepreneurship Development:</strong> Our students learn business planning, problem-solving, and enterprise management through hands-on projects, mentorship programs, and mini-business competitions.</p>
-                            <p><strong>Community Outreach:</strong> We organize financial literacy workshops for parents and community members, extending our impact beyond the classroom to build economically empowered communities.</p>
+                            <p><strong>Financial Literacy Programs:</strong> We integrate comprehensive financial
+                                education into our curriculum, teaching students essential money management skills,
+                                budgeting techniques, and investment principles to break the cycle of poverty.</p>
+                            <p><strong>Entrepreneurship Development:</strong> Our students learn business planning,
+                                problem-solving, and enterprise management through hands-on projects, mentorship
+                                programs, and mini-business competitions.</p>
+                            <p><strong>Community Outreach:</strong> We organize financial literacy workshops for parents
+                                and community members, extending our impact beyond the classroom to build economically
+                                empowered communities.</p>
                         </div>
                     </div>
                 </div>
@@ -611,9 +651,15 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 SDG 3: Good Health and Well-being
                             </span>
                             <div class="divider"></div>
-                            <p><strong>Health Education Curriculum:</strong> Our comprehensive health education program covers nutrition, mental health awareness, disease prevention, and healthy lifestyle choices, empowering students to make informed health decisions.</p>
-                            <p><strong>Medical Outreach Programs:</strong> We partner with healthcare professionals to provide free health screenings, vaccination drives, and health awareness campaigns for students and the broader community.</p>
-                            <p><strong>Mental Health Support:</strong> Our counseling services and peer support programs create a safe environment where students can discuss mental health challenges and receive professional guidance.</p>
+                            <p><strong>Health Education Curriculum:</strong> Our comprehensive health education program
+                                covers nutrition, mental health awareness, disease prevention, and healthy lifestyle
+                                choices, empowering students to make informed health decisions.</p>
+                            <p><strong>Medical Outreach Programs:</strong> We partner with healthcare professionals to
+                                provide free health screenings, vaccination drives, and health awareness campaigns for
+                                students and the broader community.</p>
+                            <p><strong>Mental Health Support:</strong> Our counseling services and peer support programs
+                                create a safe environment where students can discuss mental health challenges and
+                                receive professional guidance.</p>
                         </div>
                     </div>
                 </div>
@@ -625,13 +671,19 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 SDG 4: Quality Education
                             </span>
                             <div class="divider"></div>
-                            <p><strong>Inclusive Education Framework:</strong> We provide specialized resources and individualized support plans for students with disabilities, ensuring every child has access to quality education.</p>
-                            <p><strong>Teacher Professional Development:</strong> We invest in continuous training for our educators, introducing innovative teaching methods, educational technology, and pedagogical best practices to enhance learning outcomes.</p>
-                            <p><strong>STEM Excellence:</strong> Our state-of-the-art science laboratories and coding programs prepare students for future careers in science, technology, engineering, and mathematics.</p>
+                            <p><strong>Inclusive Education Framework:</strong> We provide specialized resources and
+                                individualized support plans for students with disabilities, ensuring every child has
+                                access to quality education.</p>
+                            <p><strong>Teacher Professional Development:</strong> We invest in continuous training for
+                                our educators, introducing innovative teaching methods, educational technology, and
+                                pedagogical best practices to enhance learning outcomes.</p>
+                            <p><strong>STEM Excellence:</strong> Our state-of-the-art science laboratories and coding
+                                programs prepare students for future careers in science, technology, engineering, and
+                                mathematics.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col s12 l6 hidden fade-in-bottom">
                     <div class="card hoverable">
                         <div class="card-content">
@@ -640,9 +692,15 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                                 SDG 5: Gender Equality
                             </span>
                             <div class="divider"></div>
-                            <p><strong>Anti-Discrimination Policies:</strong> We maintain zero-tolerance policies for gender-based discrimination and harassment, creating a safe and inclusive environment where all students can thrive regardless of gender identity.</p>
-                            <p><strong>Girls in STEM Initiative:</strong> Our specialized programs encourage female students to pursue careers in science, technology, engineering, and mathematics through mentorship, role model visits, and hands-on STEM projects.</p>
-                            <p><strong>Leadership Development:</strong> Our student leadership programs actively promote gender balance in leadership positions, teaching valuable skills in public speaking, project management, and team leadership.</p>
+                            <p><strong>Anti-Discrimination Policies:</strong> We maintain zero-tolerance policies for
+                                gender-based discrimination and harassment, creating a safe and inclusive environment
+                                where all students can thrive regardless of gender identity.</p>
+                            <p><strong>Girls in STEM Initiative:</strong> Our specialized programs encourage female
+                                students to pursue careers in science, technology, engineering, and mathematics through
+                                mentorship, role model visits, and hands-on STEM projects.</p>
+                            <p><strong>Leadership Development:</strong> Our student leadership programs actively promote
+                                gender balance in leadership positions, teaching valuable skills in public speaking,
+                                project management, and team leadership.</p>
                         </div>
                     </div>
                 </div>
@@ -659,26 +717,28 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="col s12 m6 l4 hidden fade-in-bottom">
                         <div class="card news-card hoverable">
                             <div class="card-image">
-                                <img src="<?php echo $new['news_pic'];?>" alt="<?php echo $new['news_title'];?>">
+                                <img src="<?php echo $new['news_pic']; ?>" alt="<?php echo $new['news_title']; ?>">
                             </div>
                             <div class="card-content">
-                                <span class="card-title gradient-text"><?php echo $new['news_title'];?></span>
-                                <p class="grey-text text-darken-1"><?php echo substr($new['news_description'], 0, 100) . '...'; ?></p>
+                                <span class="card-title gradient-text"><?php echo $new['news_title']; ?></span>
+                                <p class="grey-text text-darken-1">
+                                    <?php echo substr($new['news_description'], 0, 100) . '...'; ?></p>
                             </div>
                             <div class="card-action">
-                                <a href="#<?php echo $new['news_title'];?>" class="modal-trigger">
+                                <a href="#<?php echo $new['news_title']; ?>" class="modal-trigger">
                                     Read More <i class="material-icons right">arrow_forward</i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Modal -->
-                    <div id="<?php echo $new['news_title'];?>" class="modal">
+                    <div id="<?php echo $new['news_title']; ?>" class="modal">
                         <div class="modal-content">
-                            <img src="<?php echo $new['news_pic'];?>" alt="<?php echo $new['news_title'];?>" class="responsive-img">
-                            <h4 class="gradient-text"><?php echo $new['news_title'];?></h4>
-                            <p style="line-height: 1.6;"><?php echo $new['news_text'];?></p>
+                            <img src="<?php echo $new['news_pic']; ?>" alt="<?php echo $new['news_title']; ?>"
+                                class="responsive-img">
+                            <h4 class="gradient-text"><?php echo $new['news_title']; ?></h4>
+                            <p style="line-height: 1.6;"><?php echo $new['news_text']; ?></p>
                         </div>
                         <div class="modal-footer">
                             <a href="#!" class="modal-close btn primary-btn">Close</a>
@@ -692,7 +752,7 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             // Initialize Materialize components
             $('.datepicker').datepicker();
             $('.tooltipped').tooltip();
@@ -705,8 +765,8 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
             // Navbar scroll effect
             $(window).scroll(function () {
-                const sliderHeight = $('.slider').height(); 
-                if($(window).scrollTop() > sliderHeight){
+                const sliderHeight = $('.slider').height();
+                if ($(window).scrollTop() > sliderHeight) {
                     $(".navbar").addClass("scrolled");
                 } else {
                     $(".navbar").removeClass("scrolled");
@@ -755,9 +815,9 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             }
 
             // Smooth scrolling for internal links
-            $('a[href^="#"]').on('click', function(event) {
+            $('a[href^="#"]').on('click', function (event) {
                 var target = $(this.getAttribute('href'));
-                if( target.length ) {
+                if (target.length) {
                     event.preventDefault();
                     $('html, body').stop().animate({
                         scrollTop: target.offset().top - 100
@@ -779,4 +839,5 @@ $news = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
     <?php include("./templates/footer.php"); ?>
 </body>
+
 </html>

@@ -144,11 +144,10 @@
             <!-- Questions inserted by jQuery -->
           </div>
         </div>
-        <a
-          href="chatbot.html"
-          class="btn btn-large blue white-text right rounded"
-          >Back</a
-        >
+        <a href="chatbot" id="backToMain" class="btn btn-large blue white-text right rounded"><i
+          class="material-icons left">chevron_left</i>
+        Back
+      </a>
 
         <div class="answer-page" id="answerPage">
           <div class="answer-header">

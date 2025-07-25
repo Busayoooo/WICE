@@ -1,5 +1,12 @@
 <?php
-include("./templates/header.php");
+session_start();
+
+$success = false;
+if (isset($_SESSION['form_success'])) {
+    $success = true;
+    unset($_SESSION['form_success']); // Only show once
+}
+
 include("./templates/connect.php");
 
 $name = "";
@@ -30,11 +37,11 @@ if (isset($_POST['submit'])) {
     $send_query = mysqli_query($db_connect, $insert_query);
 
     if ($send_query) {
-        // echo 'Registration successful';
-        echo "<script>$(document).ready(function() {
-    $('#success-modal').modal('open');
-    });
-    </script>";
+        $_SESSION['form_success'] = true;
+
+        // Redirect back to same clean URL
+        header("Location: /WICE/academics");
+        exit();
     }
 
     if ($send_query) {
@@ -42,7 +49,7 @@ if (isset($_POST['submit'])) {
         echo 'error: ' . mysqli_error($db_connect);
     }
 }
-
+include("./templates/navbar.php");
 ?>
 
 <html lang="en">
@@ -493,7 +500,7 @@ if (isset($_POST['submit'])) {
                         class=" material-icons right">phone</i></a>
             </div>
             <div class="col s12 l6">
-                <form action="./academics.php" method="post">
+                <form action="/WICE/academics" method="post">
                     <div class="input-field">
                         <input type="text" name="name" id="name">
                         <label for="name">Your Name</label>
@@ -731,6 +738,10 @@ if (isset($_POST['submit'])) {
                     $(".navbar").removeClass("scrolled");
                 }
             });
+
+            <?php if ($success): ?>
+                M.toast({ html: 'Your registration will be processed shortly.', classes: 'green white-text rounded' });
+            <?php endif; ?>
 
             // === General Fade-in Observer ===
             const fadeInObserver = new IntersectionObserver((entries) => {

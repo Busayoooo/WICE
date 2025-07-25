@@ -1,10 +1,17 @@
 <?php
-include("./templates/header.php");
+session_start();
+
+$success = false;
+if (isset($_SESSION['form_success'])) {
+    $success = true;
+    unset($_SESSION['form_success']); // Only show once
+}
+
 include("./templates/connect.php");
 
 $name = "";
-$phone_number = "";
 $email = "";
+$subject = "";
 $message = "";
 
 // select all from products table
@@ -19,18 +26,22 @@ $registrants = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $phone_number = $_POST['phone_number'];
     $email = $_POST['email'];
+    $subject = $_POST['subject'];
     $message = $_POST['message'];
 
     // insert query, to insert the data into the database
-    $insert_query = "INSERT INTO `messages`(`name`, `phone_number`, `email`, `message`) VALUES ( '$name', '$phone_number', '$email', '$message')";
+    $insert_query = "INSERT INTO `messages`(`name`, `email`,`subject`,  `message`) VALUES ( '$name', '$email', '$subject', '$message')";
 
     // send query to server
     $send_query = mysqli_query($db_connect, $insert_query);
 
     if ($send_query) {
-        // echo 'Registration successful';    
+        $_SESSION['form_success'] = true;
+
+        // Redirect back to same clean URL
+        header("Location: /WICE/contactUs");
+        exit();
     }
 
 
@@ -40,6 +51,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
+include("./templates/navbar.php");
 ?>
 
 <!DOCTYPE html>
@@ -279,7 +291,7 @@ if (isset($_POST['submit'])) {
             <div class="col s12 l8">
                 <h4 class="blue-text hide-on-med-and-down center-align">Need More info? Drop a Message!</h4>
                 <h4 class="primary-text hide-on-large-only center">Need Assistance? Drop Us a Message!</h4>
-                <form action="./contactUs.php" method="post" id="contact-form">
+                <form action="/WICE/contactUs" method="post" id="contact-form">
                     <div class="row">
                         <div class="input-field col l6 s12">
                             <input type="text" name="name" id="name" required>
@@ -337,6 +349,12 @@ if (isset($_POST['submit'])) {
                     $(".navbar").removeClass("scrolled");
                 }
             });
+
+            <?php if ($success): ?>
+                M.toast({ html: 'Your message has been submitted successfully!', classes: 'green white-text rounded' });
+            <?php endif; ?>
+
+
             // Function to check if an element is in the viewport
             function isInViewport(el) {
                 const rect = el.getBoundingClientRect();

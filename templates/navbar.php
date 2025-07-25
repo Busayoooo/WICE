@@ -1,5 +1,6 @@
 <?php
 $current_file = $_SERVER['PHP_SELF'];
+$base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/WICE' : '';
 ?>
 <html lang="en">
 
@@ -140,33 +141,33 @@ $current_file = $_SERVER['PHP_SELF'];
             <nav class="nav-wrapper navbar">
                 <div class="container">
                     <!-- Sidenav Trigger -->
-                    <a href="#" data-target="sidenav" class="sidenav-trigger">
+                    <a href="#" id="sidenav" data-target="sidenav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
                     <div class="row">
                         <div class="col l2 s12 center-on-small-only">
-                            <a href="" class="brand-logo bold-txt blue-text">
+                            <a href="<?= $base ?>/" class="brand-logo bold-txt blue-text">
                                 <img src="./img/logo.png" alt="School Logo" width="70px">
                             </a>
                         </div>
                         <ul class="col l10 hide-on-med-and-down right push-l4">
                             <li class="nav-list <?= stripos($current_file, 'index.php') ? 'active' : ''; ?>">
-                                <a href="" class="blue-text nav-link">
+                                <a href="<?= $base ?>/" class="blue-text nav-link">
                                     <i class="material-icons left">home</i>Home
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'aboutUs.php') ? 'active' : ''; ?>">
-                                <a href="aboutUs" class="blue-text nav-link">
+                                <a href="<?= $base ?>/aboutUs" class="blue-text nav-link">
                                     <i class="material-icons left">people</i>About Us
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'academics.php') ? 'active' : ''; ?>">
-                                <a href="academics" class="blue-text nav-link">
+                                <a href="<?= $base ?>/academics" class="blue-text nav-link">
                                     <i class="material-icons left">school</i>Academics
                                 </a>
                             </li>
                             <li class="nav-list <?= stripos($current_file, 'contactUs.php') ? 'active' : ''; ?>">
-                                <a href="contactUs" class="blue-text nav-link">
+                                <a href="<?= $base ?>/contactUs" class="blue-text nav-link">
                                     <i class="material-icons left">contact_mail</i>Contact Us
                                 </a>
                             </li>
@@ -179,22 +180,22 @@ $current_file = $_SERVER['PHP_SELF'];
         <!-- Mobile Sidenav -->
         <ul class="sidenav" id="sidenav">
             <li class="<?= stripos($current_file, 'index.php') ? 'active' : ''; ?>">
-                <a href="" class="blue-text">
+                <a href="<?= $base ?>/" class="blue-text">
                     <i class="material-icons left">home</i>Home
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'aboutUs.php') ? 'active' : ''; ?>">
-                <a href="/aboutUs" class="blue-text">
+                <a href="<?= $base ?>/aboutUs" class="blue-text">
                     <i class="material-icons left">people</i>About Us
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'academics.php') ? 'active' : ''; ?>">
-                <a href="/academics" class="blue-text">
+                <a href="<?= $base ?>/academics" class="blue-text">
                     <i class="material-icons left">school</i>Academics
                 </a>
             </li>
             <li class="<?= stripos($current_file, 'contactUs.php') ? 'active' : ''; ?>">
-                <a href="WICE/contactUs" class="blue-text">
+                <a href="<?= $base ?>/contactUs" class="blue-text">
                     <i class="material-icons left">contact_mail</i>Contact Us
                 </a>
             </li>
